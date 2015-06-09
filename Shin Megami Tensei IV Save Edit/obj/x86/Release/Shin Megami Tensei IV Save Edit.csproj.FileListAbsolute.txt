@@ -1,0 +1,10 @@
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\bin\Release\Shin Megami Tensei IV Save Edit.exe
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\bin\Release\Shin Megami Tensei IV Save Edit.pdb
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\bin\Release\Newtonsoft.Json.dll
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\bin\Release\Newtonsoft.Json.xml
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\obj\x86\Release\SMTIV.Form1.resources
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\obj\x86\Release\Shin_Megami_Tensei_IV_Save_Edit.Properties.Resources.resources
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\obj\x86\Release\Shin Megami Tensei IV Save Edit.csproj.GenerateResource.Cache
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\obj\x86\Release\Shin Megami Tensei IV Save Edit.exe
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\obj\x86\Release\Shin Megami Tensei IV Save Edit.pdb
+C:\Users\Loc\Documents\Visual Studio 2010\Projects\_CSHARP_FORMS\Shin Megami Tensei IV Save Edit\Shin Megami Tensei IV Save Edit\obj\x86\Release\Shin Megami Tensei IV Save Edit.csprojResolveAssemblyReference.cache
