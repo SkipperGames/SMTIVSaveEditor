@@ -1,4 +1,4 @@
-{
+[{
   "ID": 1,
   "Name": "Agi",
   "Type": "Fire",
@@ -6,7 +6,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Fire damage. 1 enemy."
-}{
+},{
   "ID": 2,
   "Name": "Agilao",
   "Type": "Fire",
@@ -14,7 +14,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Fire damage. 1 enemy."
-}{
+},{
   "ID": 3,
   "Name": "Agidyne",
   "Type": "Fire",
@@ -22,7 +22,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Fire damage. 1 enemy."
-}{
+},{
   "ID": 4,
   "Name": "Maragi",
   "Type": "Fire",
@@ -30,7 +30,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Fire damage. All enemies."
-}{
+},{
   "ID": 5,
   "Name": "Maragion",
   "Type": "Fire",
@@ -38,7 +38,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Fire damage. All enemies."
-}{
+},{
   "ID": 6,
   "Name": "Maragidyne",
   "Type": "Fire",
@@ -46,7 +46,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Fire damage. All enemies."
-}{
+},{
   "ID": 7,
   "Name": "Fire Breath",
   "Type": "Fire",
@@ -54,7 +54,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~4 hits weak Fire damage. Multiple enemies."
-}{
+},{
   "ID": 8,
   "Name": "Trisagion",
   "Type": "Fire",
@@ -62,7 +62,7 @@
   "Damage": "Severe",
   "Target": "Single",
   "Desc": "Severe Fire damage. 1 enemy"
-}{
+},{
   "ID": 9,
   "Name": "Ragnarok",
   "Type": "Fire",
@@ -70,7 +70,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~4 hits medium Fire damage. Muliple enemies."
-}{
+},{
   "ID": 258,
   "Name": "Sunny Ray",
   "Type": "Fire",
@@ -78,7 +78,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Fire damage. 70% Poison. All enemies."
-}{
+},{
   "ID": 312,
   "Name": "Inferno of God",
   "Type": "Fire",
@@ -86,7 +86,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Fire damage. Pierce enemy Fire Resist/Null/Drain. All enemies."
-}{
+},{
   "ID": 10,
   "Name": "Bufu",
   "Type": "Ice",
@@ -94,7 +94,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Ice damage. 1 enemy."
-}{
+},{
   "ID": 11,
   "Name": "Bufula",
   "Type": "Ice",
@@ -102,7 +102,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Ice damage. 1 enemy."
-}{
+},{
   "ID": 12,
   "Name": "Bufudyne",
   "Type": "Ice",
@@ -110,7 +110,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Ice damage. 1 enemy."
-}{
+},{
   "ID": 13,
   "Name": "Mabufu",
   "Type": "Ice",
@@ -118,7 +118,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Ice damage. All enemies."
-}{
+},{
   "ID": 14,
   "Name": "Mabufula",
   "Type": "Ice",
@@ -126,7 +126,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Ice damage. All enemies."
-}{
+},{
   "ID": 15,
   "Name": "Mabufudyne",
   "Type": "Ice",
@@ -134,7 +134,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Ice damage. All enemies."
-}{
+},{
   "ID": 16,
   "Name": "Ice Breath",
   "Type": "Ice",
@@ -142,7 +142,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~4 hits weak Ice damage. Muliple enemies."
-}{
+},{
   "ID": 17,
   "Name": "Glacial Blast",
   "Type": "Ice",
@@ -150,7 +150,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~4 hits medium Ice damage. Multiple enemies."
-}{
+},{
   "ID": 18,
   "Name": "Cold World",
   "Type": "Ice",
@@ -158,7 +158,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Ice damage. 15% KO. All enemies."
-}{
+},{
   "ID": 76,
   "Name": "Breath",
   "Type": "Ice",
@@ -166,7 +166,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~5 hits medium Ice damage. Multiple enemies."
-}{
+},{
   "ID": 308,
   "Name": "Hailstorm of God",
   "Type": "Ice",
@@ -174,7 +174,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Ice damage. Pierce enemy Ice Resist/Null/Drain. All enemies."
-}{
+},{
   "ID": 315,
   "Name": "Refrigerate",
   "Type": "Status",
@@ -182,7 +182,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~8 hits weak Ice damage. Multiple enemies."
-}{
+},{
   "ID": 19,
   "Name": "Zio",
   "Type": "Elec",
@@ -190,7 +190,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Elec damage. 1 enemy."
-}{
+},{
   "ID": 20,
   "Name": "Zionga",
   "Type": "Elec",
@@ -198,7 +198,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Elec damage. 1 enemy."
-}{
+},{
   "ID": 21,
   "Name": "Ziodyne",
   "Type": "Elec",
@@ -206,7 +206,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Elec damage. 1 enemy."
-}{
+},{
   "ID": 22,
   "Name": "Mazio",
   "Type": "Elec",
@@ -214,7 +214,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Elec damage. All enemies."
-}{
+},{
   "ID": 23,
   "Name": "Mazionga",
   "Type": "Elec",
@@ -222,7 +222,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Elec damage. All enemies."
-}{
+},{
   "ID": 24,
   "Name": "Maziodyne",
   "Type": "Elec",
@@ -230,7 +230,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Elec damage. All enemies."
-}{
+},{
   "ID": 25,
   "Name": "Shock",
   "Type": "Elec",
@@ -238,7 +238,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~4 hits weak Elec damage. Muliple enemies."
-}{
+},{
   "ID": 26,
   "Name": "Thunder Reign",
   "Type": "Elec",
@@ -246,7 +246,7 @@
   "Damage": "Severe",
   "Target": "Enemies",
   "Desc": "Severe Elec damage. All enemies."
-}{
+},{
   "ID": 27,
   "Name": "Charming Bolt",
   "Type": "Elec",
@@ -254,7 +254,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Elec damage. 25% Panic. All enemies."
-}{
+},{
   "ID": 302,
   "Name": "Lightning of God",
   "Type": "Elec",
@@ -262,7 +262,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Elec damage. Pierce enemy Elec Resist/Null/Drain. All enemies."
-}{
+},{
   "ID": 313,
   "Name": "Plasma Discharge",
   "Type": "Elec",
@@ -270,7 +270,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~8 hits weak Elec damage. Multiple enemies."
-}{
+},{
   "ID": 28,
   "Name": "Zan",
   "Type": "Force",
@@ -278,7 +278,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Force damage. 1 enemy."
-}{
+},{
   "ID": 29,
   "Name": "Zanma",
   "Type": "Force",
@@ -286,7 +286,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Force damage. 1 enemy."
-}{
+},{
   "ID": 30,
   "Name": "Zandyne",
   "Type": "Force",
@@ -294,7 +294,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Force damage. 1 enemy."
-}{
+},{
   "ID": 31,
   "Name": "Mazan",
   "Type": "Force",
@@ -302,7 +302,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Force damage. All enemies."
-}{
+},{
   "ID": 32,
   "Name": "Mazanma",
   "Type": "Force",
@@ -310,7 +310,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Force damage. All enemies."
-}{
+},{
   "ID": 33,
   "Name": "Mazandyne",
   "Type": "Force",
@@ -318,7 +318,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Force damage. All enemies."
-}{
+},{
   "ID": 34,
   "Name": "Wind Breath",
   "Type": "Force",
@@ -326,7 +326,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~4 hits weak Force damage. Muliple enemies."
-}{
+},{
   "ID": 35,
   "Name": "Deadly Wind",
   "Type": "Force",
@@ -334,7 +334,7 @@
   "Damage": "Severe",
   "Target": "Single",
   "Desc": "Severe Force damage. 1 enemy."
-}{
+},{
   "ID": 36,
   "Name": "Floral Gust",
   "Type": "Force",
@@ -342,7 +342,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~4 hits medium Force damage. Muliple enemies."
-}{
+},{
   "ID": 306,
   "Name": "Tornado of God",
   "Type": "Force",
@@ -350,7 +350,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Force damage. Pierce enemy Force Resist/Null/Drain. All enemies."
-}{
+},{
   "ID": 37,
   "Name": "Megido",
   "Type": "Almighty",
@@ -358,7 +358,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Almighty damage. All enemies."
-}{
+},{
   "ID": 38,
   "Name": "Megidola",
   "Type": "Almighty",
@@ -366,7 +366,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. All enemies."
-}{
+},{
   "ID": 39,
   "Name": "Megidolaon",
   "Type": "Almighty",
@@ -374,7 +374,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. All enemies."
-}{
+},{
   "ID": 40,
   "Name": "Great Logos",
   "Type": "Almighty",
@@ -382,7 +382,7 @@
   "Damage": "Severe",
   "Target": "Enemies",
   "Desc": "Severe Almighty damage. All enemies."
-}{
+},{
   "ID": 41,
   "Name": "Antichthon",
   "Type": "Almighty",
@@ -390,7 +390,7 @@
   "Damage": "Severe",
   "Target": "Enemies",
   "Desc": "Severe Almighty damage. Debilitate. All enemies."
-}{
+},{
   "ID": 42,
   "Name": "Babylon Goblet",
   "Type": "Almighty",
@@ -398,7 +398,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. 25% Panic."
-}{
+},{
   "ID": 43,
   "Name": "Holy Wrath",
   "Type": "Almighty",
@@ -406,7 +406,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "50% additional damage VS Chaos."
-}{
+},{
   "ID": 44,
   "Name": "Judgement",
   "Type": "Almighty",
@@ -414,7 +414,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "50% additional damage VS Neutral."
-}{
+},{
   "ID": 45,
   "Name": "Sea of Chaos",
   "Type": "Almighty",
@@ -422,7 +422,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "50% additional damage VS Law."
-}{
+},{
   "ID": 46,
   "Name": "Life Drain",
   "Type": "Almighty",
@@ -430,7 +430,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Almighty damage. Drain HP. 1 enemy."
-}{
+},{
   "ID": 47,
   "Name": "Spirit Drain",
   "Type": "Almighty",
@@ -438,7 +438,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Almighty damage. Drain MP. 1 enemy."
-}{
+},{
   "ID": 48,
   "Name": "Energy Drain",
   "Type": "Almighty",
@@ -446,7 +446,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Almighty damage. Drain HP/MP. 1 enemy."
-}{
+},{
   "ID": 71,
   "Name": "Strange Ray",
   "Type": "Almighty",
@@ -454,7 +454,7 @@
   "Damage": "Fixed",
   "Target": "Single",
   "Desc": "Almighty attack reduce target MP to 50%."
-}{
+},{
   "ID": 72,
   "Name": "Enigmatic Ray",
   "Type": "Almighty",
@@ -462,7 +462,7 @@
   "Damage": "Fixed",
   "Target": "Enemies",
   "Desc": "???"
-}{
+},{
   "ID": 73,
   "Name": "Macca Beam",
   "Type": "Almighty",
@@ -470,7 +470,7 @@
   "Damage": "Fixed",
   "Target": "Single",
   "Desc": "Almighty attack reduce target Macca to 20%."
-}{
+},{
   "ID": 74,
   "Name": "Wastrel Beam",
   "Type": "Almighty",
@@ -478,7 +478,7 @@
   "Damage": "Fixed",
   "Target": "Single",
   "Desc": "Almighty attack reduce target Macca to 50%"
-}{
+},{
   "ID": 75,
   "Name": "Crushing Wave",
   "Type": "Almighty",
@@ -486,7 +486,7 @@
   "Damage": "Fixed",
   "Target": "Single",
   "Desc": "Almighty attack reduce target HP to 1."
-}{
+},{
   "ID": 77,
   "Name": "Death's Door",
   "Type": "Almighty",
@@ -494,7 +494,7 @@
   "Damage": "Fixed",
   "Target": "Enemies",
   "Desc": "All Sick enemies' HP reduced to 1."
-}{
+},{
   "ID": 194,
   "Name": "Desperate Hit",
   "Type": "Almighty",
@@ -502,7 +502,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~5 hits Almighty damage. Multiple enemies."
-}{
+},{
   "ID": 253,
   "Name": "Queen's Feast",
   "Type": "Almighty",
@@ -510,7 +510,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. Drain HP. All enemies."
-}{
+},{
   "ID": 256,
   "Name": "Ameno Murakumo",
   "Type": "Almighty",
@@ -518,7 +518,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. Tarunda. All enemies."
-}{
+},{
   "ID": 257,
   "Name": "Homeland Song",
   "Type": "Almighty",
@@ -526,7 +526,7 @@
   "Damage": "Heavy",
   "Target": "Multi",
   "Desc": "2~3 hits weak Almighty damage. Multiple enemies."
-}{
+},{
   "ID": 259,
   "Name": "Vulnera",
   "Type": "Almighty",
@@ -534,7 +534,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. 50% Bind. All enemies."
-}{
+},{
   "ID": 261,
   "Name": "Deceit Chain",
   "Type": "Almighty",
@@ -542,7 +542,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "Medium Almighty damage. 50% Bind. All enemies."
-}{
+},{
   "ID": 262,
   "Name": "Naughty Wave",
   "Type": "Almighty",
@@ -550,7 +550,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. 10% KO."
-}{
+},{
   "ID": 265,
   "Name": "Evil Shine",
   "Type": "Almighty",
@@ -558,7 +558,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. 70% Panic. All enemies."
-}{
+},{
   "ID": 267,
   "Name": "Morning Star",
   "Type": "Almighty",
@@ -566,7 +566,7 @@
   "Damage": "Fixed",
   "Target": "Enemies",
   "Desc": "Almighty attack reduce target HP by 50%."
-}{
+},{
   "ID": 268,
   "Name": "Chariot",
   "Type": "Almighty",
@@ -574,7 +574,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Almighty damage. Sukunda. All enemies."
-}{
+},{
   "ID": 269,
   "Name": "Shalt Not Resist",
   "Type": "Almighty",
@@ -582,7 +582,7 @@
   "Damage": "Mega",
   "Target": "Multi",
   "Desc": "2 hits mega Almighty damage. Rakunda. All enemies."
-}{
+},{
   "ID": 270,
   "Name": "Hexagram",
   "Type": "Almighty",
@@ -590,7 +590,7 @@
   "Damage": "KO",
   "Target": "Single",
   "Desc": "Almighty attack. 100% KO. 1 enemy."
-}{
+},{
   "ID": 271,
   "Name": "Hell's Torment",
   "Type": "Almighty",
@@ -598,7 +598,7 @@
   "Damage": "Fixed",
   "Target": "Enemies",
   "Desc": "Almighty attack reduce target HP by 66%."
-}{
+},{
   "ID": 305,
   "Name": "Serpent of Sheol",
   "Type": "Almighty",
@@ -606,7 +606,7 @@
   "Damage": "Severe",
   "Target": "Enemies",
   "Desc": "Severe Almighty damage. Drain HP/MP."
-}{
+},{
   "ID": 311,
   "Name": "Fallen Grace",
   "Type": "Almighty",
@@ -614,7 +614,7 @@
   "Damage": "Fixed",
   "Target": "Single",
   "Desc": "666 Almighty damage to 1 enemy."
-}{
+},{
   "ID": 314,
   "Name": "Megidoplasma",
   "Type": "Almighty",
@@ -622,7 +622,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage to all enemies."
-}{
+},{
   "ID": 317,
   "Name": "Punishment",
   "Type": "Almighty",
@@ -630,7 +630,7 @@
   "Damage": "Fixed",
   "Target": "Enemies",
   "Desc": "Hits 333 Almighty damage per enemy resistance. All enemies."
-}{
+},{
   "ID": 320,
   "Name": "Curse Thy Enemy",
   "Type": "Almighty",
@@ -638,7 +638,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. Gurantees weakness. All enemies."
-}{
+},{
   "ID": 323,
   "Name": "Damnation",
   "Type": "Almighty",
@@ -646,7 +646,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. 70% Poison. All enemies."
-}{
+},{
   "ID": 324,
   "Name": "Stigmatic Gleam",
   "Type": "Almighty",
@@ -654,7 +654,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. 25% Brand. All enemies."
-}{
+},{
   "ID": 326,
   "Name": "Gaea Rage",
   "Type": "Almighty",
@@ -662,7 +662,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. 30% Lost. All enemies."
-}{
+},{
   "ID": 388,
   "Name": "Assist (1)",
   "Type": "Almighty",
@@ -670,7 +670,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "1 hit weak Almighty damage. All enemies."
-}{
+},{
   "ID": 389,
   "Name": "Assist (2)",
   "Type": "Almighty",
@@ -678,7 +678,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "2 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 390,
   "Name": "Assist (3)",
   "Type": "Almighty",
@@ -686,7 +686,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "3 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 391,
   "Name": "Assist (4)",
   "Type": "Almighty",
@@ -694,7 +694,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "4 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 392,
   "Name": "Assist (5)",
   "Type": "Almighty",
@@ -702,7 +702,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "5 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 393,
   "Name": "Assist (6)",
   "Type": "Almighty",
@@ -710,7 +710,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "6 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 394,
   "Name": "Assist (7)",
   "Type": "Almighty",
@@ -718,7 +718,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "7 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 395,
   "Name": "Assist (8)",
   "Type": "Almighty",
@@ -726,7 +726,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "8 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 396,
   "Name": "Assist (9)",
   "Type": "Almighty",
@@ -734,7 +734,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "9 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 397,
   "Name": "Assist Rush (1)",
   "Type": "Almighty",
@@ -742,7 +742,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "10 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 398,
   "Name": "Assist Rush (2)",
   "Type": "Almighty",
@@ -750,7 +750,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "11 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 399,
   "Name": "Assist Rush (3)",
   "Type": "Almighty",
@@ -758,7 +758,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "12 hits weak Almighty damage. All enemies."
-}{
+},{
   "ID": 49,
   "Name": "Mudo",
   "Type": "Dark",
@@ -766,7 +766,7 @@
   "Damage": "KO",
   "Target": "Single",
   "Desc": "Dark magic. 30% KO 1 enemy."
-}{
+},{
   "ID": 50,
   "Name": "Mudoon",
   "Type": "Dark",
@@ -774,7 +774,7 @@
   "Damage": "KO",
   "Target": "Single",
   "Desc": "Dark magic. 55% KO 1 enemy."
-}{
+},{
   "ID": 51,
   "Name": "Mamudo",
   "Type": "Dark",
@@ -782,7 +782,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Dark magic. 30% KO all enemies."
-}{
+},{
   "ID": 52,
   "Name": "Mamudoon",
   "Type": "Dark",
@@ -790,7 +790,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Dark magic. 55% KO all enemies."
-}{
+},{
   "ID": 53,
   "Name": "Die for Me!",
   "Type": "Dark",
@@ -798,7 +798,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Dark magic. 80% KO all enemies."
-}{
+},{
   "ID": 54,
   "Name": "Hama",
   "Type": "Light",
@@ -806,7 +806,7 @@
   "Damage": "KO",
   "Target": "Single",
   "Desc": "Light magic. 30% KO 1 enemy."
-}{
+},{
   "ID": 55,
   "Name": "Hamaon",
   "Type": "Light",
@@ -814,7 +814,7 @@
   "Damage": "KO",
   "Target": "Single",
   "Desc": "Light magic. 55% KO 1 enemy."
-}{
+},{
   "ID": 56,
   "Name": "Mahama",
   "Type": "Light",
@@ -822,7 +822,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Light magic. 30% KO all enemies."
-}{
+},{
   "ID": 57,
   "Name": "Mahamaon",
   "Type": "Light",
@@ -830,7 +830,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Light magic. 55% KO all enemies."
-}{
+},{
   "ID": 58,
   "Name": "Judgement Light",
   "Type": "Light",
@@ -838,7 +838,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Light magic. 80% KO all enemies."
-}{
+},{
   "ID": 59,
   "Name": "Dormina",
   "Type": "Ailment",
@@ -846,7 +846,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "90% Sleep. 1 enemy."
-}{
+},{
   "ID": 60,
   "Name": "Lullaby",
   "Type": "Ailment",
@@ -854,7 +854,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "70% Sleep. All enemies."
-}{
+},{
   "ID": 61,
   "Name": "Poisma",
   "Type": "Ailment",
@@ -862,7 +862,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "90% Poison. 1 enemy."
-}{
+},{
   "ID": 62,
   "Name": "Poison Breath",
   "Type": "Ailment",
@@ -870,7 +870,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "70% Poison. All enemies."
-}{
+},{
   "ID": 63,
   "Name": "Shibaboo",
   "Type": "Ailment",
@@ -878,7 +878,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "50% Bind an enemy."
-}{
+},{
   "ID": 64,
   "Name": "Bind Voice",
   "Type": "Ailment",
@@ -886,7 +886,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "50% Bind all enemies."
-}{
+},{
   "ID": 65,
   "Name": "Pulpina",
   "Type": "Ailment",
@@ -894,7 +894,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "90% Panic. 1 enemy."
-}{
+},{
   "ID": 66,
   "Name": "Panic Voice",
   "Type": "Ailment",
@@ -902,7 +902,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "70% Panic. All enemies."
-}{
+},{
   "ID": 67,
   "Name": "Cough",
   "Type": "Ailment",
@@ -910,7 +910,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "90% Sick. 1 enemy."
-}{
+},{
   "ID": 68,
   "Name": "Pandemic Bomb",
   "Type": "Ailment",
@@ -918,7 +918,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "70% Sick. All Enemies."
-}{
+},{
   "ID": 69,
   "Name": "Ancient Curse",
   "Type": "Ailment",
@@ -926,7 +926,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "80% random ailment. All enemies."
-}{
+},{
   "ID": 70,
   "Name": "Shivering Taboo",
   "Type": "Ailment",
@@ -934,7 +934,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "70% random ailment. All enemies."
-}{
+},{
   "ID": 307,
   "Name": "Lamentation",
   "Type": "Ailment",
@@ -942,7 +942,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "45% random ailment. 100% Brand. All enemies."
-}{
+},{
   "ID": 81,
   "Name": "Dia",
   "Type": "Healing",
@@ -950,7 +950,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Heal HP for ally. Low."
-}{
+},{
   "ID": 82,
   "Name": "Diarama",
   "Type": "Healing",
@@ -958,7 +958,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Heal HP for ally. Medium."
-}{
+},{
   "ID": 83,
   "Name": "Diarahan",
   "Type": "Healing",
@@ -966,7 +966,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Heal HP for ally. High."
-}{
+},{
   "ID": 84,
   "Name": "Media",
   "Type": "Healing",
@@ -974,7 +974,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Heal HP for party. Low."
-}{
+},{
   "ID": 85,
   "Name": "Mediarama",
   "Type": "Healing",
@@ -982,7 +982,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Heal HP for party. Medium."
-}{
+},{
   "ID": 86,
   "Name": "Mediarahan",
   "Type": "Healing",
@@ -990,7 +990,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Heal HP for party. High."
-}{
+},{
   "ID": 87,
   "Name": "Salvation",
   "Type": "Healing",
@@ -998,7 +998,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Heal full HP and cure ailments for party."
-}{
+},{
   "ID": 88,
   "Name": "Patra",
   "Type": "Healing",
@@ -1006,7 +1006,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Cure Sleep/Panic/Bind for ally."
-}{
+},{
   "ID": 89,
   "Name": "Me Patra",
   "Type": "Healing",
@@ -1014,7 +1014,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Cure Sleep/Panic/Bind for party."
-}{
+},{
   "ID": 90,
   "Name": "Posumudi",
   "Type": "Healing",
@@ -1022,7 +1022,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Cure Poison/Sick for ally."
-}{
+},{
   "ID": 91,
   "Name": "Nervundi",
   "Type": "Healing",
@@ -1030,7 +1030,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": "???"
-}{
+},{
   "ID": 92,
   "Name": "Amrita",
   "Type": "Healing",
@@ -1038,7 +1038,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Cure all ailments for ally."
-}{
+},{
   "ID": 93,
   "Name": "Recarm",
   "Type": "Healing",
@@ -1046,7 +1046,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Revive ally with little starting HP."
-}{
+},{
   "ID": 94,
   "Name": "Samerecarm",
   "Type": "Healing",
@@ -1054,7 +1054,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Revive ally with full starting HP."
-}{
+},{
   "ID": 95,
   "Name": "Recarmdra",
   "Type": "Healing",
@@ -1062,7 +1062,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "User dies. Revive all allies with full HP."
-}{
+},{
   "ID": 101,
   "Name": "Tarukaja",
   "Type": "Status",
@@ -1070,7 +1070,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Increase Attack. All allies."
-}{
+},{
   "ID": 102,
   "Name": "Sukukaja",
   "Type": "Status",
@@ -1078,7 +1078,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Increase Hit/Evade. All allies."
-}{
+},{
   "ID": 103,
   "Name": "Rakukaja",
   "Type": "Status",
@@ -1086,7 +1086,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Increase Defense. All allies."
-}{
+},{
   "ID": 104,
   "Name": "Luster Candy",
   "Type": "Status",
@@ -1094,7 +1094,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Increase all stats. All allies."
-}{
+},{
   "ID": 105,
   "Name": "Dekaja",
   "Type": "Status",
@@ -1102,7 +1102,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Neutralize -kaja effects. All enemies."
-}{
+},{
   "ID": 106,
   "Name": "Tarunda",
   "Type": "Status",
@@ -1110,7 +1110,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Attack. All enemies."
-}{
+},{
   "ID": 107,
   "Name": "Sukunda",
   "Type": "Status",
@@ -1118,7 +1118,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Hit/Evade. All enemies."
-}{
+},{
   "ID": 108,
   "Name": "Rakunda",
   "Type": "Status",
@@ -1126,7 +1126,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Defense. All enemies."
-}{
+},{
   "ID": 109,
   "Name": "Debilitate",
   "Type": "Status",
@@ -1134,7 +1134,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease all stats. All enemies."
-}{
+},{
   "ID": 110,
   "Name": "Dekunda",
   "Type": "Status",
@@ -1142,7 +1142,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Neutralize -unda effects. All allies."
-}{
+},{
   "ID": 111,
   "Name": "Silent Prayer",
   "Type": "Status",
@@ -1150,7 +1150,7 @@
   "Damage": "Zero",
   "Target": "All",
   "Desc": "Neutralize stat modifications for all."
-}{
+},{
   "ID": 112,
   "Name": "War Cry",
   "Type": "Status",
@@ -1158,7 +1158,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Attack/Defense. All enemies"
-}{
+},{
   "ID": 113,
   "Name": "Fog Breath",
   "Type": "Status",
@@ -1166,7 +1166,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Attack/Hit/Evade. All enemies"
-}{
+},{
   "ID": 114,
   "Name": "Acid Breath",
   "Type": "Status",
@@ -1174,7 +1174,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Defense/Hit/Evade. All enemies"
-}{
+},{
   "ID": 115,
   "Name": "Taunt",
   "Type": "Status",
@@ -1182,7 +1182,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Decrease Defense. Increase Attack. All enemies."
-}{
+},{
   "ID": 117,
   "Name": "Panic Caster",
   "Type": "Status",
@@ -1190,7 +1190,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User Panic. Temporary increase in magic damage."
-}{
+},{
   "ID": 118,
   "Name": "Tetrakarn",
   "Type": "Status",
@@ -1198,7 +1198,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Reflect Phys/Gun damage once."
-}{
+},{
   "ID": 119,
   "Name": "Makarakarn",
   "Type": "Status",
@@ -1206,7 +1206,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Reflect magic damage once."
-}{
+},{
   "ID": 120,
   "Name": "Tetraja",
   "Type": "Status",
@@ -1214,7 +1214,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Nullify Light/Dark magic once."
-}{
+},{
   "ID": 121,
   "Name": "Charge",
   "Type": "Status",
@@ -1222,7 +1222,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's next Phys/Gun damage 250%."
-}{
+},{
   "ID": 122,
   "Name": "Concentrate",
   "Type": "Status",
@@ -1230,7 +1230,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's next magic damage 250%."
-}{
+},{
   "ID": 123,
   "Name": "Blood Ritual",
   "Type": "Status",
@@ -1238,7 +1238,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Increase all stats. Reduce user's HP to 1."
-}{
+},{
   "ID": 138,
   "Name": "Doping",
   "Type": "Status",
@@ -1246,7 +1246,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "All allies' HP 133%"
-}{
+},{
   "ID": 139,
   "Name": "Angelic Order",
   "Type": "Status",
@@ -1254,7 +1254,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Bestows Smirk. 1 ally."
-}{
+},{
   "ID": 254,
   "Name": "Orchard Guardian",
   "Type": "Status",
@@ -1262,7 +1262,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Luster Candy."
-}{
+},{
   "ID": 266,
   "Name": "Kingly One",
   "Type": "Status",
@@ -1270,7 +1270,7 @@
   "Damage": "Zero",
   "Target": "Multi",
   "Desc": "Return 1 demon to player's stock at random."
-}{
+},{
   "ID": 272,
   "Name": "Light Wing (Fire)",
   "Type": "Status",
@@ -1278,7 +1278,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Repel all attacks except Almighty/Fire."
-}{
+},{
   "ID": 273,
   "Name": "Light Wing (Ice)",
   "Type": "Status",
@@ -1286,7 +1286,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Repel all attacks except Almighty/Ice."
-}{
+},{
   "ID": 274,
   "Name": "Light Wing (Elec)",
   "Type": "Status",
@@ -1294,7 +1294,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Repel all attacks except Almighty/Elec."
-}{
+},{
   "ID": 275,
   "Name": "Light Wing (Force)",
   "Type": "Status",
@@ -1302,7 +1302,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Repel all attacks except Almighty/Force."
-}{
+},{
   "ID": 303,
   "Name": "Tetracoerce",
   "Type": "Status",
@@ -1310,7 +1310,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Nullifies enemy Tetrakarn effect."
-}{
+},{
   "ID": 309,
   "Name": "Makaracoerce",
   "Type": "Status",
@@ -1318,7 +1318,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Nullifies enemy Makarakarn effect."
-}{
+},{
   "ID": 310,
   "Name": "Archangel's Law",
   "Type": "Status",
@@ -1326,7 +1326,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Bestows Smirk. 1 ally."
-}{
+},{
   "ID": 318,
   "Name": "I Have Dr. Pepper",
   "Type": "Status",
@@ -1334,7 +1334,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "Maximizes user's stats. Minimizes 1 enemy's stats."
-}{
+},{
   "ID": 325,
   "Name": "Spirit Focus",
   "Type": "Status",
@@ -1342,7 +1342,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's next magic damage 300%."
-}{
+},{
   "ID": 328,
   "Name": "Dark Energy",
   "Type": "Status",
@@ -1350,7 +1350,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's next Phys/Gun damage 300%."
-}{
+},{
   "ID": 124,
   "Name": "Sabbatma",
   "Type": "Support",
@@ -1358,7 +1358,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Summon/return 1 ally to stock."
-}{
+},{
   "ID": 125,
   "Name": "Invitation",
   "Type": "Support",
@@ -1366,7 +1366,7 @@
   "Damage": "Zero",
   "Target": "Ally",
   "Desc": "Summon/return 1 ally to stock and revive if dead."
-}{
+},{
   "ID": 127,
   "Name": "Bad Company",
   "Type": "Support",
@@ -1374,7 +1374,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Summon highest level allies from stock."
-}{
+},{
   "ID": 137,
   "Name": "Trafuri",
   "Type": "Support",
@@ -1382,7 +1382,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Guaranteed escape from random battles."
-}{
+},{
   "ID": 140,
   "Name": "Estoma Sword",
   "Type": "Support",
@@ -1390,7 +1390,7 @@
   "Damage": "Zero",
   "Target": "Unknown",
   "Desc": "Used in maps. Hit enemies to banish them."
-}{
+},{
   "ID": 141,
   "Name": "Call Ally",
   "Type": "Support",
@@ -1398,7 +1398,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Dummy"
-}{
+},{
   "ID": 321,
   "Name": "Guardian's Eye",
   "Type": "Support",
@@ -1406,7 +1406,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Bestows 3 Turn Press icons."
-}{
+},{
   "ID": 151,
   "Name": "Lunge",
   "Type": "Phys",
@@ -1414,7 +1414,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Phys damage. High Crit. Low Acc. 1 enemy."
-}{
+},{
   "ID": 152,
   "Name": "Oni-Kagura",
   "Type": "Phys",
@@ -1422,7 +1422,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Phys damage. High Crit. Low Acc. 1 enemy."
-}{
+},{
   "ID": 153,
   "Name": "Mortal Jihad",
   "Type": "Phys",
@@ -1430,7 +1430,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Phys damage. High Crit. Low Acc. 1 enemy."
-}{
+},{
   "ID": 154,
   "Name": "Critical Wave",
   "Type": "Phys",
@@ -1438,7 +1438,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Phys damage. High Crit. Low Acc. All enemies."
-}{
+},{
   "ID": 155,
   "Name": "Megaton Press",
   "Type": "Phys",
@@ -1446,7 +1446,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Phys damage. High Crit. Low Acc. All enemies."
-}{
+},{
   "ID": 156,
   "Name": "Titanomachia",
   "Type": "Phys",
@@ -1454,7 +1454,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Phys damage. High Crit. Low Acc. All enemies."
-}{
+},{
   "ID": 157,
   "Name": "Gram Slice",
   "Type": "Phys",
@@ -1462,7 +1462,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Phys damage. 1 enemy."
-}{
+},{
   "ID": 158,
   "Name": "Fatal Sword",
   "Type": "Phys",
@@ -1470,7 +1470,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Phys damage. 1 enemy."
-}{
+},{
   "ID": 159,
   "Name": "Berserker God",
   "Type": "Phys",
@@ -1478,7 +1478,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Phys damage. 1 enemy."
-}{
+},{
   "ID": 160,
   "Name": "Heat Wave",
   "Type": "Phys",
@@ -1486,7 +1486,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Phys damage. All enemies."
-}{
+},{
   "ID": 161,
   "Name": "Javelin Rain",
   "Type": "Phys",
@@ -1494,7 +1494,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Phys damage. All enemies."
-}{
+},{
   "ID": 162,
   "Name": "Hades Blast",
   "Type": "Phys",
@@ -1502,7 +1502,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Phys damage. All enemies."
-}{
+},{
   "ID": 163,
   "Name": "Bouncing Claw",
   "Type": "Phys",
@@ -1510,7 +1510,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~3 hits weak Phys damage. 1 enemy."
-}{
+},{
   "ID": 164,
   "Name": "Damascus Claw",
   "Type": "Phys",
@@ -1518,7 +1518,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~3 hits medium Phys damage. 1 enemy."
-}{
+},{
   "ID": 165,
   "Name": "Nihil Claw",
   "Type": "Phys",
@@ -1526,7 +1526,7 @@
   "Damage": "Heavy",
   "Target": "Multi",
   "Desc": "1~3 hits heavy Phys damage. 1 enemy."
-}{
+},{
   "ID": 166,
   "Name": "Scratch Dance",
   "Type": "Phys",
@@ -1534,7 +1534,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~3 hits weak Phys damage. Multiple enemies."
-}{
+},{
   "ID": 167,
   "Name": "Axel Claw",
   "Type": "Phys",
@@ -1542,7 +1542,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~3 hits medium Phys damage. Multiple enemies."
-}{
+},{
   "ID": 168,
   "Name": "Madness Nails",
   "Type": "Phys",
@@ -1550,7 +1550,7 @@
   "Damage": "Heavy",
   "Target": "Multi",
   "Desc": "1~3 hits heavy Phys damage. Multiple enemies."
-}{
+},{
   "ID": 169,
   "Name": "Fang Breaker",
   "Type": "Phys",
@@ -1558,7 +1558,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Phys damage. Tarunda. 1 enemy."
-}{
+},{
   "ID": 170,
   "Name": "Dream Fist",
   "Type": "Phys",
@@ -1566,7 +1566,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Phys damage. 70% Sleep. 1 enemy."
-}{
+},{
   "ID": 171,
   "Name": "Purple Smoke",
   "Type": "Phys",
@@ -1574,7 +1574,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~3 hits medium Phys damage. 70% Panic. Multiple enemies."
-}{
+},{
   "ID": 172,
   "Name": "Carol Hit",
   "Type": "Phys",
@@ -1582,7 +1582,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Phys damage. 50% Lost. 1 enemy."
-}{
+},{
   "ID": 174,
   "Name": "Tetanus Cut",
   "Type": "Phys",
@@ -1590,7 +1590,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Phys damage. 70% Sick. 1 enemy."
-}{
+},{
   "ID": 176,
   "Name": "Blight",
   "Type": "Phys",
@@ -1598,7 +1598,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Phys damage. 60% Poison. All enemies."
-}{
+},{
   "ID": 177,
   "Name": "Occult Flash",
   "Type": "Phys",
@@ -1606,7 +1606,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Phys damage. 50% KO. All enemies."
-}{
+},{
   "ID": 178,
   "Name": "Binding Claw",
   "Type": "Phys",
@@ -1614,7 +1614,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Phys damage. 35% Bind. 1 enemy."
-}{
+},{
   "ID": 179,
   "Name": "Poison Claw",
   "Type": "Phys",
@@ -1622,7 +1622,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Phys damage. 70% Poison. 1 enemy."
-}{
+},{
   "ID": 180,
   "Name": "Iron Judgement",
   "Type": "Phys",
@@ -1630,7 +1630,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Phys damage. 1 enemy."
-}{
+},{
   "ID": 251,
   "Name": "Labrys Strike",
   "Type": "Phys",
@@ -1638,7 +1638,7 @@
   "Damage": "Mega",
   "Target": "Multi",
   "Desc": "2~3 hits mega Phys damage. Multiple enemies."
-}{
+},{
   "ID": 260,
   "Name": "Conquerer Spirit",
   "Type": "Phys",
@@ -1646,7 +1646,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "2 hits heavy Phys damage. All enemies."
-}{
+},{
   "ID": 264,
   "Name": "Impossible Slash",
   "Type": "Phys",
@@ -1654,7 +1654,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "2~3 hits medium Phys damage. All enemies."
-}{
+},{
   "ID": 301,
   "Name": "Kannuki-Throw",
   "Type": "Phys",
@@ -1662,7 +1662,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~15 weak hits Phys damage. Multiple enemies."
-}{
+},{
   "ID": 304,
   "Name": "Stigma Strike",
   "Type": "Phys",
@@ -1670,7 +1670,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Phys damage. 250% Brand. 1 enemy."
-}{
+},{
   "ID": 327,
   "Name": "Deadly Fury",
   "Type": "Phys",
@@ -1678,7 +1678,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Phys damage. 70% Panic. All enemies."
-}{
+},{
   "ID": 181,
   "Name": "Needle Shot",
   "Type": "Gun",
@@ -1686,7 +1686,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Gun damage. 1 enemy."
-}{
+},{
   "ID": 182,
   "Name": "Tathlum Shot",
   "Type": "Gun",
@@ -1694,7 +1694,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Gun damage. 1 enemy."
-}{
+},{
   "ID": 183,
   "Name": "Grand Tack",
   "Type": "Gun",
@@ -1702,7 +1702,7 @@
   "Damage": "Heavy",
   "Target": "Single",
   "Desc": "Heavy Gun damage. 1 enemy."
-}{
+},{
   "ID": 184,
   "Name": "Riot Gun",
   "Type": "Gun",
@@ -1710,7 +1710,7 @@
   "Damage": "Severe",
   "Target": "Single",
   "Desc": "Severe Gun damage. 1 enemy."
-}{
+},{
   "ID": 185,
   "Name": "Rapid Needle",
   "Type": "Gun",
@@ -1718,7 +1718,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Gun damage. All enemies."
-}{
+},{
   "ID": 186,
   "Name": "Blast Arrow",
   "Type": "Gun",
@@ -1726,7 +1726,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "Medium Gun damage. All enemies."
-}{
+},{
   "ID": 187,
   "Name": "Heaven's Bow",
   "Type": "Gun",
@@ -1734,7 +1734,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Gun damage. All enemies."
-}{
+},{
   "ID": 188,
   "Name": "Dream Needle",
   "Type": "Gun",
@@ -1742,7 +1742,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Gun damage. 70% Sleep. 1 enemy."
-}{
+},{
   "ID": 189,
   "Name": "Toxic Sting",
   "Type": "Gun",
@@ -1750,7 +1750,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Gun damage. 70% Poison. 1 enemy."
-}{
+},{
   "ID": 190,
   "Name": "Stun Needle",
   "Type": "Gun",
@@ -1758,7 +1758,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Gun damage. 60% Bind. 1 enemy."
-}{
+},{
   "ID": 191,
   "Name": "Madness Needle",
   "Type": "Gun",
@@ -1766,7 +1766,7 @@
   "Damage": "Weak",
   "Target": "Single",
   "Desc": "Weak Gun damage. 70% Panic. 1 enemy."
-}{
+},{
   "ID": 192,
   "Name": "Stun Needles",
   "Type": "Gun",
@@ -1774,7 +1774,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "1~3 hits medium Gun damage. 60% Bind. Muliple enemies."
-}{
+},{
   "ID": 193,
   "Name": "Myriad Arrows",
   "Type": "Gun",
@@ -1782,7 +1782,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "2~4 hits weak Gun damage. Multiple enemies."
-}{
+},{
   "ID": 252,
   "Name": "Snake's Fangs",
   "Type": "Gun",
@@ -1790,7 +1790,7 @@
   "Damage": "Medium",
   "Target": "Multi",
   "Desc": "2~3 hits medium Gun damage. Multiple enemies."
-}{
+},{
   "ID": 263,
   "Name": "Blank Bullet",
   "Type": "Gun",
@@ -1798,7 +1798,7 @@
   "Damage": "Medium",
   "Target": "Enemies",
   "Desc": "2 hits medium Gun damage. All enemies."
-}{
+},{
   "ID": 316,
   "Name": "Star Tarantella",
   "Type": "Gun",
@@ -1806,7 +1806,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Gun damage. 70% Panic. All enemies."
-}{
+},{
   "ID": 319,
   "Name": "Masenko-Ha",
   "Type": "Gun",
@@ -1814,7 +1814,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Gun damage. ???. All enemies."
-}{
+},{
   "ID": 357,
   "Name": "Dorn Gift",
   "Type": "Gun",
@@ -1822,7 +1822,7 @@
   "Damage": "Medium",
   "Target": "Single",
   "Desc": "Medium Gun damage. 1 enemy."
-}{
+},{
   "ID": 359,
   "Name": "Barrage",
   "Type": "Gun",
@@ -1830,7 +1830,7 @@
   "Damage": "Weak",
   "Target": "Enemies",
   "Desc": "Weak Gun damage. All enemies."
-}{
+},{
   "ID": 401,
   "Name": "Resist Phys",
   "Type": "Auto",
@@ -1838,7 +1838,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 402,
   "Name": "Null Phys",
   "Type": "Auto",
@@ -1846,7 +1846,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 403,
   "Name": "Repel Phys",
   "Type": "Auto",
@@ -1854,7 +1854,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 404,
   "Name": "Drain Phys",
   "Type": "Auto",
@@ -1862,7 +1862,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 405,
   "Name": "Resist Gun",
   "Type": "Auto",
@@ -1870,7 +1870,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 406,
   "Name": "Null Gun",
   "Type": "Auto",
@@ -1878,7 +1878,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 407,
   "Name": "Repel Gun",
   "Type": "Auto",
@@ -1886,7 +1886,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 408,
   "Name": "Drain Gun",
   "Type": "Auto",
@@ -1894,7 +1894,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 409,
   "Name": "Resist Fire",
   "Type": "Auto",
@@ -1902,7 +1902,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 410,
   "Name": "Null Fire",
   "Type": "Auto",
@@ -1910,7 +1910,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 411,
   "Name": "Repel Fire",
   "Type": "Auto",
@@ -1918,7 +1918,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 412,
   "Name": "Drain Fire",
   "Type": "Auto",
@@ -1926,7 +1926,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 413,
   "Name": "Resist Ice",
   "Type": "Auto",
@@ -1934,7 +1934,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 414,
   "Name": "Null Ice",
   "Type": "Auto",
@@ -1942,7 +1942,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 415,
   "Name": "Repel Ice",
   "Type": "Auto",
@@ -1950,7 +1950,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 416,
   "Name": "Drain Ice",
   "Type": "Auto",
@@ -1958,7 +1958,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 417,
   "Name": "Resist Elec",
   "Type": "Auto",
@@ -1966,7 +1966,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 418,
   "Name": "Null Elec",
   "Type": "Auto",
@@ -1974,7 +1974,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 419,
   "Name": "Repel Elec",
   "Type": "Auto",
@@ -1982,7 +1982,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 420,
   "Name": "Drain Elec",
   "Type": "Auto",
@@ -1990,7 +1990,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 421,
   "Name": "Resist Force",
   "Type": "Auto",
@@ -1998,7 +1998,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 422,
   "Name": "Null Force",
   "Type": "Auto",
@@ -2006,7 +2006,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 423,
   "Name": "Repel Force",
   "Type": "Auto",
@@ -2014,7 +2014,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 424,
   "Name": "Drain Force",
   "Type": "Auto",
@@ -2022,7 +2022,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 425,
   "Name": "Resist Dark",
   "Type": "Auto",
@@ -2030,7 +2030,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 426,
   "Name": "Null Dark",
   "Type": "Auto",
@@ -2038,7 +2038,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 427,
   "Name": "Resist Light",
   "Type": "Auto",
@@ -2046,7 +2046,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 428,
   "Name": "Null Light",
   "Type": "Auto",
@@ -2054,7 +2054,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 429,
   "Name": "Null Mind",
   "Type": "Auto",
@@ -2062,7 +2062,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 430,
   "Name": "Null Nerve",
   "Type": "Auto",
@@ -2070,7 +2070,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 431,
   "Name": "Phys Pleroma",
   "Type": "Auto",
@@ -2078,7 +2078,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Phsical attacks 125%."
-}{
+},{
   "ID": 432,
   "Name": "High Phys Pleroma",
   "Type": "Auto",
@@ -2086,7 +2086,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Phsical attacks 150%."
-}{
+},{
   "ID": 433,
   "Name": "Gun Pleroma",
   "Type": "Auto",
@@ -2094,7 +2094,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Gun attacks 125%."
-}{
+},{
   "ID": 434,
   "Name": "High Gun Pleroma",
   "Type": "Auto",
@@ -2102,7 +2102,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Gun attacks 125%."
-}{
+},{
   "ID": 435,
   "Name": "Fire Pleroma",
   "Type": "Auto",
@@ -2110,7 +2110,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Fire attacks 125%."
-}{
+},{
   "ID": 436,
   "Name": "High Fire Pleroma",
   "Type": "Auto",
@@ -2118,7 +2118,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Fire attacks 125%."
-}{
+},{
   "ID": 437,
   "Name": "Ice Pleroma",
   "Type": "Auto",
@@ -2126,7 +2126,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Ice attacks 125%."
-}{
+},{
   "ID": 438,
   "Name": "High Ice Pleroma",
   "Type": "Auto",
@@ -2134,7 +2134,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Ice attacks 125%."
-}{
+},{
   "ID": 439,
   "Name": "Elec Pleroma",
   "Type": "Auto",
@@ -2142,7 +2142,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Elec attacks 125%."
-}{
+},{
   "ID": 440,
   "Name": "High Elec Pleroma",
   "Type": "Auto",
@@ -2150,7 +2150,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Elec attacks 125%."
-}{
+},{
   "ID": 441,
   "Name": "Force Pleroma",
   "Type": "Auto",
@@ -2158,7 +2158,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Force attacks 125%."
-}{
+},{
   "ID": 442,
   "Name": "High Force Pleroma",
   "Type": "Auto",
@@ -2166,7 +2166,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Force attacks 125%."
-}{
+},{
   "ID": 443,
   "Name": "Heal Pleroma",
   "Type": "Auto",
@@ -2174,7 +2174,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Heal effects 125%."
-}{
+},{
   "ID": 444,
   "Name": "High Heal Pleroma",
   "Type": "Auto",
@@ -2182,7 +2182,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Heal effects 125%."
-}{
+},{
   "ID": 445,
   "Name": "Endure",
   "Type": "Auto",
@@ -2190,7 +2190,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Survive a fatal attack with 1 HP."
-}{
+},{
   "ID": 446,
   "Name": "Enduring Soul",
   "Type": "Auto",
@@ -2198,7 +2198,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Survive a fatal attack with full HP."
-}{
+},{
   "ID": 447,
   "Name": "Counter",
   "Type": "Auto",
@@ -2206,7 +2206,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Chance to counter Phys/Gun attacks with weak blow."
-}{
+},{
   "ID": 448,
   "Name": "Retaliate",
   "Type": "Auto",
@@ -2214,7 +2214,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Chance to counter Phys/Gun attacks with heavy blow."
-}{
+},{
   "ID": 449,
   "Name": "Ally Counter",
   "Type": "Auto",
@@ -2222,7 +2222,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Chance to counter Phys/Gun attacks for ally with weak blow."
-}{
+},{
   "ID": 450,
   "Name": "Ally Retaliate",
   "Type": "Auto",
@@ -2230,7 +2230,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Chance to counter Phys/Gun attacks for ally with heavy blow."
-}{
+},{
   "ID": 451,
   "Name": "Life Aid",
   "Type": "Auto",
@@ -2238,7 +2238,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Recover moderate HP after battle."
-}{
+},{
   "ID": 452,
   "Name": "Mana Aid",
   "Type": "Auto",
@@ -2246,7 +2246,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Recover moderate MP after battle."
-}{
+},{
   "ID": 453,
   "Name": "Victory Cry",
   "Type": "Auto",
@@ -2254,7 +2254,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Recover full HP/MP after battle."
-}{
+},{
   "ID": 454,
   "Name": "Spring of Life",
   "Type": "Auto",
@@ -2262,7 +2262,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Gain a little HP while walking."
-}{
+},{
   "ID": 455,
   "Name": "Chakra Walk",
   "Type": "Auto",
@@ -2270,7 +2270,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Gain a little MP while walking."
-}{
+},{
   "ID": 461,
   "Name": "Life Bonus",
   "Type": "Auto",
@@ -2278,7 +2278,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "HP 110%."
-}{
+},{
   "ID": 462,
   "Name": "Life Gain",
   "Type": "Auto",
@@ -2286,7 +2286,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "HP 120%."
-}{
+},{
   "ID": 463,
   "Name": "Life Surge",
   "Type": "Auto",
@@ -2294,7 +2294,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "HP 130%."
-}{
+},{
   "ID": 464,
   "Name": "Mana Bonus",
   "Type": "Auto",
@@ -2302,7 +2302,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "MP 110%."
-}{
+},{
   "ID": 465,
   "Name": "Mana Gain",
   "Type": "Auto",
@@ -2310,7 +2310,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "MP 120%."
-}{
+},{
   "ID": 466,
   "Name": "Mana Surge",
   "Type": "Auto",
@@ -2318,7 +2318,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "MP 130%."
-}{
+},{
   "ID": 471,
   "Name": "Healing Knowhow",
   "Type": "Auto",
@@ -2326,7 +2326,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Can use healing items in battle."
-}{
+},{
   "ID": 475,
   "Name": "Attack Knowhow",
   "Type": "Auto",
@@ -2334,7 +2334,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Can use attack items in battle."
-}{
+},{
   "ID": 477,
   "Name": "Light Life Aid",
   "Type": "Auto",
@@ -2342,7 +2342,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Recover a little HP after battle."
-}{
+},{
   "ID": 478,
   "Name": "Light Mana Aid",
   "Type": "Auto",
@@ -2350,7 +2350,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Recover a little MP after battle."
-}{
+},{
   "ID": 479,
   "Name": "Speed Lesson",
   "Type": "Auto",
@@ -2358,7 +2358,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Raises base AG by 10."
-}{
+},{
   "ID": 480,
   "Name": "Haste Lesson",
   "Type": "Auto",
@@ -2366,7 +2366,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Raises base AG by 20."
-}{
+},{
   "ID": 481,
   "Name": "Awakening",
   "Type": "Auto",
@@ -2374,7 +2374,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Raises all base stats by 5."
-}{
+},{
   "ID": 482,
   "Name": "Hellish Mask",
   "Type": "Auto",
@@ -2382,7 +2382,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Resist all ailments."
-}{
+},{
   "ID": 483,
   "Name": "Hard Worker",
   "Type": "Auto",
@@ -2390,7 +2390,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Slightly increases earned EXP from battle."
-}{
+},{
   "ID": 484,
   "Name": "Workaholic",
   "Type": "Auto",
@@ -2398,7 +2398,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Greatly increases earned EXP from battle."
-}{
+},{
   "ID": 485,
   "Name": "Beastly Reaction",
   "Type": "Auto",
@@ -2406,7 +2406,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Slightly increases Hit/Evade."
-}{
+},{
   "ID": 486,
   "Name": "Draconic Reaction",
   "Type": "Auto",
@@ -2414,7 +2414,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Greatly increases Hit/Evade."
-}{
+},{
   "ID": 487,
   "Name": "Bloody Glee",
   "Type": "Auto",
@@ -2422,7 +2422,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Increases Crit chance."
-}{
+},{
   "ID": 488,
   "Name": "Pierce Physical",
   "Type": "Auto",
@@ -2430,7 +2430,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's Phys attacks pierce enemy Phys Resist/Null/Drain."
-}{
+},{
   "ID": 489,
   "Name": "Pierce Gun",
   "Type": "Auto",
@@ -2438,7 +2438,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's Gun attacks pierce enemy Gun Resist/Null/Drain."
-}{
+},{
   "ID": 490,
   "Name": "Pierce Fire",
   "Type": "Auto",
@@ -2446,7 +2446,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's Fire attacks pierce enemy Fire Resist/Null/Drain."
-}{
+},{
   "ID": 491,
   "Name": "Pierce Ice",
   "Type": "Auto",
@@ -2454,7 +2454,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's Ice attacks pierce enemy Ice Resist/Null/Drain."
-}{
+},{
   "ID": 492,
   "Name": "Pierce Elec",
   "Type": "Auto",
@@ -2462,7 +2462,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's Elec attacks pierce enemy Elec Resist/Null/Drain."
-}{
+},{
   "ID": 493,
   "Name": "Pierce Force",
   "Type": "Auto",
@@ -2470,7 +2470,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "User's Force attacks pierce enemy Force Resist/Null/Drain."
-}{
+},{
   "ID": 78,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2478,7 +2478,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 79,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2486,7 +2486,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 80,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2494,7 +2494,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 96,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2502,7 +2502,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 97,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2510,7 +2510,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 98,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2518,7 +2518,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 99,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2526,7 +2526,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 100,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2534,7 +2534,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 116,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2542,7 +2542,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Does nothing. All enemies."
-}{
+},{
   "ID": 126,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2550,7 +2550,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 128,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2558,7 +2558,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "Does nothing. 1 enemy."
-}{
+},{
   "ID": 129,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2566,7 +2566,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Does nothing. All enemies."
-}{
+},{
   "ID": 130,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2574,7 +2574,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "Does nothing. 1 enemy."
-}{
+},{
   "ID": 131,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2582,7 +2582,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Does nothing. All enemies."
-}{
+},{
   "ID": 132,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2590,7 +2590,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "Does nothing. 1 enemy."
-}{
+},{
   "ID": 133,
   "Name": "Support (1)",
   "Type": "Support",
@@ -2598,7 +2598,7 @@
   "Damage": "Zero",
   "Target": "Enemies",
   "Desc": "Does nothing. All enemies."
-}{
+},{
   "ID": 134,
   "Name": "Status (1)",
   "Type": "Status",
@@ -2606,7 +2606,7 @@
   "Damage": "Zero",
   "Target": "Single",
   "Desc": "Does nothing. 1 enemy."
-}{
+},{
   "ID": 135,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2614,7 +2614,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 136,
   "Name": "Status (1)",
   "Type": "Support",
@@ -2622,7 +2622,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Does nothing. All allies."
-}{
+},{
   "ID": 142,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2630,7 +2630,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 143,
   "Name": "Do Nothing",
   "Type": "Support",
@@ -2638,7 +2638,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Does nothing."
-}{
+},{
   "ID": 144,
   "Name": "No Reaction",
   "Type": "Support",
@@ -2646,7 +2646,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Does nothing."
-}{
+},{
   "ID": 145,
   "Name": "Consult",
   "Type": "Support",
@@ -2654,7 +2654,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Does nothing."
-}{
+},{
   "ID": 146,
   "Name": "Internal Strife",
   "Type": "Support",
@@ -2662,7 +2662,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Does nothing. All allies."
-}{
+},{
   "ID": 147,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2670,7 +2670,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 148,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2678,7 +2678,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 149,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2686,7 +2686,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 150,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2694,7 +2694,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 173,
   "Name": "Phys (1)",
   "Type": "Phys",
@@ -2702,7 +2702,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Phys damage. 1 enemy."
-}{
+},{
   "ID": 175,
   "Name": "Phys (2)",
   "Type": "Phys",
@@ -2710,7 +2710,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Phys damage. 1 enemy."
-}{
+},{
   "ID": 195,
   "Name": "Almighty (1)",
   "Type": "Almighty",
@@ -2718,7 +2718,7 @@
   "Damage": "Mega",
   "Target": "Enemies",
   "Desc": "Mega Almighty damage. Enables Crit. All enemies."
-}{
+},{
   "ID": 196,
   "Name": "Almighty (2)",
   "Type": "Almighty",
@@ -2726,7 +2726,7 @@
   "Damage": "Severe",
   "Target": "Enemies",
   "Desc": "Severe Almighty damage. Enables Crit. All enemies."
-}{
+},{
   "ID": 197,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -2734,7 +2734,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 198,
   "Name": "Gun (1)",
   "Type": "Gun",
@@ -2742,7 +2742,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 199,
   "Name": "Gun (2)",
   "Type": "Gun",
@@ -2750,7 +2750,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 200,
   "Name": "Gun (3)",
   "Type": "Gun",
@@ -2758,7 +2758,7 @@
   "Damage": "Mega",
   "Target": "Enemies",
   "Desc": "Mega Gun damage. All enemies."
-}{
+},{
   "ID": 201,
   "Name": "Lantern Flame",
   "Type": "Dummy",
@@ -2766,7 +2766,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 202,
   "Name": "Gaea Flame",
   "Type": "Dummy",
@@ -2774,7 +2774,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 203,
   "Name": "Titan's Flame",
   "Type": "Dummy",
@@ -2782,7 +2782,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 204,
   "Name": "Beast's Flame",
   "Type": "Dummy",
@@ -2790,7 +2790,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 205,
   "Name": "Feng Huang Fire",
   "Type": "Dummy",
@@ -2798,7 +2798,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 206,
   "Name": "Hee-ho Freeze",
   "Type": "Dummy",
@@ -2806,7 +2806,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 207,
   "Name": "Dragon Glacier",
   "Type": "Dummy",
@@ -2814,7 +2814,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 208,
   "Name": "Wicked Ice",
   "Type": "Dummy",
@@ -2822,7 +2822,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 209,
   "Name": "Drake Breath",
   "Type": "Dummy",
@@ -2830,7 +2830,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 210,
   "Name": "Gui Xian Blizzard",
   "Type": "Dummy",
@@ -2838,7 +2838,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 211,
   "Name": "Jirae Bolt",
   "Type": "Dummy",
@@ -2846,7 +2846,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 212,
   "Name": "Thunderbirds",
   "Type": "Dummy",
@@ -2854,7 +2854,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 213,
   "Name": "Black Forest",
   "Type": "Dummy",
@@ -2862,7 +2862,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 214,
   "Name": "Wilder Bolt",
   "Type": "Dummy",
@@ -2870,7 +2870,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 215,
   "Name": "Baihu Lightning",
   "Type": "Dummy",
@@ -2878,7 +2878,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 216,
   "Name": "Flight Flutter",
   "Type": "Dummy",
@@ -2886,7 +2886,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 217,
   "Name": "Flight Tempest",
   "Type": "Dummy",
@@ -2894,7 +2894,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 218,
   "Name": "Poison Storm",
   "Type": "Dummy",
@@ -2902,7 +2902,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 219,
   "Name": "Tengu Wind",
   "Type": "Dummy",
@@ -2910,7 +2910,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 220,
   "Name": "Long Storm",
   "Type": "Dummy",
@@ -2918,7 +2918,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 221,
   "Name": "Dragon Glare",
   "Type": "Dummy",
@@ -2926,7 +2926,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 222,
   "Name": "Petra Megido",
   "Type": "Dummy",
@@ -2934,7 +2934,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 223,
   "Name": "Death's Lure",
   "Type": "Dummy",
@@ -2942,7 +2942,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 224,
   "Name": "Life Drainage",
   "Type": "Dummy",
@@ -2950,7 +2950,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 225,
   "Name": "Mana Drainage",
   "Type": "Dummy",
@@ -2958,7 +2958,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 226,
   "Name": "Tyrant's Power",
   "Type": "Dummy",
@@ -2966,7 +2966,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 227,
   "Name": "Demonee-ho Smack",
   "Type": "Dummy",
@@ -2974,7 +2974,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 228,
   "Name": "Beast Slice",
   "Type": "Dummy",
@@ -2982,7 +2982,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 229,
   "Name": "Yuletide",
   "Type": "Dummy",
@@ -2990,7 +2990,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 230,
   "Name": "Dragon Rage",
   "Type": "Dummy",
@@ -2998,7 +2998,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 231,
   "Name": "Tooth and Claw",
   "Type": "Dummy",
@@ -3006,7 +3006,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 232,
   "Name": "Truth and Claw",
   "Type": "Dummy",
@@ -3014,7 +3014,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 233,
   "Name": "Rabbit Riser",
   "Type": "Dummy",
@@ -3022,7 +3022,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 234,
   "Name": "Altered Fate",
   "Type": "Dummy",
@@ -3030,7 +3030,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 235,
   "Name": "Chakra",
   "Type": "Dummy",
@@ -3038,7 +3038,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 236,
   "Name": "Arjuna",
   "Type": "Dummy",
@@ -3046,7 +3046,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 237,
   "Name": "Sahasrara",
   "Type": "Dummy",
@@ -3054,7 +3054,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 238,
   "Name": "Clear Mind",
   "Type": "Dummy",
@@ -3062,7 +3062,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 239,
   "Name": "Total Clarity",
   "Type": "Dummy",
@@ -3070,7 +3070,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 240,
   "Name": "Charge Beacon",
   "Type": "Dummy",
@@ -3078,7 +3078,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 241,
   "Name": "Integrity Wave",
   "Type": "Dummy",
@@ -3086,7 +3086,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 242,
   "Name": "Counter Formation",
   "Type": "Dummy",
@@ -3094,7 +3094,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 243,
   "Name": "Hasty Retreat",
   "Type": "Dummy",
@@ -3102,7 +3102,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 244,
   "Name": "Arcana",
   "Type": "Dummy",
@@ -3110,7 +3110,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 245,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3118,7 +3118,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 246,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3126,7 +3126,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 247,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3134,7 +3134,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 248,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3142,7 +3142,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 249,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3150,7 +3150,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 250,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3158,7 +3158,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 255,
   "Name": "Cross Dressing",
   "Type": "Support",
@@ -3166,7 +3166,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": "Its aura has greatly changed..."
-}{
+},{
   "ID": 276,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3174,7 +3174,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 277,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3182,7 +3182,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 278,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3190,7 +3190,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 279,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3198,7 +3198,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 280,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3206,7 +3206,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 281,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3214,7 +3214,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 282,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3222,7 +3222,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 283,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3230,7 +3230,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 284,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3238,7 +3238,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 285,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3246,7 +3246,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 286,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3254,7 +3254,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 287,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3262,7 +3262,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 288,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3270,7 +3270,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 289,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3278,7 +3278,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 290,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3286,7 +3286,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 291,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3294,7 +3294,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 292,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3302,7 +3302,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 293,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3310,7 +3310,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 294,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3318,7 +3318,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 295,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3326,7 +3326,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 296,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3334,7 +3334,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 297,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3342,7 +3342,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 298,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3350,7 +3350,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 299,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3358,7 +3358,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 300,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3366,7 +3366,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 322,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3374,7 +3374,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 329,
   "Name": "Move Slowly",
   "Type": "Dummy",
@@ -3382,7 +3382,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 330,
   "Name": "Aim Carefully",
   "Type": "Support",
@@ -3390,7 +3390,7 @@
   "Damage": "Zero",
   "Target": "Self",
   "Desc": ""
-}{
+},{
   "ID": 331,
   "Name": "Clench Fist",
   "Type": "Dummy",
@@ -3398,7 +3398,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 332,
   "Name": "Prayer",
   "Type": "Dummy",
@@ -3406,7 +3406,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 333,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3414,7 +3414,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 334,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3422,7 +3422,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 335,
   "Name": "Dark (1)",
   "Type": "Dark",
@@ -3430,7 +3430,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Dark magic. Always misses. All enemies."
-}{
+},{
   "ID": 336,
   "Name": "Light (1)",
   "Type": "Light",
@@ -3438,7 +3438,7 @@
   "Damage": "KO",
   "Target": "Enemies",
   "Desc": "Light magic. Always misses. All enemies."
-}{
+},{
   "ID": 337,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3446,7 +3446,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 338,
   "Name": "Almighty (3)",
   "Type": "Almighty",
@@ -3454,7 +3454,7 @@
   "Damage": "Heavy",
   "Target": "Enemies",
   "Desc": "Heavy Almighty damage. All enemies."
-}{
+},{
   "ID": 339,
   "Name": "Status (1)",
   "Type": "Status",
@@ -3462,7 +3462,7 @@
   "Damage": "Zero",
   "Target": "Allies",
   "Desc": "Luster Candy. All allies."
-}{
+},{
   "ID": 340,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3470,7 +3470,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 341,
   "Name": "Almighty (4)",
   "Type": "Almighty",
@@ -3478,7 +3478,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Almighty damage. Enables Crit. 1 enemy."
-}{
+},{
   "ID": 342,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3486,7 +3486,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 343,
   "Name": "Gun (4)",
   "Type": "Gun",
@@ -3494,7 +3494,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 344,
   "Name": "Gun (5)",
   "Type": "Gun",
@@ -3502,7 +3502,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 345,
   "Name": "Gun (6)",
   "Type": "Gun",
@@ -3510,7 +3510,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 346,
   "Name": "Gun (7)",
   "Type": "Gun",
@@ -3518,7 +3518,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 347,
   "Name": "Gun (8)",
   "Type": "Gun",
@@ -3526,7 +3526,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 348,
   "Name": "Gun (9)",
   "Type": "Gun",
@@ -3534,7 +3534,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 349,
   "Name": "Gun (10)",
   "Type": "Gun",
@@ -3542,7 +3542,7 @@
   "Damage": "Mega",
   "Target": "Single",
   "Desc": "Mega Gun damage. 1 enemy."
-}{
+},{
   "ID": 350,
   "Name": "Gun (5)",
   "Type": "Gun",
@@ -3550,7 +3550,7 @@
   "Damage": "Weak",
   "Target": "Multi",
   "Desc": "1~4 hits weak Gun damage. Multiple enemies."
-}{
+},{
   "ID": 351,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3558,7 +3558,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 352,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3566,7 +3566,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 353,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3574,7 +3574,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 354,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3582,7 +3582,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 355,
   "Name": "Load Bullets",
   "Type": "Dummy",
@@ -3590,7 +3590,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 356,
   "Name": "Myriad Shots",
   "Type": "Dummy",
@@ -3598,7 +3598,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 358,
   "Name": "Fear",
   "Type": "Dummy",
@@ -3606,7 +3606,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 360,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3614,7 +3614,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 361,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3622,7 +3622,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 362,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3630,7 +3630,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 363,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3638,7 +3638,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 364,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3646,7 +3646,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 365,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3654,7 +3654,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 366,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3662,7 +3662,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 367,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3670,7 +3670,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 368,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3678,7 +3678,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 369,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3686,7 +3686,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 370,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3694,7 +3694,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 371,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3702,7 +3702,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 372,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3710,7 +3710,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 373,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3718,7 +3718,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 374,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3726,7 +3726,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 375,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3734,7 +3734,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 376,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3742,7 +3742,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 377,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3750,7 +3750,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 378,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3758,7 +3758,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 379,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3766,7 +3766,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 380,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3774,7 +3774,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 381,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3782,7 +3782,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 382,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3790,7 +3790,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 383,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3798,7 +3798,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 384,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3806,7 +3806,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 385,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3814,7 +3814,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 386,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3822,7 +3822,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 387,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3830,7 +3830,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 400,
   "Name": "Extra Shot",
   "Type": "Dummy",
@@ -3838,7 +3838,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 456,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3846,7 +3846,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 457,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3854,7 +3854,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 458,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3862,7 +3862,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 459,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3870,7 +3870,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 460,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3878,7 +3878,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 467,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3886,7 +3886,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 468,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3894,7 +3894,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 469,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3902,7 +3902,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 470,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3910,7 +3910,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 472,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3918,7 +3918,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 473,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3926,7 +3926,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 474,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3934,7 +3934,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 476,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3942,7 +3942,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 494,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3950,7 +3950,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 495,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3958,7 +3958,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 496,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3966,7 +3966,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 497,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3974,7 +3974,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 498,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3982,7 +3982,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 499,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3990,7 +3990,7 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}{
+},{
   "ID": 500,
   "Name": "Dummy",
   "Type": "Dummy",
@@ -3998,4 +3998,4 @@
   "Damage": "Unknown",
   "Target": "Unknown",
   "Desc": ""
-}
+}]

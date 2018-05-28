@@ -1,352 +1,215 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
+using Microsoft.VisualBasic.FileIO;
 
-using Skills;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+using SMTIV.Skills;
+using SMTIV.Items;
 
 namespace SMTIV
 {
-
-
     public partial class Form1 : Form
-    {
-
-        
+    {        
         byte[] data;
         string filename;
 
-
-        #region enums
-        Skill_Type[] types = new Skill_Type[]
-        {
-            Skill_Type.Fire,
-            Skill_Type.Ice,
-            Skill_Type.Elec,
-            Skill_Type.Force,
-            Skill_Type.Almighty,
-            Skill_Type.Dark,
-            Skill_Type.Light,
-            Skill_Type.Ailment,
-            Skill_Type.Healing,
-            Skill_Type.Status,
-            Skill_Type.Support,
-            Skill_Type.Phys,
-            Skill_Type.Gun,
-            Skill_Type.Auto,
-            Skill_Type.Dummy,
-        };
-
-        Damage[] damage = new Damage[]
-        {
-            Damage.Weak,
-            Damage.Medium,
-            Damage.Heavy,
-            Damage.Severe,
-            Damage.Fixed,
-            Damage.KO,
-            Damage.Zero,
-            Damage.Unknown,
-            Damage.Mega,
-        };
-
-        Target[] target = new Target[]
-        {
-            Target.Single,
-            Target.Multi,
-            Target.Enemies,
-            Target.Self,
-            Target.Ally,
-            Target.Allies,
-            Target.Unknown,
-        };
-        #endregion enums
-
-
-
-        public Skill_Type[] GetTypes { get { return types; } }
-        public Damage[] GetDamage { get { return damage; } }
-        public Target[] GetTarget { get { return target; } }
-
-
-        public FlowLayoutPanel FlowPanel { get { return flowLayoutPanel1; } }
-
-
-        static AddFilterButton addfilterbutton = new AddFilterButton();
-
-
+        Skill[] skills;
+        Weapon[] swords;
+        Accessory[] accessories;
 
 
         public Form1()
         {
-
             InitializeComponent();
-
 
             saveToolStripMenuItem.Enabled = false;
 
+            skills = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
+                Application.StartupPath + "/skills.json"));
 
-            SkillCollection.SkillDeserializeJson();
+            swords = JsonConvert.DeserializeObject<Weapon[]>(File.ReadAllText(
+                Application.StartupPath + "/swords.json"));
 
+            accessories = JsonConvert.DeserializeObject<Accessory[]>(File.ReadAllText(
+                Application.StartupPath + "/accessories.json"));
+            
+            tabControl2.Selected += TabControl2_Selected;
+            //using (var parser = new TextFieldParser(
+            //    File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Swords.csv")))
+            //{
+            //    parser.Delimiters = new string[1] { "," };
+            //    parser.ReadFields();
+            //    swords = new Weapon[120];
+            //    int id = 0;
 
-            comboBox1.DataSource = SkillCollection.GetNames;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            comboBox1.SelectedIndex = 0;
-            comboBox1_SelectedIndexChanged(this, null);
+            //    while (!parser.EndOfData)
+            //    {
+            //        string[] line = parser.ReadFields();
 
+            //        Weapon sword = new Weapon();
+            //        sword.Name = line[0];
+            //        sword.Power = int.Parse(line[1]);
+            //        sword.HitsMin = int.Parse(line[2]);
+            //        sword.HitsMax = 1;
+            //        int.TryParse(line[3], out sword.HitsMax);
+            //        sword.IsInaccurate = !string.IsNullOrEmpty(line[4]);
+            //        sword.Targets = parseWeaponTarget(line[5][0]);
+            //        sword.Effect = StatusAilment.None;
+            //        Enum.TryParse(line[6], out sword.Effect);
+            //        sword.Wep = parseWeaponType(line[7]);
 
-            AddFilterButton.ParentForm = this;
-            ComboFilter.ParentForm = this;
-            ComboTypeFilter.ParentForm = this;
-            NumericCostFilter.form1 = this;
-            ComboDamageFilter.ParentForm = this;
-            ComboTargetFilter.ParentForm = this;
+            //        swords[id] = sword;
+            //        id++;
+            //    }
 
+            //    parser.Close();
+            //}
 
-            flowLayoutPanel1.Controls.Add(addfilterbutton);
-
-
+            //File.WriteAllText(Application.StartupPath + "/swords.json",
+            //    JsonConvert.SerializeObject(swords));
         }
 
-
-
-
-        private List<string> filters = new List<string>(4)
+        private void TabControl2_Selected(object sender, TabControlEventArgs e)
         {
-            "Damage",
-            "MP Cost",
-            "Targets",
-            "Type",
-        };
+        }
 
-        public string[] Filters { get { return filters.ToArray(); } }
-
-        private List<object> specifiedfilters = new List<object>(4);
-
-
-        public void CreateFilterButton(Control other)
+        private Skills.Target parseWeaponTarget(char input)
         {
-
-            flowLayoutPanel1.Controls.Remove(other);
-
-
-            if (filters.Count > 1)
+            switch (input)
             {
-                flowLayoutPanel1.Controls.Add(new ComboFilter());
+                case 'm':
+                    return Target.Multi;
+                case 'a':
+                    return Target.All;
+                default:
+                    return Target.Single;
             }
-            else
+        }
+
+        private Dictionary<string, string> parseAccessoryStats(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return null;
+
+            var temp = new Dictionary<string, string>();
+
+            var elements = input.Split(' ', '/');
+
+            List<string> list = new List<string>();
+            foreach (var e in elements)
             {
-                switch (filters[0])
+                if (e.Contains(':'))
                 {
-                    case "Type":
-                        flowLayoutPanel1.Controls.Add(new ComboTypeFilter());
-                        break;
-                    case "MP Cost":
-                        flowLayoutPanel1.Controls.Add(new NumericCostFilter());
-                        break;
-                    case "Damage":
-                        flowLayoutPanel1.Controls.Add(new ComboDamageFilter());
-                        break;
-                    case "Targets":
-                        flowLayoutPanel1.Controls.Add(new ComboTargetFilter());
-                        break;
-                    default:
-                        return;
+                    var ea = e.Split(':');
+                    foreach (var s in list)
+                    {
+                        temp.Add(s, ea[1]);
+                    }
+                    temp.Add(ea[0], ea[1]);
+
+                    list.Clear();
+                    continue;
                 }
+                list.Add(e);
             }
 
+            return temp;
         }
 
-
-        public void AddFilter(object args)
+        private WeaponType parseWeaponType(string input)
         {
-
-
-            if (args.GetType() == typeof(Skill_Type))
+            switch (input)
             {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(Skill_Type));
-                specifiedfilters.Add((Skill_Type)args);
+                case "am":
+                    return WeaponType.Ammo;
+                case "bl":
+                    return WeaponType.Blunt;
+                case "da":
+                    return WeaponType.Dagger;
+                case "gu":
+                    return WeaponType.Firearm;
+                case "sp":
+                    return WeaponType.Spear;
+                default:
+                    return WeaponType.Sword;
             }
-            else if (args.GetType() == typeof(int))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(int));
-                specifiedfilters.Add((int)args);
-            }
-            else if (args.GetType() == typeof(Damage))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(Damage));
-                specifiedfilters.Add((Damage)args);
-            }
-            else if (args.GetType() == typeof(Target))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(Target));
-                specifiedfilters.Add((Target)args);
-            }
-            else return;
-
-            SkillCollection.OrganizeSkillList(specifiedfilters.ToArray());
-            comboBox1.DataSource = SkillCollection.GetNames;
         }
-
-
-        public void RemoveFilter(object args, Control other)
-        {
-
-            flowLayoutPanel1.Controls.Remove(other);
-            flowLayoutPanel1.Refresh();
-
-
-            if (args.GetType() == typeof(Skill_Type))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(Skill_Type));
-                filters.Add("Type");
-            }
-            else if (args.GetType() == typeof(int))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(int));
-                filters.Add("MP Cost");
-            }
-            else if (args.GetType() == typeof(Damage))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(Damage));
-                filters.Add("Damage");
-            }
-            else if (args.GetType() == typeof(Target))
-            {
-                specifiedfilters.RemoveAll(a => a.GetType() == typeof(Target));
-                filters.Add("Targets");
-            }
-
-
-            if (!flowLayoutPanel1.Controls.Contains(addfilterbutton))
-            {
-                flowLayoutPanel1.Controls.Add(addfilterbutton);
-            }
-
-            filters.Sort();
-
-
-            SkillCollection.OrganizeSkillList(specifiedfilters.ToArray());
-            comboBox1.DataSource = SkillCollection.GetNames;
-        }
-
-
-        public void OnTypeFilterAdded(ComboFilter filter)
-        {
-
-            flowLayoutPanel1.Controls.Add(new ComboTypeFilter());
-            if (filters.Count > 1)
-            {
-                flowLayoutPanel1.Controls.Add(addfilterbutton);
-            }
-
-            flowLayoutPanel1.Controls.Remove(filter);
-            filters.Remove("Type");
-        }
-
-
-        public void OnCostFilterAdded(ComboFilter filter)
-        {
-
-            flowLayoutPanel1.Controls.Add(new NumericCostFilter());
-            if (filters.Count > 1)
-            {
-                flowLayoutPanel1.Controls.Add(addfilterbutton);
-            }
-
-            flowLayoutPanel1.Controls.Remove(filter);
-            filters.Remove("MP Cost");
-        }
-
-
-        public void OnDamageFilterAdded(ComboFilter filter)
-        {
-
-            flowLayoutPanel1.Controls.Add(new ComboDamageFilter());
-            if (filters.Count > 1)
-            {
-                flowLayoutPanel1.Controls.Add(addfilterbutton);
-            }
-
-            flowLayoutPanel1.Controls.Remove(filter);
-            filters.Remove("Damage");
-        }
-
-
-        public void OnTargetFilterAdded(ComboFilter filter)
-        {
-
-            flowLayoutPanel1.Controls.Add(new ComboTargetFilter());
-
-            if (filters.Count > 1)
-            {
-                flowLayoutPanel1.Controls.Add(addfilterbutton);
-            }
-
-            flowLayoutPanel1.Controls.Remove(filter);
-            filters.Remove("Targets");
-        }
-
-
-        private void CreateSurpriseSkill()
-        {
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.Add(addfilterbutton);
-
-
-            filters.Clear();
-            filters.Add("Damage");
-            filters.Add("MP Cost");
-            filters.Add("Targets");
-            filters.Add("Type");
-
-            specifiedfilters.Clear();
-
-
-            comboBox1.SelectedItem = (string)SkillCollection.GetSurpriseSkill().Name;
-        }
-
-
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            boxtype.Text = SkillCollection.GetSkillInfo((string)comboBox1.SelectedItem, "Type");
-            boxmp.Text = SkillCollection.GetSkillInfo((string)comboBox1.SelectedItem, "MP");
-            boxdamage.Text = SkillCollection.GetSkillInfo((string)comboBox1.SelectedItem, "Damage");
-            boxtargets.Text = SkillCollection.GetSkillInfo((string)comboBox1.SelectedItem, "Targets");
-            boxdesc.Text = SkillCollection.GetSkillInfo((string)comboBox1.SelectedItem, "Desc");
-        }
-
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.DefaultExt = "SAV";
-            dialog.Filter = "SMT4 SDF Save data (*.SAV)|*.SAV|All files (*.*)|*.*";
-            dialog.Title = "Open a SMT4 save";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            using (var dialog = new OpenFileDialog())
             {
-
-                data = File.ReadAllBytes(dialog.FileName);
-                filename = dialog.FileName;
-
-                saveToolStripMenuItem.Enabled = true;
+                dialog.DefaultExt = "SAV";
+                dialog.Filter = "SMT4 SDF Save data (*.SAV)|*.SAV|All files (*.*)|*.*";
+                dialog.Title = "Open a SMT4 save";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    data = File.ReadAllBytes(dialog.FileName);
+                    filename = dialog.FileName;
+                }
             }
 
+            if (!File.Exists(filename)) return;
+            
+            foreach (TabPage tp in tabControl2.TabPages) { tp.SuspendLayout(); tp.Controls.Clear(); tp.ResumeLayout(); }
+            
+            saveToolStripMenuItem.Enabled = true;
+
+            TableLayoutPanel table = new TableLayoutPanel();
+            table.Anchor = AnchorStyles.Left;
+            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            table.Width = 320;
+            table.Height = 480;
+            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66f));
+            table.AutoScroll = true;
+            table.HorizontalScroll.Visible = false;
+            table.MouseEnter += mouseFocus;
+            tabPage7.Controls.Add(table);
+
+            table.SuspendLayout();
+
+            int row = 0;
+            for (int i = 0; i < swords.Length; i++)
+            {
+                swords[i].Amount = BitConverter.ToInt16(data, 0x9a5c + i * 2);
+                if (swords[i].Amount == 0) continue;
+
+                LinkLabel lb = new LinkLabel();
+                lb.DataBindings.Add("Text", swords[i], "Name");
+                table.SetColumn(lb, 0);
+                table.SetRow(lb, row);
+                table.Controls.Add(lb);
+
+                NumericUpDown nu = new NumericUpDown();
+                nu.Maximum = 999;
+                nu.DataBindings.Add("Value", swords[i], "Amount");
+                nu.BorderStyle = BorderStyle.None;
+                nu.Controls[0].Enabled = nu.Controls[0].Visible = false;
+                table.SetColumn(nu, 1);
+                table.SetRow(nu, row);
+                table.Controls.Add(nu);
+
+                row++;
+            }
+
+            table.ResumeLayout();
         }
 
+        private void mouseFocus(object sender, EventArgs e)
+        {
+            (sender as Control).Focus();
+        }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             if (data != null)
             {
                 File.WriteAllBytes(filename, data);
@@ -357,499 +220,6 @@ namespace SMTIV
                     DateTime.Now.Second + "s " +
                     DateTime.Now.Millisecond + "ms";
             }
-
         }
-
-                
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (specifiedfilters.Count == 0)
-            {
-                this.CreateSurpriseSkill();
-            }
-            else if (MessageBox.Show("Clear filters and generate random skill?",
-                    "Message",
-                    MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                this.CreateSurpriseSkill();
-            }
-        }
-
-        
-        private void saveitems_Click(object sender, EventArgs e)
-        {
-
-
-            openToolStripMenuItem_Click(this, e);
-
-
-            int offset = 0x0;
-
-
-            if (plotcheckbox.Checked)
-            {
-
-                offset = 0x98f8;
-                for (short i = 0; i < 47; i++)
-                {
-                    data[offset] = 0x01;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (valuablecheckbox.Checked)
-            {
-
-                offset = 0x9958;
-                for (short i = 0; i < 70; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (valuablecheckbox.Checked)
-            {
-
-                offset = 0x9958;
-                for (short i = 0; i < 70; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (expendablecheckbox.Checked)
-            {
-
-                offset = 0x99e4;
-                for (short i = 0; i < 60; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (swordscheckbox.Checked)
-            {
-
-                offset = 0x9a5c;
-                for (short i = 0; i < 120; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (gunscheckbox.Checked)
-            {
-
-                offset = 0x9b4c;
-                for (short i = 0; i < 120; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (helmcheckbox.Checked)
-            {
-
-
-                offset = 0x9c3c;
-
-                data[offset] = 0x00;
-                data[offset + 1] = 0x00;
-
-                offset += 2;
-                for (short i = 1; i < 99; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-
-                data[offset] = 0x00;
-                data[offset + 1] = 0x00;
-
-                offset += 2;
-                for (short i = 1; i < 21; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (uppercheckbox.Checked)
-            {
-
-                offset = 0x9d2c;
-                for (short i = 0; i < 120; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (lowercheckbox.Checked)
-            {
-
-                offset = 0x9e1c;
-                for (short i = 0; i < 120; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (acccheckbox.Checked)
-            {
-
-                offset = 0x9f0c;
-                for (short i = 0; i < 120; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (bulletscheckbox.Checked)
-            {
-
-                offset = 0x9ffc;
-                for (short i = 0; i < 50; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-            if (relicscheckbox.Checked)
-            {
-
-                offset = 0xa060;
-                for (short i = 0; i < 1000; i++)
-                {
-                    data[offset] = 0x63;
-                    data[offset + 1] = 0x00;
-
-                    offset += 2;
-                }
-            }
-
-
-
-            File.WriteAllBytes(filename, data);
-
-
-        }
-
-
-    }
-
-
-    public class AddFilterButton : System.Windows.Forms.Button
-    {
-
-
-        public static Form1 ParentForm;
-
-
-
-        public AddFilterButton()
-        {
-            this.Location = new System.Drawing.Point(3, 3);
-            this.Name = "button";
-            this.Size = new System.Drawing.Size(75, 23);
-            this.TabIndex = 0; ;
-            this.Text = "Add Filter";
-            this.UseVisualStyleBackColor = true;
-            this.MouseClick += OnAddFilterButtonClicked;
-        }
-
-
-        private void OnAddFilterButtonClicked(object sender, EventArgs e)
-        {
-            ParentForm.CreateFilterButton(this);
-        }
-
-
-    }
-
-    public class RemoveFilterButton : System.Windows.Forms.Button
-    {
-
-
-        public RemoveFilterButton()
-        {
-            this.Name = "button";
-            this.Size = new System.Drawing.Size(21, 21);
-            this.TabIndex = 0;
-            this.Text = "X";
-            this.UseVisualStyleBackColor = true;
-        }
-
-    }
-
-    public class ComboFilter : System.Windows.Forms.ComboBox
-    {
-
-        public static Form1 ParentForm;
-
-
-
-        public ComboFilter(params object[] args)
-        {
-            this.FormattingEnabled = true;
-            this.DataSource = ParentForm.Filters;
-            this.Name = "comboBox";
-            this.Size = new System.Drawing.Size(80, 21);
-            this.TabIndex = 0;
-            this.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            if (this.Items.Count != 0) this.SelectedIndex = 0;
-            this.SelectedIndexChanged += ComboFilter_SelectedIndexChanged;
-
-        }
-
-
-        private void ComboFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            if (Items.Count < 2) return;
-
-
-            switch ((string)SelectedItem)
-            {
-                case "Type":
-                    ParentForm.OnTypeFilterAdded(this);
-                    break;
-                case "MP Cost":
-                    ParentForm.OnCostFilterAdded(this);
-                    break;
-                case "Damage":
-                    ParentForm.OnDamageFilterAdded(this);
-                    break;
-                case "Targets":
-                    ParentForm.OnTargetFilterAdded(this);
-                    break;
-                default:
-                    return;
-            }
-
-        }
-
-    }
-
-    public class ComboTypeFilter : System.Windows.Forms.ComboBox
-    {
-
-        public static Form1 ParentForm;
-
-        static RemoveFilterButton button = new RemoveFilterButton();
-
-
-
-
-        public ComboTypeFilter()
-        {
-            this.FormattingEnabled = true;
-            this.DataSource = ParentForm.GetTypes;
-            this.Location = new System.Drawing.Point(3, 3);
-            this.Name = "comboBox";
-            this.Size = new System.Drawing.Size(80, 21);
-            this.TabIndex = 0;
-            this.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            if (this.Items.Count != 0) this.SelectedIndex = 0;
-            this.SelectedIndexChanged += ComboTypeFilter_SelectedIndexChanged;
-
-
-
-            button.MouseClick += OnFilterRemoved;
-            ParentForm.FlowPanel.Controls.Add(button);
-
-
-            ParentForm.AddFilter(Skill_Type.Fire);
-        }
-
-        protected virtual void ComboTypeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ParentForm.AddFilter(SelectedItem);
-        }
-
-        public void OnFilterRemoved(object sender, EventArgs e)
-        {
-            ParentForm.RemoveFilter(SelectedItem, this);
-            ParentForm.FlowPanel.Controls.Remove(button);
-        }
-
-    }
-
-    public class NumericCostFilter : System.Windows.Forms.NumericUpDown
-    {
-
-        public static Form1 form1;
-
-        static RemoveFilterButton button = new RemoveFilterButton();
-
-
-
-        public NumericCostFilter()
-        {
-            this.Maximum = new decimal(new int[] {
-            251,
-            0,
-            0,
-            0});
-            this.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.Name = "numericUpDown";
-            this.Size = new System.Drawing.Size(64, 20);
-            this.TabIndex = 1;
-            this.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Value = 251;
-            this.ValueChanged += OnValueChanged;
-
-
-            button.MouseClick += OnFilterRemoved;
-            form1.FlowPanel.Controls.Add(button);
-
-
-
-            form1.AddFilter(251);
-        }
-
-        protected virtual void OnValueChanged(object sender, EventArgs e)
-        {
-            form1.AddFilter((int)this.Value);
-        }
-
-        public void OnFilterRemoved(object sender, EventArgs e)
-        {
-            form1.RemoveFilter(0, this);
-            form1.FlowPanel.Controls.Remove(button);
-        }
-
-    }
-
-    public class ComboDamageFilter : System.Windows.Forms.ComboBox
-    {
-
-        public static Form1 ParentForm;
-
-        static RemoveFilterButton button = new RemoveFilterButton();
-
-
-
-
-        public ComboDamageFilter()
-        {
-            this.FormattingEnabled = true;
-            this.DataSource = ParentForm.GetDamage;
-            this.Location = new System.Drawing.Point(3, 3);
-            this.Name = "comboBox";
-            this.Size = new System.Drawing.Size(80, 21);
-            this.TabIndex = 0;
-            this.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            this.SelectedIndexChanged += ComboTypeFilter_SelectedIndexChanged;
-
-
-            button.MouseClick += OnFilterRemoved;
-            ParentForm.FlowPanel.Controls.Add(button);
-
-
-            ParentForm.AddFilter(Damage.Weak);
-        }
-
-        protected virtual void ComboTypeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ParentForm.AddFilter(SelectedItem);
-        }
-
-        public void OnFilterRemoved(object sender, EventArgs e)
-        {
-            ParentForm.RemoveFilter(SelectedItem, this);
-            ParentForm.FlowPanel.Controls.Remove(button);
-        }
-
-    }
-
-    public class ComboTargetFilter : System.Windows.Forms.ComboBox
-    {
-
-        public static Form1 ParentForm;
-
-        static RemoveFilterButton button = new RemoveFilterButton();
-
-
-
-
-        public ComboTargetFilter()
-        {
-            this.FormattingEnabled = true;
-            this.DataSource = ParentForm.GetTarget;
-            this.Location = new System.Drawing.Point(3, 3);
-            this.Name = "comboBox";
-            this.Size = new System.Drawing.Size(80, 21);
-            this.TabIndex = 0;
-            this.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            if (this.Items.Count != 0) this.SelectedIndex = 0;
-            this.SelectedIndexChanged += ComboTypeFilter_SelectedIndexChanged;
-
-
-
-            button.MouseClick += OnFilterRemoved;
-            ParentForm.FlowPanel.Controls.Add(button);
-
-
-            ParentForm.AddFilter(Target.Single);
-        }
-
-        protected virtual void ComboTypeFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ParentForm.AddFilter(SelectedItem);
-        }
-
-        public void OnFilterRemoved(object sender, EventArgs e)
-        {
-            ParentForm.RemoveFilter(SelectedItem, this);
-            ParentForm.FlowPanel.Controls.Remove(button);
-        }
-
     }
 }

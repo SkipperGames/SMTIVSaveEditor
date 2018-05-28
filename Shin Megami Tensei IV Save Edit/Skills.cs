@@ -1,127 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using Newtonsoft.Json;
 
-
-
-namespace Skills
+namespace SMTIV.Skills
 {
-
-    public enum Skill_Type : byte
+    public enum Skill_Type
     {
-        Fire        = 0,
-        Ice         = 1,
-        Elec        = 2,
-        Force       = 3,
-        Almighty    = 4,
-        Dark        = 5,
-        Light       = 6,
-        Ailment     = 7,
-        Healing     = 8,
-        Status      = 9,
-        Support     = 10,
-        Phys        = 11,
-        Gun         = 12,
-        Auto        = 13,
-        Dummy       = 14,
+        Fire,
+        Ice,
+        Elec,
+        Force,
+        Almighty,
+        Dark,
+        Light,
+        Ailment,
+        Healing,
+        Status,
+        Support,
+        Phys,
+        Gun,
+        Auto,
+        Dummy
     }
 
-    public enum Damage : byte
+    public enum Damage
     {
-        Zero        = 0,
-        Weak        = 1,
-        Medium      = 2,
-        Heavy       = 3,
-        Severe      = 4,
-        KO          = 5,
-        Fixed       = 6,
-        Unknown     = 7,
-        Mega        = 8,
+        Zero,
+        Weak,
+        Medium,
+        Heavy,
+        Severe,
+        KO,
+        Fixed,
+        Unknown,
+        Mega
     }
 
-    public enum Target : byte
+    public enum Target
     {
-        Single  = 0,
-        Multi   = 1,
-        Enemies = 2,
-        Self    = 3,
-        Ally    = 4,
-        Allies  = 5,
-        All     = 6,
-        Unknown = 7,
+        Single,
+        Multi,
+        Enemies,
+        Self,
+        Ally,
+        Allies,
+        All,
+        Unknown
     }
 
     public class Skill
     {
-        public short    ID          { get; set; }
-        public string   Name        { get; set; }
-        public string   Type        { get; set; }
-        public int      Cost        { get; set; }
-        public string   Damage      { get; set; }
-        public string   Target      { get; set; }
-        public string   Desc        { get; set; }
-
-
-        public Skill()
-        {
-            ID = 0;
-            Name = "";
-            Type = "";
-            Cost = 0;
-            Damage = "";
-            Target = "";
-            Desc = "";
-        }
-
-        public Skill(short id, string name, byte type, int cost, byte damage, byte target)
-        {
-            this.ID     = id;
-            this.Name   = name;
-            this.Cost   = cost;
-
-            try
-            {
-                this.Type   = Enum.Parse(typeof(Skill_Type),    type.ToString()).ToString();
-                this.Damage = Enum.Parse(typeof(Damage),        damage.ToString()).ToString();
-                this.Target = Enum.Parse(typeof(Target),        target.ToString()).ToString();
-            }
-            catch
-            {
-                this.Type   = "Skill Type Exception";
-                this.Damage = "Skill Damage Exception";
-                this.Target = "Skill Target Exception";
-            }
-
-            this.Desc = "";
-        }
-
-        public Skill(short id, string name, byte type, int cost, byte damage, byte target, string desc)
-        {
-            this.ID = id;
-            this.Name = name;
-            this.Cost = cost;
-
-            try
-            {
-                this.Type = Enum.Parse(typeof(Skill_Type), type.ToString()).ToString();
-                this.Damage = Enum.Parse(typeof(Damage), damage.ToString()).ToString();
-                this.Target = Enum.Parse(typeof(Target), target.ToString()).ToString();
-            }
-            catch
-            {
-                this.Type = "Skill Type Exception";
-                this.Damage = "Skill Damage Exception";
-                this.Target = "Skill Target Exception";
-            }
-
-            this.Desc = desc;
-        }
+        public short ID { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public int Cost { get; set; }
+        public string Damage { get; set; }
+        public string Target { get; set; }
+        public string Desc { get; set; }
     }
-
+}
+    /*
     public static class SkillCollection
     {
 
@@ -664,7 +602,6 @@ namespace Skills
             new Skill(  0x1f4,  "Dummy",                14,     1,      7,      7),
 
         };
-        */
         #endregion skill list
 
 
@@ -832,4 +769,4 @@ namespace Skills
 
 
     }
-}
+}*/
