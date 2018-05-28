@@ -23,8 +23,12 @@ namespace SMTIV
         string filename;
 
         Skill[] skills;
+        Dictionary<int, Item> valuables;
+        Dictionary<int, Item> expendables;
         Weapon[] swords;
         Accessory[] accessories;
+
+        TableLayoutPanel itemtable;
 
 
         public Form1()
@@ -41,106 +45,105 @@ namespace SMTIV
 
             accessories = JsonConvert.DeserializeObject<Accessory[]>(File.ReadAllText(
                 Application.StartupPath + "/accessories.json"));
-            
+
+            //tabControl2.Selected += TabControl2_Selected;
+            using (var parser = new TextFieldParser(
+                File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Valuables.csv")))
+            {
+                parser.Delimiters = new string[1] { "," };
+                valuables = new Dictionary<int, Item>();
+                int id = 0;
+
+                while (!parser.EndOfData)
+                {
+                    string[] line = parser.ReadFields();
+
+                    if (!string.IsNullOrEmpty(line[0]))
+                    {
+                        valuables.Add(id, new Item() { Name = line[0] });
+                    }
+                    id++;
+                }
+
+                parser.Close();
+            }
+
+            using (var parser = new TextFieldParser(
+                File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Expendables.csv")))
+            {
+                parser.Delimiters = new string[1] { "," };
+                expendables = new Dictionary<int, Item>();
+                int id = 0;
+
+                while (!parser.EndOfData)
+                {
+                    string[] line = parser.ReadFields();
+
+                    if (!string.IsNullOrEmpty(line[0]))
+                    {
+                        expendables.Add(id, new Item() { Name = line[0] });
+                    }
+                    id++;
+                }
+
+                parser.Close();
+            }
+
             tabControl2.Selected += TabControl2_Selected;
-            //using (var parser = new TextFieldParser(
-            //    File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Swords.csv")))
-            //{
-            //    parser.Delimiters = new string[1] { "," };
-            //    parser.ReadFields();
-            //    swords = new Weapon[120];
-            //    int id = 0;
-
-            //    while (!parser.EndOfData)
-            //    {
-            //        string[] line = parser.ReadFields();
-
-            //        Weapon sword = new Weapon();
-            //        sword.Name = line[0];
-            //        sword.Power = int.Parse(line[1]);
-            //        sword.HitsMin = int.Parse(line[2]);
-            //        sword.HitsMax = 1;
-            //        int.TryParse(line[3], out sword.HitsMax);
-            //        sword.IsInaccurate = !string.IsNullOrEmpty(line[4]);
-            //        sword.Targets = parseWeaponTarget(line[5][0]);
-            //        sword.Effect = StatusAilment.None;
-            //        Enum.TryParse(line[6], out sword.Effect);
-            //        sword.Wep = parseWeaponType(line[7]);
-
-            //        swords[id] = sword;
-            //        id++;
-            //    }
-
-            //    parser.Close();
-            //}
-
-            //File.WriteAllText(Application.StartupPath + "/swords.json",
-            //    JsonConvert.SerializeObject(swords));
+            tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemtable)) tabControl2.SelectedTab.Controls.Remove(itemtable); };
+            itemtable = new TableLayoutPanel();
+            itemtable.Anchor = AnchorStyles.Left;
+            itemtable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
+            itemtable.Size = new System.Drawing.Size(320, 480);
+            itemtable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66f));
+            itemtable.AutoScroll = true;
+            itemtable.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
+            itemtable.MouseEnter += (sender, e) => { itemtable.Focus(); };
         }
 
         private void TabControl2_Selected(object sender, TabControlEventArgs e)
         {
-        }
+            if (!File.Exists(filename)) return;
 
-        private Skills.Target parseWeaponTarget(char input)
-        {
-            switch (input)
+            itemtable.SuspendLayout();
+            itemtable.Controls.Clear();
+
+            switch (tabControl2.SelectedTab.Text)
             {
-                case 'm':
-                    return Target.Multi;
-                case 'a':
-                    return Target.All;
-                default:
-                    return Target.Single;
-            }
-        }
-
-        private Dictionary<string, string> parseAccessoryStats(string input)
-        {
-            if (string.IsNullOrEmpty(input)) return null;
-
-            var temp = new Dictionary<string, string>();
-
-            var elements = input.Split(' ', '/');
-
-            List<string> list = new List<string>();
-            foreach (var e in elements)
-            {
-                if (e.Contains(':'))
-                {
-                    var ea = e.Split(':');
-                    foreach (var s in list)
+                case "Valuables":
+                    for (int i = 0, row = 0; i < valuables.Count; i++)
                     {
-                        temp.Add(s, ea[1]);
+                        valuables[i].Amount = BitConverter.ToInt16(data, 0x98f8 + i * 2);
+                        if (!createItemTableCells(valuables[i], row)) continue;
+                        row++;
                     }
-                    temp.Add(ea[0], ea[1]);
-
-                    list.Clear();
-                    continue;
-                }
-                list.Add(e);
+                    break;
             }
 
-            return temp;
+            itemtable.ResumeLayout();
+            tabControl2.SelectedTab.Controls.Add(itemtable);
         }
 
-        private WeaponType parseWeaponType(string input)
+        private bool createItemTableCells(Item source, int row)
         {
-            switch (input)
-            {
-                case "am":
-                    return WeaponType.Ammo;
-                case "bl":
-                    return WeaponType.Blunt;
-                case "da":
-                    return WeaponType.Dagger;
-                case "gu":
-                    return WeaponType.Firearm;
-                case "sp":
-                    return WeaponType.Spear;
-                default:
-                    return WeaponType.Sword;
-            }
+            if (source.Amount == 0) return false;
+
+            LinkLabel lb = new LinkLabel();
+            lb.DataBindings.Add("Text", source, "Name");
+            itemtable.SetColumn(lb, 0);
+            itemtable.SetRow(lb, row);
+            itemtable.Controls.Add(lb);
+
+            NumericUpDown nu = new NumericUpDown();
+            nu.Maximum = 999;
+            nu.DataBindings.Add("Value", source, "Amount");
+            nu.BorderStyle = BorderStyle.None;
+            nu.Controls.RemoveAt(0);
+            itemtable.SetColumn(nu, 1);
+            itemtable.SetRow(nu, row);
+            itemtable.Controls.Add(nu);
+
+            return true;
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,60 +157,12 @@ namespace SMTIV
                 {
                     data = File.ReadAllBytes(dialog.FileName);
                     filename = dialog.FileName;
+                    
+                    saveToolStripMenuItem.Enabled = true;                    
                 }
             }
-
-            if (!File.Exists(filename)) return;
-            
-            foreach (TabPage tp in tabControl2.TabPages) { tp.SuspendLayout(); tp.Controls.Clear(); tp.ResumeLayout(); }
-            
-            saveToolStripMenuItem.Enabled = true;
-
-            TableLayoutPanel table = new TableLayoutPanel();
-            table.Anchor = AnchorStyles.Left;
-            table.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-            table.Width = 320;
-            table.Height = 480;
-            table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66f));
-            table.AutoScroll = true;
-            table.HorizontalScroll.Visible = false;
-            table.MouseEnter += mouseFocus;
-            tabPage7.Controls.Add(table);
-
-            table.SuspendLayout();
-
-            int row = 0;
-            for (int i = 0; i < swords.Length; i++)
-            {
-                swords[i].Amount = BitConverter.ToInt16(data, 0x9a5c + i * 2);
-                if (swords[i].Amount == 0) continue;
-
-                LinkLabel lb = new LinkLabel();
-                lb.DataBindings.Add("Text", swords[i], "Name");
-                table.SetColumn(lb, 0);
-                table.SetRow(lb, row);
-                table.Controls.Add(lb);
-
-                NumericUpDown nu = new NumericUpDown();
-                nu.Maximum = 999;
-                nu.DataBindings.Add("Value", swords[i], "Amount");
-                nu.BorderStyle = BorderStyle.None;
-                nu.Controls[0].Enabled = nu.Controls[0].Visible = false;
-                table.SetColumn(nu, 1);
-                table.SetRow(nu, row);
-                table.Controls.Add(nu);
-
-                row++;
-            }
-
-            table.ResumeLayout();
         }
-
-        private void mouseFocus(object sender, EventArgs e)
-        {
-            (sender as Control).Focus();
-        }
-
+        
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (data != null)
