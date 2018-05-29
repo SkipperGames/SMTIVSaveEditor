@@ -18,7 +18,26 @@ using SMTIV.Items;
 namespace SMTIV
 {
     public partial class Form1 : Form
-    {        
+    {
+        const int PLAYER_STATS_OFFSET = 0xa0;
+        const int MACCA_OFFSET = 0x10C;
+        const int PLAYER_BATTLESTATS_OFFSET = 0x122;
+        
+        const int APP_POINTSTOTAL_OFFSET = 0x98EC;
+        const int APP_POINTS_OFFSET = 0x98f0; // max 9999
+        const int VALUABLES_OFFSET = 0x98f8;
+        const int EXPENDABLES_OFFSET = 0x99e4;
+        const int SWORDS_OFFSET = 0x9a5c;
+        const int GUNS_OFFSET = 0x9b4c;
+        const int HELMS_OFFSET = 0x9c3c;
+        const int UPPERARMOR_OFFSET = 0x9d2c;
+        const int LOWERARMOR_OFFSET = 0x9e1c;
+        const int ACCESSORIES_OFFSET = 0x9f0c;
+        const int AMMO_OFFSET = 0x9ffc;
+        const int RELICS_OFFSET = 0xa060;
+
+        const int APP_UNLOCKS_OFFSET = 0x1d5bc;
+
         byte[] data;
         string filename;
 
@@ -117,6 +136,8 @@ namespace SMTIV
             itemtable.MouseEnter += (sender, e) => { itemtable.Focus(); };
             tabControl2.Selected += TabControl2_Selected;
             tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemtable)) tabControl2.SelectedTab.Controls.Remove(itemtable); };
+
+
         }
 
         private void TabControl2_Selected(object sender, TabControlEventArgs e)
@@ -136,7 +157,7 @@ namespace SMTIV
                     for (int i = 0; i < valuables.Count; i++)
                     {
                         var item = valuables.ElementAt(i);
-                        item.Value.Amount = BitConverter.ToInt16(data, 0x98f8 + item.Key * 2);
+                        item.Value.Amount = BitConverter.ToInt16(data, VALUABLES_OFFSET + item.Key * 2);
                         if (!createItemTableCells(item.Value)) continue;
                     }
                     break;
@@ -144,21 +165,21 @@ namespace SMTIV
                     for (int i = 0; i < expendables.Count; i++)
                     {
                         var item = expendables.ElementAt(i);
-                        item.Value.Amount = BitConverter.ToInt16(data, 0x99e4 + item.Key * 2);
+                        item.Value.Amount = BitConverter.ToInt16(data, EXPENDABLES_OFFSET + item.Key * 2);
                         if (!createItemTableCells(item.Value)) continue;
                     }
                     break;
                 case "Swords":
                     for (int i = 0; i < swords.Length; i++)
                     {
-                        swords[i].Amount = BitConverter.ToInt16(data, 0x9a5c + i * 2);
+                        swords[i].Amount = BitConverter.ToInt16(data, SWORDS_OFFSET + i * 2);
                         if (!createItemTableCells(swords[i])) continue;
                     }
                     break;
                 case "Accessories":
                     for (int i = 0; i < accessories.Length; i++)
                     {
-                        accessories[i].Amount = BitConverter.ToInt16(data, 0x9f0c + i * 2);
+                        accessories[i].Amount = BitConverter.ToInt16(data, ACCESSORIES_OFFSET + i * 2);
                         if (!createItemTableCells(accessories[i])) continue;
                     }
                     break;
@@ -166,7 +187,7 @@ namespace SMTIV
                     for (int i = 0; i < relics.Count; i++)
                     {
                         var item = relics.ElementAt(i);
-                        item.Value.Amount = BitConverter.ToInt16(data, 0xa060 + item.Key * 2);
+                        item.Value.Amount = BitConverter.ToInt16(data, RELICS_OFFSET + item.Key * 2);
                         if (!createItemTableCells(item.Value)) continue;
                     }
                     break;
