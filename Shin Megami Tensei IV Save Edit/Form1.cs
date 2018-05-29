@@ -27,6 +27,7 @@ namespace SMTIV
         Dictionary<int, Item> expendables;
         Weapon[] swords;
         Accessory[] accessories;
+        Dictionary<int, Item> relics;
 
         TableLayoutPanel itemtable;
 
@@ -45,52 +46,67 @@ namespace SMTIV
 
             accessories = JsonConvert.DeserializeObject<Accessory[]>(File.ReadAllText(
                 Application.StartupPath + "/accessories.json"));
-
-            //tabControl2.Selected += TabControl2_Selected;
-            using (var parser = new TextFieldParser(
+            
+            using (var sr = new StreamReader(
                 File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Valuables.csv")))
-            {
-                parser.Delimiters = new string[1] { "," };
+            {                
                 valuables = new Dictionary<int, Item>();
                 int id = 0;
 
-                while (!parser.EndOfData)
+                while (!sr.EndOfStream)
                 {
-                    string[] line = parser.ReadFields();
+                    string line = sr.ReadLine();
 
-                    if (!string.IsNullOrEmpty(line[0]))
+                    if (!string.IsNullOrEmpty(line))
                     {
-                        valuables.Add(id, new Item() { Name = line[0] });
+                        valuables.Add(id, new Item() { Name = line });
                     }
                     id++;
                 }
 
-                parser.Close();
+                sr.Close();
             }
 
-            using (var parser = new TextFieldParser(
+            using (var sr = new StreamReader(
                 File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Expendables.csv")))
             {
-                parser.Delimiters = new string[1] { "," };
                 expendables = new Dictionary<int, Item>();
                 int id = 0;
 
-                while (!parser.EndOfData)
+                while (!sr.EndOfStream)
                 {
-                    string[] line = parser.ReadFields();
+                    string line = sr.ReadLine();
 
-                    if (!string.IsNullOrEmpty(line[0]))
+                    if (!string.IsNullOrEmpty(line))
                     {
-                        expendables.Add(id, new Item() { Name = line[0] });
+                        expendables.Add(id, new Item() { Name = line });
                     }
                     id++;
                 }
 
-                parser.Close();
+                sr.Close();
             }
 
-            tabControl2.Selected += TabControl2_Selected;
-            tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemtable)) tabControl2.SelectedTab.Controls.Remove(itemtable); };
+            using (var sr = new StreamReader(
+                File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Relics.csv")))
+            {
+                relics = new Dictionary<int, Item>();
+                int id = 0;
+
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        relics.Add(id, new Item() { Name = line });
+                    }
+                    id++;
+                }
+
+                sr.Close();
+            }
+
             itemtable = new TableLayoutPanel();
             itemtable.Anchor = AnchorStyles.Left;
             itemtable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
@@ -99,39 +115,76 @@ namespace SMTIV
             itemtable.AutoScroll = true;
             itemtable.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
             itemtable.MouseEnter += (sender, e) => { itemtable.Focus(); };
+            tabControl2.Selected += TabControl2_Selected;
+            tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemtable)) tabControl2.SelectedTab.Controls.Remove(itemtable); };
         }
 
         private void TabControl2_Selected(object sender, TabControlEventArgs e)
         {
-            if (!File.Exists(filename)) return;
+            if (data == null) return;
 
+            itemtable.Hide();
             itemtable.SuspendLayout();
+            while (itemtable.Controls.Count > 0) { itemtable.Controls[0].Dispose(); }
             itemtable.Controls.Clear();
+            itemtable.RowStyles.Clear();
+            itemtable.RowCount = 0;
 
             switch (tabControl2.SelectedTab.Text)
             {
                 case "Valuables":
-                    for (int i = 0, row = 0; i < valuables.Count; i++)
+                    for (int i = 0; i < valuables.Count; i++)
                     {
-                        valuables[i].Amount = BitConverter.ToInt16(data, 0x98f8 + i * 2);
-                        if (!createItemTableCells(valuables[i], row)) continue;
-                        row++;
+                        var item = valuables.ElementAt(i);
+                        item.Value.Amount = BitConverter.ToInt16(data, 0x98f8 + item.Key * 2);
+                        if (!createItemTableCells(item.Value)) continue;
+                    }
+                    break;
+                case "Expendables":
+                    for (int i = 0; i < expendables.Count; i++)
+                    {
+                        var item = expendables.ElementAt(i);
+                        item.Value.Amount = BitConverter.ToInt16(data, 0x99e4 + item.Key * 2);
+                        if (!createItemTableCells(item.Value)) continue;
+                    }
+                    break;
+                case "Swords":
+                    for (int i = 0; i < swords.Length; i++)
+                    {
+                        swords[i].Amount = BitConverter.ToInt16(data, 0x9a5c + i * 2);
+                        if (!createItemTableCells(swords[i])) continue;
+                    }
+                    break;
+                case "Accessories":
+                    for (int i = 0; i < accessories.Length; i++)
+                    {
+                        accessories[i].Amount = BitConverter.ToInt16(data, 0x9f0c + i * 2);
+                        if (!createItemTableCells(accessories[i])) continue;
+                    }
+                    break;
+                case "Relics":
+                    for (int i = 0; i < relics.Count; i++)
+                    {
+                        var item = relics.ElementAt(i);
+                        item.Value.Amount = BitConverter.ToInt16(data, 0xa060 + item.Key * 2);
+                        if (!createItemTableCells(item.Value)) continue;
                     }
                     break;
             }
 
             itemtable.ResumeLayout();
             tabControl2.SelectedTab.Controls.Add(itemtable);
+            itemtable.Show();
         }
 
-        private bool createItemTableCells(Item source, int row)
+        private bool createItemTableCells(Item source)
         {
             if (source.Amount == 0) return false;
 
-            LinkLabel lb = new LinkLabel();
+            Label lb = new Label();
             lb.DataBindings.Add("Text", source, "Name");
             itemtable.SetColumn(lb, 0);
-            itemtable.SetRow(lb, row);
+            itemtable.SetRow(lb, itemtable.RowCount);
             itemtable.Controls.Add(lb);
 
             NumericUpDown nu = new NumericUpDown();
@@ -140,9 +193,10 @@ namespace SMTIV
             nu.BorderStyle = BorderStyle.None;
             nu.Controls.RemoveAt(0);
             itemtable.SetColumn(nu, 1);
-            itemtable.SetRow(nu, row);
+            itemtable.SetRow(nu, itemtable.RowCount);
             itemtable.Controls.Add(nu);
 
+            itemtable.RowCount++;
             return true;
         }
 
@@ -158,7 +212,7 @@ namespace SMTIV
                     data = File.ReadAllBytes(dialog.FileName);
                     filename = dialog.FileName;
                     
-                    saveToolStripMenuItem.Enabled = true;                    
+                    saveToolStripMenuItem.Enabled = true;
                 }
             }
         }

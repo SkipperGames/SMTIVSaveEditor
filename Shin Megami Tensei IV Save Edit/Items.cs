@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 using SMTIV.Skills;
@@ -15,11 +16,33 @@ namespace SMTIV.Items
     {
         Sword, Blunt, Dagger, Spear, Ammo, Firearm
     }
-
-    class Item
+        
+    class Item : INotifyPropertyChanged
     {
+        private int _amount;
         public string Name { get; set; }
-        public int Amount { get; set; }
+        public int Amount
+        {
+            get
+            {
+                return _amount;
+            }
+            set
+            {
+                _amount = value;
+                NotifyPropertyChanged("Amount");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(string propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
 
     class Weapon : Item
