@@ -37,14 +37,10 @@ namespace SMTIV
 
     class Player
     {        
-        public int CurrentXp;
+        public int Exp;
+        public BaseStats StatsBase;
         public EquippedStats StatsEquipped;
-        public BaseStats StatsBasic;
-        //public int TotalXp;
-        public BaseStats BattleStatsBasic;
-        public EquippedStats BattleStatsEquipped;
-        public short[] Skills;
-        public byte[] SkillLevels;
+        public List<KeyValuePair<short, byte>> Skills;
 
         //sword
         //gun
@@ -53,9 +49,9 @@ namespace SMTIV
         //top
         //bottom
         //accessory
-        //current xp
-        //current hp
-        //current mp
+        //?
+        //hp
+        //mp
         //max hp
         //max mp
         //st
@@ -65,6 +61,41 @@ namespace SMTIV
         //lu
         //?
         //?
-        //base 
+        //base st
+        //base dx
+        //base ma
+        //base ag
+        //base lu
+        //level
+        //?
+        //?
+
+        //sword
+        //gun
+        //ammo
+        //helm
+        //top
+        //bottom
+        //accessory
+        //?
+        //?
+        //base st
+        //base dx
+        //base ma
+        //base ag
+        //base lu
+        //max hp
+        //max mp
+        //st
+        //dx
+        //ma
+        //ag
+        //lu
+        //hp
+        //mp
+        //xp
+        //skills 1~8
+        //skills 1~8 levels
+        //level
     }
 }

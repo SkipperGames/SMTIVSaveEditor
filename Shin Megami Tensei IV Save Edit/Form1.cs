@@ -19,26 +19,27 @@ namespace SMTIV
 {
     public partial class Form1 : Form
     {
-        const int PLAYER_STATS_OFFSET = 0xa0;
+        const int PLAYER_SAVESTATS_OFFSET = 0x92;
         const int MACCA_OFFSET = 0x10C;
-        const int PLAYER_BATTLESTATS_OFFSET = 0x122;
-        
+        const int PLAYER_STATS_OFFSET = 0x110;
+
+        const int APP_UNLOCKS_OFFSET = 0x989e;
         const int APP_POINTSTOTAL_OFFSET = 0x98EC;
-        const int APP_POINTS_OFFSET = 0x98f0; // max 9999
+        const int APP_POINTS_OFFSET = 0x98f0;
         const int VALUABLES_OFFSET = 0x98f8;
         const int EXPENDABLES_OFFSET = 0x99e4;
         const int SWORDS_OFFSET = 0x9a5c;
         const int GUNS_OFFSET = 0x9b4c;
         const int HELMS_OFFSET = 0x9c3c;
-        const int UPPERARMOR_OFFSET = 0x9d2c;
-        const int LOWERARMOR_OFFSET = 0x9e1c;
+        const int UPPER_ARMOR_OFFSET = 0x9d2c;
+        const int LOWER_ARMOR_OFFSET = 0x9e1c;
         const int ACCESSORIES_OFFSET = 0x9f0c;
         const int AMMO_OFFSET = 0x9ffc;
         const int RELICS_OFFSET = 0xa060;
 
-        const int APP_UNLOCKS_OFFSET = 0x1d5bc;
+        const int PLAY_LOG_OFFSET = 0x1f560;
 
-        byte[] data;
+        byte[] data = new byte[0x24e30];
         string filename;
 
         Skill[] skills;
@@ -49,12 +50,13 @@ namespace SMTIV
         Dictionary<int, Item> relics;
 
         TableLayoutPanel itemtable;
-
+        SolidBrush brush = new SolidBrush(Color.LightGray);
 
         public Form1()
         {
             InitializeComponent();
 
+            statusStrip1.Text = "No save file loaded";
             saveToolStripMenuItem.Enabled = false;
 
             skills = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
@@ -133,11 +135,13 @@ namespace SMTIV
             itemtable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66f));
             itemtable.AutoScroll = true;
             itemtable.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
+            tableLayoutPanel1.MouseEnter += (sender, e) => { tableLayoutPanel1.Focus(); };
             itemtable.MouseEnter += (sender, e) => { itemtable.Focus(); };
             tabControl2.Selected += TabControl2_Selected;
             tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemtable)) tabControl2.SelectedTab.Controls.Remove(itemtable); };
-
-
+            tableLayoutPanel1.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
+            tabPage1.Padding = new Padding(0, 0, 0, SystemInformation.HorizontalScrollBarHeight);
+            
         }
 
         private void TabControl2_Selected(object sender, TabControlEventArgs e)
@@ -202,7 +206,7 @@ namespace SMTIV
         {
             if (source.Amount == 0) return false;
 
-            Label lb = new Label();
+            LinkLabel lb = new LinkLabel();
             lb.DataBindings.Add("Text", source, "Name");
             itemtable.SetColumn(lb, 0);
             itemtable.SetRow(lb, itemtable.RowCount);
@@ -231,19 +235,21 @@ namespace SMTIV
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     data = File.ReadAllBytes(dialog.FileName);
-                    filename = dialog.FileName;
+                    statusStrip1.Text = filename = dialog.FileName;
                     
                     saveToolStripMenuItem.Enabled = true;
+
+                    TabControl2_Selected(null, null);
                 }
             }
         }
         
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (data != null)
+            if (File.Exists(filename))
             {
                 File.WriteAllBytes(filename, data);
-
+                
                 statusStrip1.Text = "Saved " +
                     DateTime.Now.Hour + "h " +
                     DateTime.Now.Minute + "m " +
