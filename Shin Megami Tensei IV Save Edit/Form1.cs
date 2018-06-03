@@ -19,10 +19,6 @@ namespace SMTIV
 {
     public partial class Form1 : Form
     {
-        const int PLAYER_SAVESTATS_OFFSET = 0x92;
-        const int MACCA_OFFSET = 0x10C;
-        const int PLAYER_STATS_OFFSET = 0x110;
-
         const int APP_UNLOCKS_OFFSET = 0x989e;
         const int APP_POINTSTOTAL_OFFSET = 0x98EC;
         const int APP_POINTS_OFFSET = 0x98f0;
@@ -45,32 +41,39 @@ namespace SMTIV
         Skill[] skills;
         Dictionary<int, Item> valuables;
         Dictionary<int, Item> expendables;
-        Weapon[] swords;
-        Accessory[] accessories;
+        Dictionary<short, Weapon> swords;
+        Dictionary<short, Accessory> accessories;
         Dictionary<int, Item> relics;
-
-        TableLayoutPanel itemtable;
-        SolidBrush brush = new SolidBrush(Color.LightGray);
+        ListView itemList;
+        AppInfo[] appdata;
+        Player player = new Player();
 
         public Form1()
         {
             InitializeComponent();
 
-            statusStrip1.Text = "No save file loaded";
             saveToolStripMenuItem.Enabled = false;
 
             skills = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
                 Application.StartupPath + "/skills.json"));
 
-            swords = JsonConvert.DeserializeObject<Weapon[]>(File.ReadAllText(
+            var swordsjson = JsonConvert.DeserializeObject<Weapon[]>(File.ReadAllText(
                 Application.StartupPath + "/swords.json"));
+            for (short i = 0x3d; i - 0x3d < swordsjson.Length; i++)
+            {
+                swords.Add(i, swordsjson[i]);
+            }
 
-            accessories = JsonConvert.DeserializeObject<Accessory[]>(File.ReadAllText(
+            var accjson = JsonConvert.DeserializeObject<Accessory[]>(File.ReadAllText(
                 Application.StartupPath + "/accessories.json"));
-            
+            for (short i = 0x295; i - 0x295 < accjson.Length; i++)
+            {
+                accessories.Add(i, accjson[i]);
+            }
+
             using (var sr = new StreamReader(
                 File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Valuables.csv")))
-            {                
+            {
                 valuables = new Dictionary<int, Item>();
                 int id = 0;
 
@@ -84,7 +87,8 @@ namespace SMTIV
                     }
                     id++;
                 }
-
+                NumericUpDown asdf = new NumericUpDown();
+                
                 sr.Close();
             }
 
@@ -128,32 +132,38 @@ namespace SMTIV
                 sr.Close();
             }
 
-            itemtable = new TableLayoutPanel();
-            itemtable.Anchor = AnchorStyles.Left;
-            itemtable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Inset;
-            itemtable.Size = new System.Drawing.Size(320, 480);
-            itemtable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 66f));
-            itemtable.AutoScroll = true;
-            itemtable.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
-            tableLayoutPanel1.MouseEnter += (sender, e) => { tableLayoutPanel1.Focus(); };
-            itemtable.MouseEnter += (sender, e) => { itemtable.Focus(); };
-            tabControl2.Selected += TabControl2_Selected;
-            tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemtable)) tabControl2.SelectedTab.Controls.Remove(itemtable); };
-            tableLayoutPanel1.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
-            tabPage1.Padding = new Padding(0, 0, 0, SystemInformation.HorizontalScrollBarHeight);
+            nud_level.DataBindings.Add("Value", player, "Level");
+            nud_exp.DataBindings.Add("Value", player, "Exp");
+            nud_macca.DataBindings.Add("Value", player, "Macca");
             
+            var appnames = File.ReadAllLines(Application.StartupPath + "/apps.txt");
+            appdata = new AppInfo[appnames.Length];
+            for (int i = 0; i < appnames.Length; i++)
+                appdata[i] = new AppInfo() { Name = appnames[i] };
+
+            tableLayoutPanel1.MouseEnter += (sender, e) => { tableLayoutPanel1.Focus(); };
+            tableLayoutPanel1.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
+
+            itemList = new ListView();
+            itemList.View = View.Details;
+            itemList.Anchor = AnchorStyles.Left;
+            //itemList.Dock = DockStyle.Top | DockStyle.Left;
+            itemList.Size = new System.Drawing.Size(320, 480);
+            itemList.Columns.Add("Name", 200);
+            itemList.Columns.Add("Amount", 80);
+            itemList.Padding = new Padding(0, 0, 
+                SystemInformation.VerticalScrollBarWidth, SystemInformation.HorizontalScrollBarHeight);
+            //itemList.MouseEnter += (sender, e) => { itemList.Focus(); };
+            tabControl2.Selected += TabControl2_Selected;
+            tabControl2.Selecting += (sender, e) => { if (tabControl2.SelectedTab.Controls.Contains(itemList)) tabControl2.SelectedTab.Controls.Remove(itemList); };
         }
 
         private void TabControl2_Selected(object sender, TabControlEventArgs e)
         {
             if (data == null) return;
 
-            itemtable.Hide();
-            itemtable.SuspendLayout();
-            while (itemtable.Controls.Count > 0) { itemtable.Controls[0].Dispose(); }
-            itemtable.Controls.Clear();
-            itemtable.RowStyles.Clear();
-            itemtable.RowCount = 0;
+            itemList.SuspendLayout();
+            itemList.Items.Clear();
 
             switch (tabControl2.SelectedTab.Text)
             {
@@ -174,17 +184,19 @@ namespace SMTIV
                     }
                     break;
                 case "Swords":
-                    for (int i = 0; i < swords.Length; i++)
+                    for (int i = 0; i < swords.Count; i++)
                     {
-                        swords[i].Amount = BitConverter.ToInt16(data, SWORDS_OFFSET + i * 2);
-                        if (!createItemTableCells(swords[i])) continue;
+                        var item = swords.ElementAt(i);
+                        item.Value.Amount = BitConverter.ToInt16(data, SWORDS_OFFSET + item.Key * 2);
+                        if (!createItemTableCells(item.Value)) continue;
                     }
                     break;
                 case "Accessories":
-                    for (int i = 0; i < accessories.Length; i++)
+                    for (int i = 0; i < accessories.Count; i++)
                     {
-                        accessories[i].Amount = BitConverter.ToInt16(data, ACCESSORIES_OFFSET + i * 2);
-                        if (!createItemTableCells(accessories[i])) continue;
+                        var item = accessories.ElementAt(i);
+                        item.Value.Amount = BitConverter.ToInt16(data, ACCESSORIES_OFFSET + item.Key * 2);
+                        if (!createItemTableCells(item.Value)) continue;
                     }
                     break;
                 case "Relics":
@@ -196,32 +208,17 @@ namespace SMTIV
                     }
                     break;
             }
-
-            itemtable.ResumeLayout();
-            tabControl2.SelectedTab.Controls.Add(itemtable);
-            itemtable.Show();
+            itemList.ResumeLayout();
+            tabControl2.SelectedTab.Controls.Add(itemList);
         }
 
         private bool createItemTableCells(Item source)
         {
             if (source.Amount == 0) return false;
-
-            LinkLabel lb = new LinkLabel();
-            lb.DataBindings.Add("Text", source, "Name");
-            itemtable.SetColumn(lb, 0);
-            itemtable.SetRow(lb, itemtable.RowCount);
-            itemtable.Controls.Add(lb);
-
-            NumericUpDown nu = new NumericUpDown();
-            nu.Maximum = 999;
-            nu.DataBindings.Add("Value", source, "Amount");
-            nu.BorderStyle = BorderStyle.None;
-            nu.Controls.RemoveAt(0);
-            itemtable.SetColumn(nu, 1);
-            itemtable.SetRow(nu, itemtable.RowCount);
-            itemtable.Controls.Add(nu);
-
-            itemtable.RowCount++;
+            itemList.Items.Add(new ListViewItem(
+                new string[] {
+                    string.IsNullOrEmpty(source.Name) ? "???" : source.Name,
+                    source.Amount.ToString() })).Tag = source;
             return true;
         }
 
@@ -234,27 +231,48 @@ namespace SMTIV
                 dialog.Title = "Open a SMT4 save";
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
+                    filename = dialog.FileName;
                     data = File.ReadAllBytes(dialog.FileName);
-                    statusStrip1.Text = filename = dialog.FileName;
-                    
                     saveToolStripMenuItem.Enabled = true;
 
                     TabControl2_Selected(null, null);
+                    player.Data = data;
+                    setAppdataFromMemory();
+                }
+            }
+        }
+
+        private void setAppdataFromMemory()
+        {
+            int offset = APP_UNLOCKS_OFFSET;
+            var e = appdata.GetEnumerator();
+            for (; offset < APP_UNLOCKS_OFFSET + 0x22; offset++)
+            {
+                byte b = data[offset];
+                for (int i = 0; i < 8; i++)
+                {
+                    if (!e.MoveNext()) return;
+                    if ((b & (1 << i)) != 0)
+                    {
+                        (e.Current as AppInfo).Unlocked = true;
+                    }
                 }
             }
         }
         
+        private void unlockApp(int index)
+        {
+            var s = index % 8;
+            var b = data[APP_UNLOCKS_OFFSET + (index / 8)];
+            var d = (byte)(b | (1 << s));
+            data[APP_UNLOCKS_OFFSET + (index / 8)] = d;
+        }
+
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(filename))
             {
                 File.WriteAllBytes(filename, data);
-                
-                statusStrip1.Text = "Saved " +
-                    DateTime.Now.Hour + "h " +
-                    DateTime.Now.Minute + "m " +
-                    DateTime.Now.Second + "s " +
-                    DateTime.Now.Millisecond + "ms";
             }
         }
     }

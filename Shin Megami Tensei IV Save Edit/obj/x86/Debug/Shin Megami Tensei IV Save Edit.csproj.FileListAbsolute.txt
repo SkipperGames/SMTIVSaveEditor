@@ -14,7 +14,7 @@ C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\bi
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\bin\Debug\Shin Megami Tensei IV Save Edit.pdb
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\Shin Megami Tensei IV Save Edit.csprojResolveAssemblyReference.cache
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\SMTIV.Form1.resources
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\Shin_Megami_Tensei_IV_Save_Edit.Properties.Resources.resources
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\Shin Megami Tensei IV Save Edit.csproj.GenerateResource.Cache
+C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\Shin Megami Tensei IV Save Edit.csprojResolveAssemblyReference.cache

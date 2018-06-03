@@ -35,7 +35,6 @@ namespace SMTIV.Items
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         private void NotifyPropertyChanged(string propertyName = "")
         {
             if (PropertyChanged != null)

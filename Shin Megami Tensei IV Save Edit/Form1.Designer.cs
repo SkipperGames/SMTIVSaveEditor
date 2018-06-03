@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Total play time");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Total Macca earnings");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Enemy encounters");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Preemptive attacks");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Total damage dealt");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Total damage sustained");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Times weapon swung");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Field attacks connected");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Time spent idle in the field");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Times saved");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Total play time");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Total Macca earnings");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Enemy encounters");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Preemptive attacks");
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Total damage dealt");
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("Total damage sustained");
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("Times weapon swung");
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("Field attacks connected");
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("Time spent idle in the field");
+            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("Times saved");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -93,7 +93,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.nud_level = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nud_exp = new System.Windows.Forms.NumericUpDown();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
@@ -114,6 +114,9 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.nud_macca = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -128,10 +131,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_hp)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_level)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_exp)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_macca)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -171,19 +175,19 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.splitter5, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.lv_playlog, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.lv_apps, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.splitter4, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.splitter3, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.splitter5, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.lv_playlog, 0, 14);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.lv_apps, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.splitter4, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.splitter3, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.splitter2, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.nud_lu, 6, 7);
-            this.tableLayoutPanel1.Controls.Add(this.nud_ag, 5, 7);
-            this.tableLayoutPanel1.Controls.Add(this.nud_ma, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.nud_dx, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.nud_st, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.nud_mp, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_lu, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.nud_ag, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.nud_ma, 4, 8);
+            this.tableLayoutPanel1.Controls.Add(this.nud_dx, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.nud_st, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.nud_mp, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.llb_sword, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 3);
@@ -198,30 +202,34 @@
             this.tableLayoutPanel1.Controls.Add(this.llb_accessory, 6, 4);
             this.tableLayoutPanel1.Controls.Add(this.label7, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 5, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 6, 6);
-            this.tableLayoutPanel1.Controls.Add(this.nud_hp, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.lv_skills, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 4, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label16, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.nud_hp, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lv_skills, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 5, 10);
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label17, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.nud_level, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nud_exp, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.splitter1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label19, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nud_macca, 6, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 14;
+            this.tableLayoutPanel1.RowCount = 15;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -239,7 +247,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.splitter5, 7);
             this.splitter5.Cursor = System.Windows.Forms.Cursors.HSplit;
             this.splitter5.Enabled = false;
-            this.splitter5.Location = new System.Drawing.Point(3, 635);
+            this.splitter5.Location = new System.Drawing.Point(3, 655);
             this.splitter5.MinExtra = 1;
             this.splitter5.MinSize = 1;
             this.splitter5.Name = "splitter5";
@@ -256,17 +264,17 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lv_playlog, 5);
             this.lv_playlog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lv_playlog.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10});
-            this.lv_playlog.Location = new System.Drawing.Point(3, 655);
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19,
+            listViewItem20});
+            this.lv_playlog.Location = new System.Drawing.Point(3, 675);
             this.lv_playlog.Name = "lv_playlog";
             this.lv_playlog.Size = new System.Drawing.Size(318, 180);
             this.lv_playlog.TabIndex = 45;
@@ -292,7 +300,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(327, 449);
+            this.panel2.Location = new System.Drawing.Point(327, 469);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(106, 180);
             this.panel2.TabIndex = 44;
@@ -336,7 +344,7 @@
             this.columnHeader5});
             this.tableLayoutPanel1.SetColumnSpan(this.lv_apps, 5);
             this.lv_apps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lv_apps.Location = new System.Drawing.Point(3, 449);
+            this.lv_apps.Location = new System.Drawing.Point(3, 469);
             this.lv_apps.Name = "lv_apps";
             this.lv_apps.Size = new System.Drawing.Size(318, 180);
             this.lv_apps.TabIndex = 43;
@@ -358,7 +366,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.splitter4, 7);
             this.splitter4.Cursor = System.Windows.Forms.Cursors.HSplit;
             this.splitter4.Enabled = false;
-            this.splitter4.Location = new System.Drawing.Point(3, 429);
+            this.splitter4.Location = new System.Drawing.Point(3, 449);
             this.splitter4.MinExtra = 1;
             this.splitter4.MinSize = 1;
             this.splitter4.Name = "splitter4";
@@ -372,7 +380,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.splitter3, 7);
             this.splitter3.Cursor = System.Windows.Forms.Cursors.HSplit;
             this.splitter3.Enabled = false;
-            this.splitter3.Location = new System.Drawing.Point(3, 223);
+            this.splitter3.Location = new System.Drawing.Point(3, 243);
             this.splitter3.MinExtra = 1;
             this.splitter3.MinSize = 1;
             this.splitter3.Name = "splitter3";
@@ -399,7 +407,7 @@
             // 
             this.nud_lu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_lu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_lu.Location = new System.Drawing.Point(391, 183);
+            this.nud_lu.Location = new System.Drawing.Point(391, 203);
             this.nud_lu.Maximum = new decimal(new int[] {
             999,
             0,
@@ -413,7 +421,7 @@
             // 
             this.nud_ag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_ag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_ag.Location = new System.Drawing.Point(327, 183);
+            this.nud_ag.Location = new System.Drawing.Point(327, 203);
             this.nud_ag.Maximum = new decimal(new int[] {
             999,
             0,
@@ -427,7 +435,7 @@
             // 
             this.nud_ma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_ma.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_ma.Location = new System.Drawing.Point(263, 183);
+            this.nud_ma.Location = new System.Drawing.Point(263, 203);
             this.nud_ma.Maximum = new decimal(new int[] {
             999,
             0,
@@ -441,7 +449,7 @@
             // 
             this.nud_dx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_dx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_dx.Location = new System.Drawing.Point(199, 183);
+            this.nud_dx.Location = new System.Drawing.Point(199, 203);
             this.nud_dx.Maximum = new decimal(new int[] {
             999,
             0,
@@ -455,7 +463,7 @@
             // 
             this.nud_st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_st.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_st.Location = new System.Drawing.Point(131, 183);
+            this.nud_st.Location = new System.Drawing.Point(131, 203);
             this.nud_st.Maximum = new decimal(new int[] {
             999,
             0,
@@ -469,7 +477,7 @@
             // 
             this.nud_mp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_mp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_mp.Location = new System.Drawing.Point(67, 183);
+            this.nud_mp.Location = new System.Drawing.Point(67, 203);
             this.nud_mp.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -616,7 +624,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 160);
+            this.label10.Location = new System.Drawing.Point(3, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 16;
@@ -625,7 +633,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(67, 160);
+            this.label11.Location = new System.Drawing.Point(67, 180);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 17;
@@ -634,7 +642,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(131, 160);
+            this.label12.Location = new System.Drawing.Point(131, 180);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 13);
             this.label12.TabIndex = 18;
@@ -643,7 +651,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(199, 160);
+            this.label13.Location = new System.Drawing.Point(199, 180);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(18, 13);
             this.label13.TabIndex = 19;
@@ -652,7 +660,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(263, 160);
+            this.label14.Location = new System.Drawing.Point(263, 180);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 13);
             this.label14.TabIndex = 20;
@@ -661,7 +669,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(327, 160);
+            this.label15.Location = new System.Drawing.Point(327, 180);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(19, 13);
             this.label15.TabIndex = 21;
@@ -670,7 +678,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(391, 160);
+            this.label16.Location = new System.Drawing.Point(391, 180);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(15, 13);
             this.label16.TabIndex = 22;
@@ -680,7 +688,7 @@
             // 
             this.nud_hp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nud_hp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_hp.Location = new System.Drawing.Point(3, 183);
+            this.nud_hp.Location = new System.Drawing.Point(3, 203);
             this.nud_hp.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -698,7 +706,7 @@
             this.columnHeader3});
             this.tableLayoutPanel1.SetColumnSpan(this.lv_skills, 5);
             this.lv_skills.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lv_skills.Location = new System.Drawing.Point(3, 243);
+            this.lv_skills.Location = new System.Drawing.Point(3, 263);
             this.lv_skills.Name = "lv_skills";
             this.lv_skills.Size = new System.Drawing.Size(318, 180);
             this.lv_skills.TabIndex = 31;
@@ -727,7 +735,7 @@
             this.panel1.Controls.Add(this.b_enableskills);
             this.panel1.Controls.Add(this.b_maxskills);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(327, 243);
+            this.panel1.Location = new System.Drawing.Point(327, 263);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(106, 180);
             this.panel1.TabIndex = 34;
@@ -792,20 +800,20 @@
             0,
             0});
             // 
-            // numericUpDown1
+            // nud_exp
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.numericUpDown1, 2);
-            this.numericUpDown1.Location = new System.Drawing.Point(199, 23);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nud_exp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_exp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.nud_exp, 2);
+            this.nud_exp.Location = new System.Drawing.Point(199, 23);
+            this.nud_exp.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 16);
-            this.numericUpDown1.TabIndex = 38;
+            this.nud_exp.Name = "nud_exp";
+            this.nud_exp.Size = new System.Drawing.Size(120, 16);
+            this.nud_exp.TabIndex = 38;
             // 
             // splitter1
             // 
@@ -979,14 +987,14 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -994,7 +1002,7 @@
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -1004,6 +1012,40 @@
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(496, 22);
             this.statusStrip1.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label9, 7);
+            this.label9.Location = new System.Drawing.Point(3, 160);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(336, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "*Changing equipment in game causes HP/MP to reset relative to level";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(327, 20);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 13);
+            this.label19.TabIndex = 48;
+            this.label19.Text = "Macca";
+            // 
+            // nud_macca
+            // 
+            this.nud_macca.AutoSize = true;
+            this.nud_macca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_macca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_macca.Location = new System.Drawing.Point(391, 23);
+            this.nud_macca.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.nud_macca.Name = "nud_macca";
+            this.nud_macca.Size = new System.Drawing.Size(77, 16);
+            this.nud_macca.TabIndex = 49;
             // 
             // Form1
             // 
@@ -1033,11 +1075,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_hp)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nud_level)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_exp)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_macca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1105,7 +1148,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.NumericUpDown nud_level;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nud_exp;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Splitter splitter3;
         private System.Windows.Forms.Splitter splitter2;
@@ -1121,6 +1164,9 @@
         private System.Windows.Forms.ListView lv_playlog;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.NumericUpDown nud_macca;
     }
 }
 
