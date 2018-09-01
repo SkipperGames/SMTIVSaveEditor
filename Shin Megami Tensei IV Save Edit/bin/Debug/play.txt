@@ -1,0 +1,35 @@
+Total play time
+Total earnings
+Enemy encounters
+Preemptive attacks
+Successful escapes
+Total damage dealt
+Total damage sustained
+Demon conversations
+Successful recruitments
+Failed conversations
+Total Macca negotiated
+Items offered in trade
+Items received in trade
+Burroughs App activations in talks
+Consecutive successful fundraisers
+Most gained in fundraising
+Total distance walked
+Excavated relics
+Weapon swung
+Field attacks connected
+Times caught in trap
+Damage sustained from damage zones
+Treasure boxes opened
+Domains entered
+Facilities entered
+Time spent idle in the field
+Total gained through selling
+Times saved
+Terminal uses
+Challenge Quests completed
+Money won through Challenge Quests
+Items won through Challenge Quests
+Time spent in Cathedral of Shadows
+Demon fusions
+Macca spent on the Compendium

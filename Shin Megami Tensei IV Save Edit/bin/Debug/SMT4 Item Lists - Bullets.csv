@@ -1,0 +1,50 @@
+FMJ Rounds,29,Gun,
+,22,Gun,
+,22,Fire,
+,22,Ice,
+,22,Elec,
+,22,Force,
+Sleep Rounds,28,Gun,Sleep
+Toxic Rounds,28,Gun,Poison
+Flaemis Rounds,34,Fire,
+Aquans Rounds,34,Ice,
+Erthys Rounds,34,Elec,
+Aeros Rounds,34,Force,
+Steel Rounds,47,Gun,
+Virus Rounds,41,Gun,Sick
+Salamander Rounds,47,Fire,
+Undine Rounds,47,Ice,
+Gnome Rounds,47,Elec,
+Sylph Rounds,47,Force,
+Panic Rounds,54,Gun,Panic
+Bind Rounds,60,Gun,Bind
+Flame Rounds,60,Fire,
+Frost Rounds,60,Ice,
+Volt Rounds,60,Elec,
+Storm Rounds,60,Force,
+Hollow-Points,73,Gun,
+Skull Rounds,47,Gun,KO
+Inferno Rounds,73,Fire,
+Cocytus Rounds,73,Ice,
+Enelysios Rounds,73,Elec,
+Zephyr Rounds,73,Force,
+Venom Rounds,79,Gun,Poison
+Prometheus Rounds,79,Gun,Bind
+Suzaku Shot,85,Fire,
+Genbu Bomb,85,Ice,
+Baihu Rounds,85,Elec,
+Long Rounds,85,Force,
+AP Rounds,98,Gun,
+Darkness Rounds,92,Gun,Sick
+Hephaestus Rounds,111,Fire,
+Poseidon Rounds,111,Ice,
+Zeus Rounds,111,Elec,
+Hermes Rounds,111,Force,
+Gouma Rounds,73,Gun,
+Shinno Rounds,105,Gun,KO
+,111,Fire,
+Plutonium Rounds,98,Ice,
+Pumpkin Bombs,66,Fire,
+,111,Force,
+Tenma Rounds,117,Gun,
+Almighty Rounds,20,Almighty,

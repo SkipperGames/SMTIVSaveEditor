@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace SMTIV.Skills
 {
-    public enum Skill_Type
+    public enum SkillType
     {
         Fire,
         Ice,
@@ -52,10 +52,10 @@ namespace SMTIV.Skills
     {
         public short ID { get; set; }
         public string Name { get; set; }
-        public string Type { get; set; }
+        public SkillType Type { get; set; }
         public int Cost { get; set; }
-        public string Damage { get; set; }
-        public string Target { get; set; }
+        public Damage Damage { get; set; }
+        public Target Target { get; set; }
         public string Desc { get; set; }
     }
 }

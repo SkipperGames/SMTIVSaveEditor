@@ -1,0 +1,120 @@
+Mikado Black,5,Elec:Resist Force:Weak
+Mikado Wood,5,Force:Resist Elec:Weak
+Mikado Sand,5,Fire:Resist Ice:Weak
+Ahazuya Red,7,Fire:Resist Ice:Weak
+Ahazuya Gray,7,Elec:Resist Force:Weak
+Ahazuya Blue,7,Ice:Resist Fire:Weak
+Aquila White,26,Ice:Resist Dark:Weak
+Aquila Gold,26,Force:Resist Fire:Weak
+Aquila Black,26,Dark:Resist Gun/Elec:Weak
+,4,
+Plain Knight,7,Dark:Resist Fire:Weak
+Blue Knight,7,Ice:Resist Force:Weak
+Red Knight,7,Fire:Resist Elec:Weak
+Silver Duke,12,Dark:Weak
+Blood Duke,12,Fire:Resist Light:Weak
+Green Duke,12,Elec:Resist Fire:Weak
+Black King,26,Elec:Resist Force:Weak
+White King,26,Dark:Weak
+Blood King,26,Dark:Resist Light:Weak
+,4,
+Soldier Yasha,8,Dark:Resist Gun:Weak
+Soldier Mogura,8,Elec:Resist Gun:Weak
+Soldier Murasame,8,Ice:Resist Gun:Weak
+Bushi Tasogare,24,Fire:Resist Ice:Weak
+Bushi Yoi,24,Dark:Resist Force:Weak
+Bushi Reimei,24,Ice:Resist Fire:Weak
+Daimyo Kintoku,29,Elec:Repel Force:Weak
+Daimyo Mokutoku,29,Ice:Repel Fire:Weak
+Daimyo Katoku,29,Fire:Repel Ice:Weak
+,4,
+Green Sneak,8,Elec:Resist Ice:Weak
+Yellow Sneak,8,Fire:Resist Force:Weak
+Blue Sneak,8,Ice:Resist Fire:Weak
+Agent B,24,Fire:Resist Dark:Weak
+Agent Y,24,Force:Resist Ice:Weak
+Agent G,24,Gun:Resist Elec:Weak
+Dark Stealth,29,Elec:Null Force:Resist Ice:Weak
+Sky Stealth,39,Ice:Null Fire:Resist Force:Weak
+Red Stealth,29,Force:Null Ice:Resist Elec:Weak
+,4,
+Casual Blue,13,Ice:Resist Elec:Weak
+Casual Pink,13,Fire:Resist Gun:Weak
+Casual Black,13,Dark:Resist Gun:Weak
+,4,
+Prime Coat,6,Ice:Resist Gun:Weak
+Power Hoodie,6,Elec:Resist Gun:Weak
+Auric Armor,20,Fire/Ice/Elec/Force:Resist Phys/Gun/Light/Dark:Weak
+,4,
+,4,
+,4,
+Catcher's Red,10,Fire:Resist Ice:Weak
+Catcher's Blue,10,Ice:Resist Fire:Weak
+Catcher's Brown,10,Force:Resist Elec:Weak
+Cream Pads,19,Phys/Gun:Resist Light/Dark:Weak
+Magenta Pads,19,Phys/Gun:Resist Ice/Force:Weak
+Tricolor Pads,19,Phys/Gun:Resist Fire/Elec:Weak
+,4,
+,4,
+,4,
+,4,
+Black Rider,15,Force:Resist Light:Weak
+Blood Rider,15,Force:Resist Ice:Weak
+Silver Rider,15,Force:Resist Dark:Weak
+Hero Green,21,Ice:Resist Light:Weak
+Hero Gray,21,Dark:Resist Gun:Weak
+Hero Red,21,Fire:Resist Dark:Weak
+,4,
+,4,
+,4,
+,4,
+Survival Cream,12,Gun:Resist Fire:Weak
+Survival Olive,12,Elec:Resist Force:Weak
+Survival Purple,12,Gun:Resist Elec:Weak
+,4,
+Deity Scales,34,Force:Drain Phys/Gun:Resist Ice:Weak
+Demon's Skin,27,Ice:Drain Dark:Resist Force:Weak
+Traje de Luces,34,Elec:Drain Dark:Null Ice:Resist Fire:Weak
+White Samurai,9,Gun:Resist Ice:Weak
+Freedom Armor,13,Dark:Null Ice:Weak
+,4,
+Olive Camouflage,15,Fire:Resist Elec:Weak
+Sand Camouflage,15,Elec:Resist Force:Weak
+Gray Camouflage,15,Ice:Resist Fire:Weak
+,4,
+,4,
+,4,
+,4,
+,4,
+,4,
+,4,
+Demonica Suit,29,Gun:Null
+Black Demonica,8,Dark:Resist Force:Weak
+,4,
+,4,
+,4,
+R Scorpion,32,Fire:Drain Dark:Null Ice:Weak
+Genke Rindo,32,Gun:Repel Dark:Null Force:Weak
+Celtic White,32,Force:Repel Dark:Null Elec:Weak
+Nibelungen,32,Phys:Repel Dark:Null Gun:Weak
+,4,
+Soldier Enma,10,Dark:Null Gun/Light:Weak
+Demon Sneak,12,Dark:Null Fire/Light:Weak
+Fire Guard,13,Fire:Null Ice/Light:Weak
+,4,
+,4,
+,4,
+,4,
+,4,
+,4,
+,4,
+All Repel,4,Phys/Gun/Fire/Ice/Elec/Force/Light/Dark:Repel
+All Drain,4,Phys/Gun/Fire/Ice/Elec/Force/Light/Dark:Drain
+All Null,4,Phys/Gun/Fire/Ice/Elec/Force/Light/Dark:Null
+All Resist,4,Phys/Gun/Fire/Ice/Elec/Force/Light/Dark:Resist
+All Weak,4,Phys/Gun/Fire/Ice/Elec/Force/Light/Dark:Weak
+,4,
+,4,
+,4,
+,35,Phys/Gun:Null
+Samurai Uniform,4,Ice:Resist Fire:Weak
