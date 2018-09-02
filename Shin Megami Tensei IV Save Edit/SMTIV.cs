@@ -24,7 +24,7 @@ namespace SMTIV
         public static Dictionary<short, UpperArmor> UpperArmor = new Dictionary<short, UpperArmor>();
         public static Dictionary<short, Armor> LowerArmor = new Dictionary<short, Armor>();
         public static Dictionary<short, Accessory> Accessories = new Dictionary<short, Accessory>();
-        public static Dictionary<short, Skill> Skills = new Dictionary<short, Skill>();
+        public static Skill[] Skills;
         public static List<Demon> Demons = new List<Demon>();
         
         static SMTIV()
@@ -215,14 +215,8 @@ namespace SMTIV
                 sr.Close();
             }
 
-            var json = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
+            Skills = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
                 Application.StartupPath + "/skills.json"));
-            for (var num = json.GetEnumerator(); num.MoveNext(); )
-            {
-                Skills.Add(
-                    (num.Current as Skill).ID, 
-                    num.Current as Skill);
-            }
 
             id = 1;
             using (var sr = new StreamReader(

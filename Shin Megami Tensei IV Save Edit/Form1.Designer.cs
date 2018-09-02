@@ -88,6 +88,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.b_changeEquips = new System.Windows.Forms.Button();
+            this.b_changeSkill = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -114,6 +115,7 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demonSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1.SuspendLayout();
@@ -235,6 +237,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label22, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.label23, 3, 12);
             this.tableLayoutPanel1.Controls.Add(this.b_changeEquips, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.b_changeSkill, 5, 12);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 18;
@@ -250,14 +253,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(490, 947);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(490, 956);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // splitter5
@@ -265,7 +268,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.splitter5, 7);
             this.splitter5.Cursor = System.Windows.Forms.Cursors.HSplit;
             this.splitter5.Enabled = false;
-            this.splitter5.Location = new System.Drawing.Point(3, 744);
+            this.splitter5.Location = new System.Drawing.Point(3, 753);
             this.splitter5.MinExtra = 1;
             this.splitter5.MinSize = 1;
             this.splitter5.Name = "splitter5";
@@ -281,7 +284,7 @@
             this.columnHeader7});
             this.tableLayoutPanel1.SetColumnSpan(this.lv_playlog, 5);
             this.lv_playlog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lv_playlog.Location = new System.Drawing.Point(3, 764);
+            this.lv_playlog.Location = new System.Drawing.Point(3, 773);
             this.lv_playlog.Name = "lv_playlog";
             this.lv_playlog.Size = new System.Drawing.Size(344, 180);
             this.lv_playlog.TabIndex = 45;
@@ -307,7 +310,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.b_unlockApps);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(353, 558);
+            this.panel2.Location = new System.Drawing.Point(353, 567);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(106, 180);
             this.panel2.TabIndex = 44;
@@ -357,7 +360,7 @@
             this.columnHeader5});
             this.tableLayoutPanel1.SetColumnSpan(this.lv_apps, 5);
             this.lv_apps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lv_apps.Location = new System.Drawing.Point(3, 558);
+            this.lv_apps.Location = new System.Drawing.Point(3, 567);
             this.lv_apps.Name = "lv_apps";
             this.lv_apps.Size = new System.Drawing.Size(344, 180);
             this.lv_apps.TabIndex = 43;
@@ -379,7 +382,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.splitter4, 7);
             this.splitter4.Cursor = System.Windows.Forms.Cursors.HSplit;
             this.splitter4.Enabled = false;
-            this.splitter4.Location = new System.Drawing.Point(3, 538);
+            this.splitter4.Location = new System.Drawing.Point(3, 547);
             this.splitter4.MinExtra = 1;
             this.splitter4.MinSize = 1;
             this.splitter4.Name = "splitter4";
@@ -784,6 +787,7 @@
             // 
             // llb_helm
             // 
+            this.llb_helm.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.llb_helm, 2);
             this.llb_helm.Location = new System.Drawing.Point(3, 180);
             this.llb_helm.Name = "llb_helm";
@@ -835,6 +839,7 @@
             // 
             // llb_accessory
             // 
+            this.llb_accessory.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.llb_accessory, 2);
             this.llb_accessory.Location = new System.Drawing.Point(423, 180);
             this.llb_accessory.Name = "llb_accessory";
@@ -855,6 +860,7 @@
             // 
             // llb_bottom
             // 
+            this.llb_bottom.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.llb_bottom, 2);
             this.llb_bottom.Location = new System.Drawing.Point(283, 180);
             this.llb_bottom.Name = "llb_bottom";
@@ -875,6 +881,7 @@
             // 
             // llb_top
             // 
+            this.llb_top.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.llb_top, 2);
             this.llb_top.Location = new System.Drawing.Point(143, 180);
             this.llb_top.Name = "llb_top";
@@ -902,7 +909,7 @@
             this.tb_skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tb_skills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tb_skills.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_skills.Location = new System.Drawing.Point(3, 363);
+            this.tb_skills.Location = new System.Drawing.Point(3, 372);
             this.tb_skills.Name = "tb_skills";
             this.tb_skills.RowCount = 8;
             this.tb_skills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -919,7 +926,7 @@
             // b_maxskills
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.b_maxskills, 2);
-            this.b_maxskills.Location = new System.Drawing.Point(353, 363);
+            this.b_maxskills.Location = new System.Drawing.Point(353, 372);
             this.b_maxskills.Name = "b_maxskills";
             this.b_maxskills.Size = new System.Drawing.Size(100, 23);
             this.b_maxskills.TabIndex = 32;
@@ -931,7 +938,7 @@
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label22.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label22, 2);
-            this.label22.Location = new System.Drawing.Point(3, 343);
+            this.label22.Location = new System.Drawing.Point(3, 348);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 54;
@@ -941,7 +948,7 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(213, 343);
+            this.label23.Location = new System.Drawing.Point(213, 348);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(49, 13);
             this.label23.TabIndex = 55;
@@ -956,6 +963,17 @@
             this.b_changeEquips.TabIndex = 52;
             this.b_changeEquips.Text = "Change";
             this.b_changeEquips.UseVisualStyleBackColor = true;
+            // 
+            // b_changeSkill
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.b_changeSkill, 2);
+            this.b_changeSkill.Location = new System.Drawing.Point(353, 343);
+            this.b_changeSkill.Name = "b_changeSkill";
+            this.b_changeSkill.Size = new System.Drawing.Size(100, 23);
+            this.b_changeSkill.TabIndex = 56;
+            this.b_changeSkill.Text = "Change";
+            this.b_changeSkill.UseVisualStyleBackColor = true;
+            this.b_changeSkill.Click += new System.EventHandler(this.clickChangeSkill);
             // 
             // tabPage2
             // 
@@ -1168,14 +1186,14 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -1183,7 +1201,7 @@
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -1196,24 +1214,31 @@
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.demonSearchToolStripMenuItem,
-            this.equipsToolStripMenuItem});
+            this.equipsToolStripMenuItem,
+            this.skillsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // demonSearchToolStripMenuItem
             // 
             this.demonSearchToolStripMenuItem.Name = "demonSearchToolStripMenuItem";
-            this.demonSearchToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.demonSearchToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.demonSearchToolStripMenuItem.Text = "Demon Search";
             this.demonSearchToolStripMenuItem.Click += new System.EventHandler(this.demonSearchToolStripMenuItem_Click);
             // 
             // equipsToolStripMenuItem
             // 
             this.equipsToolStripMenuItem.Name = "equipsToolStripMenuItem";
-            this.equipsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.equipsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.equipsToolStripMenuItem.Text = "Equips";
             this.equipsToolStripMenuItem.Click += new System.EventHandler(this.clickChangeEquip);
+            // 
+            // skillsToolStripMenuItem
+            // 
+            this.skillsToolStripMenuItem.Name = "skillsToolStripMenuItem";
+            this.skillsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.skillsToolStripMenuItem.Text = "Skills";
             // 
             // statusStrip1
             // 
@@ -1227,7 +1252,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(95, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // Form1
@@ -1368,6 +1393,8 @@
         private System.Windows.Forms.ListView lv_playlog;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ToolStripMenuItem skillsToolStripMenuItem;
+        private System.Windows.Forms.Button b_changeSkill;
     }
 }
 

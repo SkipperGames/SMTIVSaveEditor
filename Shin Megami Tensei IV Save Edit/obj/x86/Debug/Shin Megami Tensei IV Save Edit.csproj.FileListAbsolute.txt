@@ -20,3 +20,4 @@ C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\ob
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\Shin Megami Tensei IV Save Edit.csprojResolveAssemblyReference.cache
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\SMTIV.Form2.resources
 C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\SMTIV.ChangeEquipForm.resources
+C:\Users\Loc\Documents\GitHub\SMTIVSaveEditor\Shin Megami Tensei IV Save Edit\obj\x86\Debug\SMTIV.ChangeSkillsForm.resources

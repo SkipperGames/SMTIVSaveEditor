@@ -122,23 +122,23 @@ namespace SMTIV
             {
                 Macca = BitConverter.ToInt32(value, MACCA_OFFSET);
 
-                equips[0] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x00);
-                equips[1] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x02);
-                equips[2] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x04);
-                equips[3] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x06);
-                equips[4] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x08);
-                equips[5] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x0a);
-                equips[6] = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x0c);
+                Sword = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x00);
+                Gun = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x02);
+                Ammo = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x04);
+                Helm = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x06);
+                Top = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x08);
+                Bottom = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x0a);
+                Accessory = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x0c);
 
-                stats[0] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x0);
-                stats[1] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x2);
-                stats[2] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x4);
-                stats[3] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x6);
-                stats[4] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x8);
-                stats[5] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0xa);
-                stats[6] = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0xc);
+                St = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x0);
+                Dx = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x2);
+                Ma = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x4);
+                Ag = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x6);
+                Lu = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0x8);
+                Hp = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0xa);
+                Mp = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0xc);
 
-                exp = BitConverter.ToInt32(value, PLAYER_XP_OFFSET);
+                Exp = BitConverter.ToInt32(value, PLAYER_XP_OFFSET);
 
                 for (int i = 0; i < 8; i++)
                 {
@@ -146,9 +146,9 @@ namespace SMTIV
                     skills[i].lv = value[PLAYER_SKILLS_OFFSET + 0x10 + i];
                 }
 
-                status = BitConverter.ToInt16(value, STATUS_FLAGS_OFFSET);
-                alignment = BitConverter.ToInt16(value, STORY_ALIGNMENT_OFFSET);
-                level = value[PLAYER_LEVEL_OFFSET];
+                Status = BitConverter.ToInt16(value, STATUS_FLAGS_OFFSET);
+                Alignment = BitConverter.ToInt16(value, STORY_ALIGNMENT_OFFSET);
+                Level = value[PLAYER_LEVEL_OFFSET];
             }
         }
 
@@ -251,7 +251,7 @@ namespace SMTIV
         public SkillAndLevel[] Skills
         {
             get { return skills; }
-            set { skills = value; }//NotifyPropertyChanged("Skills"); }
+            set { skills = value; NotifyPropertyChanged("Skills"); }
         }
 
         public byte Level

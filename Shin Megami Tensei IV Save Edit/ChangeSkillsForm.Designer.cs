@@ -264,7 +264,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(512, 480);
             this.Name = "ChangeSkillsForm";
-            this.Text = "SMT4 Save Editor - Change Equips";
+            this.Text = "SMT4 Save Editor - Change Skills";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

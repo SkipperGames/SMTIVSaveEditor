@@ -46,6 +46,7 @@ namespace SMTIV
             saveToolStripMenuItem.Enabled = false;
 
             b_changeEquips.Click += clickChangeEquip;
+            b_changeSkill.Click += clickChangeSkill;
 
             nud_level.DataBindings.Add("Value", Player.Instance, "Level");
             nud_exp.DataBindings.Add("Value", Player.Instance, "Exp");
@@ -77,7 +78,6 @@ namespace SMTIV
             createCustomLabelForTable(6, 6);
             createCustomLabelForTable(7, 7);
             
-
             itemList = new ListView();
             itemList.View = View.Details;
             itemList.Anchor = AnchorStyles.Left;
@@ -190,15 +190,13 @@ namespace SMTIV
             var lb1 = new LinkLabel() { Dock = DockStyle.Fill };
             tb_skills.Controls.Add(lb1);
             tb_skills.SetCellPosition(lb1, new TableLayoutPanelCellPosition(0, row));
-            BindingSource source = new BindingSource(Player.Instance, "Skills");
-            source.CurrencyManager.Position = index;
-            lb1.DataBindings.Add("Text", source, "id");
-            lb1.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.Never;
+            lb1.DataBindings.Add("Text", ChangeSkillsForm.Instance.Controls[0].Controls["comboBox" + (row + 1)], "Text");
+            //lb1.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.Never;
 
-            var lb2 = new LinkLabel() { Dock = DockStyle.Fill };
-            tb_skills.Controls.Add(lb2);
-            tb_skills.SetCellPosition(lb2, new TableLayoutPanelCellPosition(1, row));
-            lb2.DataBindings.Add("Text", source, "lv");
+            //var lb2 = new LinkLabel() { Dock = DockStyle.Fill };
+            //tb_skills.Controls.Add(lb2);
+            //tb_skills.SetCellPosition(lb2, new TableLayoutPanelCellPosition(1, row));
+            //lb2.DataBindings.Add("Text", source, "lv");
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -216,6 +214,7 @@ namespace SMTIV
 
                     Player.Instance.Data = data;
                     foreach (LinkLabel lb in tb_skills.Controls) lb.DataBindings[0].ReadValue();
+
                     //setAppdataFromData();
                     //setInventoryFromData();
                     
@@ -365,5 +364,11 @@ namespace SMTIV
             //sword, gun, ammo, helm, top, bottom, acc
             ChangeEquipForm.Instance.Show();
         }
+
+        private void clickChangeSkill(object sender, EventArgs e)
+        {
+            ChangeSkillsForm.Instance.Show();
+        }
+        
     }
 }
