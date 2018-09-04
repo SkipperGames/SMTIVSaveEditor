@@ -87,6 +87,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(496, 442);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Tag = "label1";
             // 
             // comboBox1
             // 
@@ -96,6 +97,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Tag = "label1";
             // 
             // label1
             // 
@@ -189,6 +191,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(160, 21);
             this.comboBox2.TabIndex = 8;
+            this.comboBox2.Tag = "label2";
             // 
             // comboBox3
             // 
@@ -198,6 +201,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(160, 21);
             this.comboBox3.TabIndex = 9;
+            this.comboBox3.Tag = "label3";
             // 
             // comboBox4
             // 
@@ -207,6 +211,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(160, 21);
             this.comboBox4.TabIndex = 10;
+            this.comboBox4.Tag = "label4";
             // 
             // comboBox5
             // 
@@ -216,6 +221,7 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(160, 21);
             this.comboBox5.TabIndex = 11;
+            this.comboBox5.Tag = "label5";
             // 
             // comboBox6
             // 
@@ -225,6 +231,7 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(160, 21);
             this.comboBox6.TabIndex = 12;
+            this.comboBox6.Tag = "label6";
             // 
             // comboBox7
             // 
@@ -234,6 +241,7 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(160, 21);
             this.comboBox7.TabIndex = 13;
+            this.comboBox7.Tag = "label7";
             // 
             // comboBox8
             // 
@@ -243,6 +251,7 @@
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(160, 21);
             this.comboBox8.TabIndex = 14;
+            this.comboBox8.Tag = "label8";
             // 
             // label8
             // 

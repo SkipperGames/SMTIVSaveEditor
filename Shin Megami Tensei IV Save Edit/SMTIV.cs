@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,21 +13,28 @@ using SMTIV.Skills;
 
 namespace SMTIV
 {
+    public class Appdata
+    {
+        public string Name { get; set; }
+        public bool Unlocked { get; set; }
+    }
+
     static class SMTIV
     {
-        public static Dictionary<short, Item> Expendables = new Dictionary<short, Item>();//60
-        public static Dictionary<short, Item> Relics = new Dictionary<short, Item>();//700
-        public static Dictionary<short, Item> Valuables = new Dictionary<short, Item>();//120
-        public static Dictionary<short, Sword> Swords = new Dictionary<short, Sword>();
-        public static Dictionary<short, Weapon> Guns = new Dictionary<short, Weapon>();
-        public static Dictionary<short, Bullet> Bullets = new Dictionary<short, Bullet>();//50
-        public static Dictionary<short, Armor> Helms = new Dictionary<short, Armor>();//120
-        public static Dictionary<short, UpperArmor> UpperArmor = new Dictionary<short, UpperArmor>();
-        public static Dictionary<short, Armor> LowerArmor = new Dictionary<short, Armor>();
-        public static Dictionary<short, Accessory> Accessories = new Dictionary<short, Accessory>();
-        public static Skill[] Skills;
-        public static List<Demon> Demons = new List<Demon>();
-        
+        public static Dictionary<short, Item> Expendables { get; private set; } =  new Dictionary<short, Item>();//60
+        public static Dictionary<short, Item> Relics { get; private set; } =  new Dictionary<short, Item>();//700
+        public static Dictionary<short, Item> Valuables { get; private set; } =  new Dictionary<short, Item>();//120
+        public static Dictionary<short, Sword> Swords { get; private set; } =  new Dictionary<short, Sword>();//120
+        public static Dictionary<short, Weapon> Guns { get; private set; } =  new Dictionary<short, Weapon>();//120
+        public static Dictionary<short, Bullet> Bullets { get; private set; } =  new Dictionary<short, Bullet>();//50
+        public static Dictionary<short, Armor> Helms { get; private set; } =  new Dictionary<short, Armor>();//120
+        public static Dictionary<short, UpperArmor> UpperArmor { get; private set; } =  new Dictionary<short, UpperArmor>();//120
+        public static Dictionary<short, Armor> LowerArmor { get; private set; } =  new Dictionary<short, Armor>();//120
+        public static Dictionary<short, Accessory> Accessories { get; private set; } =  new Dictionary<short, Accessory>();//120
+        public static Skill[] Skills { get; private set; }//500
+        public static List<Demon> Demons { get; private set; } = new List<Demon>();//1124
+        public static BindingList<Appdata> Apps { get; private set; }
+
         static SMTIV()
         {
             short id = 0x00;
@@ -94,7 +102,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            } Swords.Add(0, new Sword());
 
             id = 0xb5;
             using (var sr = new StreamReader(
@@ -115,7 +123,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            } Guns.Add(0, new Weapon());
 
             id = 0x12d;//helms
             using (var sr = new StreamReader(
@@ -134,9 +142,9 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            } Helms.Add(0, new Armor());
 
-            id = 0x1a5;//tops
+            id = 0x1a5;//tops            
             using (var sr = new StreamReader(
                 File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Upper Body.csv")))
             {
@@ -153,7 +161,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            } UpperArmor.Add(0, new UpperArmor());
 
             id = 0x21d;//bottoms
             using (var sr = new StreamReader(
@@ -172,7 +180,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            }  LowerArmor.Add(0, new Armor());
 
             id = 0x295;
             using (var sr = new StreamReader(
@@ -192,7 +200,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            } Accessories.Add(0, new Accessory());    
 
             id = 0x30D;
             using (var sr = new StreamReader(
@@ -213,7 +221,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }
+            } Bullets.Add(0, new Bullet());
 
             Skills = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
                 Application.StartupPath + "/skills.json"));
@@ -259,6 +267,10 @@ namespace SMTIV
 
                 sr.Close();
             }
+
+            Apps = new BindingList<Appdata>(
+                (from s in File.ReadAllLines(Application.StartupPath + "/apps.txt")
+                 select new Appdata() { Name = s, Unlocked = false }).ToList());
         }
     }
 }

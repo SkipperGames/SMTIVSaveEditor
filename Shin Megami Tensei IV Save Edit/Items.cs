@@ -70,24 +70,24 @@ namespace SMTIV.Items
 
     class Weapon : Item
     {
-        public int Power;
-        public int HitsMin;
+        public int Power = 0;
+        public int HitsMin = 0;
         public int HitsMax = 0;
-        public Target Targets;
+        public Target Targets = 0;
     }
 
     class Sword : Weapon
     {
         public bool IsInaccurate = false;
-        public StatusCondition Effect = StatusCondition.None;
-        public WeaponType WeaponType;
+        public StatusCondition Effect = 0;
+        public WeaponType WeaponType = 0;
     }
 
     class Bullet : Item
     {
-        public int Power;
-        public SkillType Type;
-        public StatusCondition Effect;
+        public int Power = 0;
+        public SkillType Type = SkillType.Dummy;
+        public StatusCondition Effect = 0;
     }
 
     class Equip : Item

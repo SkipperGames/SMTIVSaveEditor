@@ -6,6 +6,7 @@ namespace SMTIV.Skills
 {
     public enum SkillType
     {
+        Dummy = -1,
         Fire,
         Ice,
         Elec,
@@ -19,33 +20,32 @@ namespace SMTIV.Skills
         Support,
         Phys,
         Gun,
-        Auto,
-        Dummy
+        Auto
     }
 
     public enum Damage
     {
+        Unknown = -1,
         Zero,
+        Fixed,
         Weak,
         Medium,
         Heavy,
         Severe,
-        KO,
-        Fixed,
-        Unknown,
-        Mega
+        Mega,
+        KO
     }
 
     public enum Target
     {
+        Unknown,
         Single,
         Multi,
         Enemies,
         Self,
         Ally,
         Allies,
-        All,
-        Unknown
+        All
     }
 
     public class Skill

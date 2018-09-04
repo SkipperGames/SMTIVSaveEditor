@@ -69,15 +69,17 @@ namespace SMTIV
             nud_ag.DataBindings.Add("Value", Player.Instance, "Ag");
             nud_lu.DataBindings.Add("Value", Player.Instance, "Lu");
 
-            createCustomLabelForTable(0, 0);
-            createCustomLabelForTable(1, 1);
-            createCustomLabelForTable(2, 2);
-            createCustomLabelForTable(3, 3);
-            createCustomLabelForTable(4, 4);
-            createCustomLabelForTable(5, 5);
-            createCustomLabelForTable(6, 6);
-            createCustomLabelForTable(7, 7);
-            
+            gv_skills.AutoGenerateColumns = false;
+            var gbsrc = (from Control c in ChangeSkillsForm.Instance.Controls[0].Controls
+                         where c is ComboBox select (ComboBox)c).ToList();
+            gv_skills.DataSource = new BindingList<ComboBox>(gbsrc);
+            gv_skills.DataBindingComplete += (sender, e) => { ChangeSkillsForm.Instance.RefreshValues(); };
+            gv_skills.RowsAdded += (sender, e) => { gv_skills.Height += gv_skills.Rows[e.RowIndex].Height; };
+
+            gv_apps.AutoGenerateColumns = false;
+            gv_apps.SelectionMode = DataGridViewSelectionMode.FullRowSelect;            
+            gv_apps.DataSource = SMTIV.Apps;
+
             itemList = new ListView();
             itemList.View = View.Details;
             itemList.Anchor = AnchorStyles.Left;
@@ -184,21 +186,7 @@ namespace SMTIV
                     string.IsNullOrEmpty(source.Name) ? "???" : source.Name,
                     source.Amount.ToString() })).Tag = source;
         }
-
-        private void createCustomLabelForTable(int row, int index)
-        {
-            var lb1 = new LinkLabel() { Dock = DockStyle.Fill };
-            tb_skills.Controls.Add(lb1);
-            tb_skills.SetCellPosition(lb1, new TableLayoutPanelCellPosition(0, row));
-            lb1.DataBindings.Add("Text", ChangeSkillsForm.Instance.Controls[0].Controls["comboBox" + (row + 1)], "Text");
-            //lb1.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.Never;
-
-            //var lb2 = new LinkLabel() { Dock = DockStyle.Fill };
-            //tb_skills.Controls.Add(lb2);
-            //tb_skills.SetCellPosition(lb2, new TableLayoutPanelCellPosition(1, row));
-            //lb2.DataBindings.Add("Text", source, "lv");
-        }
-
+        
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var dialog = new OpenFileDialog())
@@ -213,55 +201,105 @@ namespace SMTIV
                     saveToolStripMenuItem.Enabled = true;
 
                     Player.Instance.Data = data;
-                    foreach (LinkLabel lb in tb_skills.Controls) lb.DataBindings[0].ReadValue();
-
-                    //setAppdataFromData();
-                    //setInventoryFromData();
+                    //ChangeSkillsForm.Instance.RefreshValues();
+                    gv_skills.Refresh();
+                    setAppdataFromData();
+                    setInventoryFromData();
                     
                     toolStripStatusLabel1.Text = filename;
                 }
             }
         }
-
+        
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (File.Exists(filename))
             {
-                Player.Instance.Data.CopyTo(data, 0);
-                // todo - if equipped an item not present in inventory, then add 1 to inventory
+                //Player.Instance.Data.CopyTo(data, 0);
+                CheckInventoryForEquips();
+                setDataFromAppdata();
+                setDataFromInventory();
+
+                File.WriteAllBytes(filename, data);
             }
         }
 
-        //private void setAppdataFromData()
-        //{
-        //    int offset = APP_UNLOCKS_OFFSET;
-        //    var e = appdata.GetEnumerator();
-        //    for (; offset < APP_UNLOCKS_OFFSET + 0x22; offset++)
-        //    {
-        //        byte b = data[offset];
-        //        for (int i = 0; i < 8; i++)
-        //        {
-        //            if (!e.MoveNext()) return;
-        //            (e.Current as AppInfo).Unlocked = (b & (1 << i)) != 0 ? true : false;
-        //        }
-        //    }
+        private void CheckInventoryForEquips()
+        {
+            var temp = (from Control c in ChangeEquipForm.Instance.Controls[0].Controls
+                        where c is ComboBox
+                        select (ComboBox)c).ToArray();
+            if (SMTIV.Swords[(short)temp[0].SelectedValue].Amount == 0)
+                SMTIV.Swords[(short)temp[0].SelectedValue].Amount = 1;
+            if (SMTIV.Guns[(short)temp[1].SelectedValue].Amount == 0)
+                SMTIV.Guns[(short)temp[1].SelectedValue].Amount = 1;
+            if (SMTIV.Bullets[(short)temp[2].SelectedValue].Amount == 0)
+                SMTIV.Bullets[(short)temp[2].SelectedValue].Amount = 1;
+            if (SMTIV.Helms[(short)temp[3].SelectedValue].Amount == 0)
+                SMTIV.Helms[(short)temp[3].SelectedValue].Amount = 1;
+            if (SMTIV.UpperArmor[(short)temp[4].SelectedValue].Amount == 0)
+                SMTIV.UpperArmor[(short)temp[4].SelectedValue].Amount = 1;
+            if (SMTIV.LowerArmor[(short)temp[5].SelectedValue].Amount == 0)
+                SMTIV.LowerArmor[(short)temp[5].SelectedValue].Amount = 1;
+            if (SMTIV.Accessories[(short)temp[6].SelectedValue].Amount == 0)
+                SMTIV.Accessories[(short)temp[6].SelectedValue].Amount = 1;
+        }
 
-        //    foreach (ListViewItem it in lv_apps.Items)
-        //    {
-        //        it.SubItems[1].Text = (it.Tag as AppInfo).Unlocked ? "y" : "";
-        //    }
-        //    nud_appPoints.Value = BitConverter.ToInt16(data, APP_POINTS_OFFSET);
-        //}
+        public void RefreshSkillDataGridView()
+        {
+            gv_skills.Refresh();
+        }
 
-        //private void unlockApp(int index)
-        //{
-        //    var s = index % 8;
-        //    var b = data[APP_UNLOCKS_OFFSET + (index / 8)];
-        //    var d = (byte)(b | (1 << s));
-        //    data[APP_UNLOCKS_OFFSET + (index / 8)] = d;
-        //    appdata[index].Unlocked = true;
-        //    lv_apps.Items[index].SubItems[1].Text = "y";
-        //}
+        private void setAppdataFromData()
+        {
+            var e = SMTIV.Apps.GetEnumerator();
+            for (int offset = APP_UNLOCKS_OFFSET; offset < APP_UNLOCKS_OFFSET + 0x22; offset++)
+            {
+                byte b = data[offset];
+                for (int i = 0; i < 8; i++)
+                {
+                    if (!e.MoveNext()) return;
+                    (e.Current as Appdata).Unlocked = (b & (1 << i)) != 0 ? true : false;
+                }
+            }
+
+            nud_appPoints.Value = BitConverter.ToInt16(data, APP_POINTS_OFFSET);
+        }
+
+        private void setDataFromAppdata()
+        {
+            var e = SMTIV.Apps.GetEnumerator();
+            for (int offset = APP_UNLOCKS_OFFSET; offset < APP_UNLOCKS_OFFSET + 0x22; offset++)
+            {
+                byte b = 0;
+                for (int i = 0; i < 8; i++)
+                {
+                    if (!e.MoveNext()) return;
+                    if ((e.Current as Appdata).Unlocked)
+                    {
+                        
+                        data[offset] = b = (byte)(b | (1 << i));
+                    }
+                }
+            }
+
+            BitConverter.GetBytes((short)nud_appPoints.Value).CopyTo(data, APP_POINTS_OFFSET);
+        }
+
+        private void b_unlockApps_Click(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < gv_apps.RowCount; i++)
+            //{
+            //    (gv_apps.Rows[i].Cells["appunlocks"] as DataGridViewCheckBoxCell).Value = true;
+            //}
+            for (var num = SMTIV.Apps.GetEnumerator(); num.MoveNext();)
+            {
+                num.Current.Unlocked = true;
+            }
+
+            gv_apps.DataSource = SMTIV.Apps;
+            gv_apps.Refresh();
+        }
 
         private void setInventoryFromData()
         {
@@ -326,6 +364,69 @@ namespace SMTIV
             }
         }
 
+        private void setDataFromInventory()
+        {
+            for (var num = SMTIV.Expendables.GetEnumerator(); num.MoveNext();)
+            {
+                BitConverter.GetBytes(num.Current.Value.Amount).CopyTo(
+                    data, EXPENDABLES_OFFSET + num.Current.Key * 2);
+            }
+
+            for (var num = SMTIV.Relics.GetEnumerator(); num.MoveNext();)
+            {
+                BitConverter.GetBytes(num.Current.Value.Amount).CopyTo(
+                    data, RELICS_OFFSET + num.Current.Key * 2);
+            }
+
+            for (var num = SMTIV.Valuables.GetEnumerator(); num.MoveNext();)
+            {
+                BitConverter.GetBytes(num.Current.Value.Amount).CopyTo(
+                    data, VALUABLES_OFFSET + num.Current.Key * 2);
+            }
+
+            for (var i = 0; i < 120; i++)
+            {
+                 BitConverter.GetBytes(SMTIV.Swords.ElementAt(i).Value.Amount).CopyTo(
+                    data, SWORDS_OFFSET + i * 2);
+            }
+
+            for (var i = 0; i < 120; i++)
+            {
+                BitConverter.GetBytes(SMTIV.Guns.ElementAt(i).Value.Amount).CopyTo(
+                    data, GUNS_OFFSET + i * 2);
+            }
+
+            for (var i = 0; i < 50; i++)
+            {
+                BitConverter.GetBytes(SMTIV.Bullets.ElementAt(i).Value.Amount).CopyTo(
+                    data, AMMO_OFFSET + i * 2);
+            }
+
+            for (var i = 0; i < 120; i++)
+            {
+                BitConverter.GetBytes(SMTIV.Helms.ElementAt(i).Value.Amount).CopyTo(
+                    data, HELMS_OFFSET + i * 2);
+            }
+
+            for (var i = 0; i < 120; i++)
+            {
+                BitConverter.GetBytes(SMTIV.UpperArmor.ElementAt(i).Value.Amount).CopyTo(
+                    data, UPPER_ARMOR_OFFSET + i * 2);
+            }
+
+            for (var i = 0; i < 120; i++)
+            {
+                BitConverter.GetBytes(SMTIV.LowerArmor.ElementAt(i).Value.Amount).CopyTo(
+                    data, LOWER_ARMOR_OFFSET + i * 2);
+            }
+
+            for (var i = 0; i < 120; i++)
+            {
+                BitConverter.GetBytes(SMTIV.Accessories.ElementAt(i).Value.Amount).CopyTo(
+                    data, ACCESSORIES_OFFSET + i * 2);
+            }
+        }
+
         private void setItemAmount(object sender, EventArgs e)
         {
             var selected = itemList.SelectedItems;            
@@ -348,12 +449,7 @@ namespace SMTIV
                 it.SubItems[1].Text = num_itemAmount.Value.ToString();
             }
         }
-
-        private void b_unlockApps_Click(object sender, EventArgs e)
-        {
-            //for (int i = 0; i < appdata.Length; i++) unlockApp(i);
-        }
-
+        
         private void demonSearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //form2.Show();
@@ -369,6 +465,5 @@ namespace SMTIV
         {
             ChangeSkillsForm.Instance.Show();
         }
-        
     }
 }

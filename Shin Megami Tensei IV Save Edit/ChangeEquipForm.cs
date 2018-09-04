@@ -96,6 +96,7 @@ namespace SMTIV
             label5.Text = string.Format("id:{0} HP:{1}\n",
                 string.Format("{0}d|{1}h", id, id.ToString("X")), it.Hp);
 
+            if (it.Elements == null) return;
             foreach (var r in it.Elements)
             {
                 label5.Text += r.Key + ":" + Utils.resistShorthand(r.Value);

@@ -1,22 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 
 namespace SMTIV
 {
-    
     class Player : INotifyPropertyChanged
     {
-        public class SkillAndLevel
-        {
-            public short id { get; set; }
-            public byte lv { get; set; }
-            public SkillAndLevel(short i, byte l) { id = i; lv = l; }
-        }
-       
         const int MACCA_OFFSET = 0x10C;
         const int PLAYER_EQUIPS_OFFSET = 0x110;
         const int PLAYER_STATS_OFFSET = 0x122;
@@ -25,17 +13,11 @@ namespace SMTIV
         const int STATUS_FLAGS_OFFSET = 0x182; // player and demons
         const int STORY_ALIGNMENT_OFFSET = 0x184; // for player
         const int PLAYER_LEVEL_OFFSET = 0x186;
-        
+
         short[] equips = new short[7] { 0x3d, 0xb5, 0x30d, 0x12d, 0x1a5, 0x21d, 0x295 };
         short[] stats = new short[7];
         int exp = 0;
-        SkillAndLevel[] skills = new SkillAndLevel[8]
-            {
-                new SkillAndLevel(1, 1), new SkillAndLevel(2, 2),
-                new SkillAndLevel(3, 3), new SkillAndLevel(4, 4),
-                new SkillAndLevel(5, 5), new SkillAndLevel(6, 6),
-                new SkillAndLevel(7, 7), new SkillAndLevel(8, 8)
-            };
+        BindingList<short> skills = new BindingList<short> { 1,2,3,4,5,6,7,8};
         short status = 0;
         short alignment = 0;
         byte level = 1;
@@ -111,9 +93,12 @@ namespace SMTIV
                 a2.CopyTo(arr, 0x12a);
                 a2.CopyTo(arr, 0x138);
                 arr[0x0cc] = arr[0x186] = level;
-                BitConverter.GetBytes(macca).CopyTo(arr, MACCA_OFFSET);                
-                for (int i = 0; i < 8; i++) { BitConverter.GetBytes(skills[i].id).CopyTo(arr, PLAYER_SKILLS_OFFSET + (i * 2)); }
-                for (int i = 0; i < 8; i++) { arr[PLAYER_SKILLS_OFFSET + 0x10 + i] = skills[i].lv; }
+                BitConverter.GetBytes(macca).CopyTo(arr, MACCA_OFFSET);
+                for (int i = 0; i < 8; i++)
+                {
+                    BitConverter.GetBytes(skills[i]).CopyTo(arr, PLAYER_SKILLS_OFFSET + (i * 2));
+                    arr[PLAYER_SKILLS_OFFSET + 0x10 + i] = 0xc;
+                }
                 BitConverter.GetBytes(status).CopyTo(arr, STATUS_FLAGS_OFFSET);
                 BitConverter.GetBytes(alignment).CopyTo(arr, STORY_ALIGNMENT_OFFSET);
                 return arr;
@@ -139,13 +124,9 @@ namespace SMTIV
                 Mp = BitConverter.ToInt16(value, PLAYER_STATS_OFFSET + 0xc);
 
                 Exp = BitConverter.ToInt32(value, PLAYER_XP_OFFSET);
-
-                for (int i = 0; i < 8; i++)
-                {
-                    skills[i].id = BitConverter.ToInt16(value, PLAYER_SKILLS_OFFSET + i * 2);
-                    skills[i].lv = value[PLAYER_SKILLS_OFFSET + 0x10 + i];
-                }
-
+                
+                for (int i = 0; i < 8; i++) { skills[i] = (BitConverter.ToInt16(value, PLAYER_SKILLS_OFFSET + (i * 2))); }
+                
                 Status = BitConverter.ToInt16(value, STATUS_FLAGS_OFFSET);
                 Alignment = BitConverter.ToInt16(value, STORY_ALIGNMENT_OFFSET);
                 Level = value[PLAYER_LEVEL_OFFSET];
@@ -179,19 +160,19 @@ namespace SMTIV
         public short Helm
         {
             get { return equips[3]; }
-            set { equips[3] = value; NotifyPropertyChanged("Helm"); }
+            set { if (value != 0) { equips[3] = value; NotifyPropertyChanged("Helm"); } }
         }
 
         public short Top
         {
             get { return equips[4]; }
-            set { equips[4] = value; NotifyPropertyChanged("Top"); }
+            set { if (value != 0) { equips[4] = value; NotifyPropertyChanged("Top"); } }
         }
 
         public short Bottom
         {
             get { return equips[5]; }
-            set { equips[5] = value; NotifyPropertyChanged("Bottom"); }
+            set { if (value != 0) { equips[5] = value; NotifyPropertyChanged("Bottom"); } }
         }
 
         public short Accessory
@@ -248,11 +229,11 @@ namespace SMTIV
             set { exp = value; NotifyPropertyChanged("Exp"); }
         }
 
-        public SkillAndLevel[] Skills
+        public BindingList<short> Skills
         {
             get { return skills; }
             set { skills = value; NotifyPropertyChanged("Skills"); }
-        }
+        }        
 
         public byte Level
         {
