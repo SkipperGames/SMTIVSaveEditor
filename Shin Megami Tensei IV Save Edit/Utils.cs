@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using SMTIV.Skills;
-using SMTIV.Items;
+using SMTIV.Enums;
 
 namespace SMTIV
 {

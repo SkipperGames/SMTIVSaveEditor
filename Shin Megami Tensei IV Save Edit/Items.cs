@@ -1,41 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 
-using SMTIV.Skills;
+using SMTIV.Enums;
 
 namespace SMTIV.Items
 {
-    public enum StatusCondition : short
-    {
-        None,
-        Smirk = 0x10,
-        Bind,
-        Poison,
-        KO,
-        Sleep,
-        Panic,
-        Sick,
-        Lost,
-        Brand
-    }
-
-    public enum WeaponType
-    {
-        Sword, Blunt, Dagger, Spear
-    }
-
-    public enum Resistance : short
-    {
-        Weak = -1,
-        Neutral,
-        Resist,
-        Null,
-        Repel,
-        Drain,
-    }
-
     class Item : INotifyPropertyChanged
     {
         private short _amount = 0;
@@ -110,44 +80,5 @@ namespace SMTIV.Items
         public int Mp;
         public Dictionary<string, Resistance> Elements;
         public string Effect;
-    }
-
-    public enum Race
-    {
-        Unknown = -1, None,
-        Amatsu, Archaic, Avatar, Avian, 
-        Beast, Brute, 
-        Chaos, Cyber, 
-        Deity, Divine, Dragon, Drake, 
-        Element, Enigma, Entity,
-        Fairy, Fallen, Famed, Femme, Fiend, Flight, Food, Foul, Fury, 
-        Genma, Ghost, Godly,
-        Herald, Holy, Horde, Human, 
-        Jaki, Jirae, 
-        King, Kishin, Kunitsu,
-        Lady, 
-        Megami, Mitama, 
-        Night, Nymph, 
-        Raptor, Reaper, 
-        Snake, Spirit, 
-        Tree, Tyrant, 
-        Undead, 
-        Vermin, Vile, 
-        Wilder, Wood,
-        Yoma,
-        Zealot
-    }
-
-    public class Demon
-    {
-        public int Id { get; set; } = 0;
-        public Race Race { get; set; } = Race.None;
-        public string Name { get; set; } = "";
-        public Dictionary<SkillType, Resistance> Elements;
-        public Dictionary<StatusCondition, Resistance> StatusResistance;
-        public bool IsGunAttackType { get; set; } = false;
-        public int AttackHitsMin = 1;
-        public int AttackHitsMax = 1;
-        public Target Targets = Target.Single;
-    }
+    }       
 }

@@ -1,33 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-using SMTIV.Items;
-using SMTIV.Skills;
+using SMTIV.Enums;
 
 namespace SMTIV
 {
     public partial class Form2 : Form
     {
-        Demon[] demons;
+        public static Form2 Instance { get; private set; }
+        static Form2() { Instance = new Form2(); Instance.Initialize(); }
 
-
-        public Form2(ref List<Demon> input)
+        public Form2()
         {
             InitializeComponent();
 
-            demons = input.ToArray();            
+            //button1_Click(this, null);
+            //button2_Click(this, null);
+        }
+
+        private void Initialize()
+        {                
             listBox1.ValueMember = "Name";
-            
+
 
             var rac = Enum.GetValues(typeof(Race));
             cbx_race.Items.Add("(any)");
-            for (var num = rac.GetEnumerator(); num.MoveNext(); )
+            for (var num = rac.GetEnumerator(); num.MoveNext();)
             {
                 cbx_race.Items.Add(num.Current);
             }
@@ -100,35 +101,35 @@ namespace SMTIV
 
         private void b_apply_Click(object sender, EventArgs e)
         {
-            IEnumerable<Demon> temp = demons;
+            IEnumerable<Demon> temp = DemonCollection.Demons;
             
             if (cbx_race.SelectedIndex != 0)
-                demons.Where(d => d.Race == (Race)cbx_race.SelectedItem);
+                temp = temp.Where(d => d.Race == (Race)cbx_race.SelectedItem);
             
             //
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Phys] == (Resistance)cbx_phys.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Phys] >= (Resistance)cbx_phys.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Phys] == (Resistance)cbx_phys.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Phys] >= (Resistance)cbx_phys.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Gun] == (Resistance)cbx_gun.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Gun] >= (Resistance)cbx_gun.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Gun] == (Resistance)cbx_gun.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Gun] >= (Resistance)cbx_gun.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Fire] == (Resistance)cbx_fire.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Fire] >= (Resistance)cbx_fire.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Fire] == (Resistance)cbx_fire.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Fire] >= (Resistance)cbx_fire.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Ice] == (Resistance)cbx_ice.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Ice] >= (Resistance)cbx_ice.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Ice] == (Resistance)cbx_ice.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Ice] >= (Resistance)cbx_ice.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Elec] == (Resistance)cbx_elec.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Elec] >= (Resistance)cbx_elec.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Elec] == (Resistance)cbx_elec.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Elec] >= (Resistance)cbx_elec.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Force] == (Resistance)cbx_force.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Force] >= (Resistance)cbx_force.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Force] == (Resistance)cbx_force.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Force] >= (Resistance)cbx_force.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Light] == (Resistance)cbx_light.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Light] >= (Resistance)cbx_light.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Light] == (Resistance)cbx_light.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Light] >= (Resistance)cbx_light.SelectedItem);
 
-            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[Skills.SkillType.Dark] == (Resistance)cbx_dark.SelectedItem);
-            else temp = temp.Where(d => d.Elements[Skills.SkillType.Dark] >= (Resistance)cbx_dark.SelectedItem);
+            if (rb_equal.Checked) temp = temp.Where(d => d.Elements[SkillType.Dark] == (Resistance)cbx_dark.SelectedItem);
+            else temp = temp.Where(d => d.Elements[SkillType.Dark] >= (Resistance)cbx_dark.SelectedItem);
             
             switch (cbx_status.SelectedIndex)
             {
@@ -212,7 +213,7 @@ namespace SMTIV
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = demons;
+            listBox1.DataSource = DemonCollection.Demons;
             rb_sortaz_CheckedChanged(sender, e);
         }
 

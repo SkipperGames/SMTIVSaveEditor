@@ -31,6 +31,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.gv_playlog = new System.Windows.Forms.DataGridView();
+            this.playinfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playvalue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitter5 = new System.Windows.Forms.Splitter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.nud_appPoints = new System.Windows.Forms.NumericUpDown();
@@ -39,12 +42,6 @@
             this.splitter4 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.nud_lu = new System.Windows.Forms.NumericUpDown();
-            this.nud_ag = new System.Windows.Forms.NumericUpDown();
-            this.nud_ma = new System.Windows.Forms.NumericUpDown();
-            this.nud_dx = new System.Windows.Forms.NumericUpDown();
-            this.nud_st = new System.Windows.Forms.NumericUpDown();
-            this.nud_mp = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,7 +50,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.nud_hp = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.nud_level = new System.Windows.Forms.NumericUpDown();
             this.nud_exp = new System.Windows.Forms.NumericUpDown();
@@ -78,9 +74,19 @@
             this.llb_top = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.b_changeEquips = new System.Windows.Forms.Button();
-            this.b_changeSkill = new System.Windows.Forms.Button();
             this.gv_skills = new System.Windows.Forms.DataGridView();
+            this.skillnames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gv_apps = new System.Windows.Forms.DataGridView();
+            this.appnames = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.appunlocks = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.b_changeSkill = new System.Windows.Forms.Button();
+            this.nud_hp = new System.Windows.Forms.NumericUpDown();
+            this.nud_mp = new System.Windows.Forms.NumericUpDown();
+            this.nud_st = new System.Windows.Forms.NumericUpDown();
+            this.nud_dx = new System.Windows.Forms.NumericUpDown();
+            this.nud_ma = new System.Windows.Forms.NumericUpDown();
+            this.nud_ag = new System.Windows.Forms.NumericUpDown();
+            this.nud_lu = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -110,30 +116,25 @@
             this.skillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.playinfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playvalue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appnames = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appunlocks = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.skillnames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_playlog)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_appPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_lu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_ag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_ma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_dx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_st)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_mp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_hp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_level)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_exp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_macca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_alignment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_skills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_apps)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_hp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_mp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_st)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_dx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_ma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_ag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_lu)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -143,7 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_itemAmount)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -188,18 +188,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 18);
+            this.tableLayoutPanel1.Controls.Add(this.gv_playlog, 0, 18);
             this.tableLayoutPanel1.Controls.Add(this.splitter5, 0, 16);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.splitter4, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.splitter3, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.splitter2, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.nud_lu, 6, 10);
-            this.tableLayoutPanel1.Controls.Add(this.nud_ag, 5, 10);
-            this.tableLayoutPanel1.Controls.Add(this.nud_ma, 4, 10);
-            this.tableLayoutPanel1.Controls.Add(this.nud_dx, 3, 10);
-            this.tableLayoutPanel1.Controls.Add(this.nud_st, 2, 10);
-            this.tableLayoutPanel1.Controls.Add(this.nud_mp, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label11, 1, 9);
@@ -208,7 +202,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label14, 4, 9);
             this.tableLayoutPanel1.Controls.Add(this.label15, 5, 9);
             this.tableLayoutPanel1.Controls.Add(this.label16, 6, 9);
-            this.tableLayoutPanel1.Controls.Add(this.nud_hp, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.nud_level, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.nud_exp, 3, 0);
@@ -236,6 +229,13 @@
             this.tableLayoutPanel1.Controls.Add(this.gv_skills, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.gv_apps, 0, 15);
             this.tableLayoutPanel1.Controls.Add(this.b_changeSkill, 5, 12);
+            this.tableLayoutPanel1.Controls.Add(this.nud_hp, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nud_mp, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nud_st, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nud_dx, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nud_ma, 4, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nud_ag, 5, 10);
+            this.tableLayoutPanel1.Controls.Add(this.nud_lu, 6, 10);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 19;
@@ -258,8 +258,45 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(490, 908);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // gv_playlog
+            // 
+            this.gv_playlog.AllowUserToAddRows = false;
+            this.gv_playlog.AllowUserToDeleteRows = false;
+            this.gv_playlog.AllowUserToResizeColumns = false;
+            this.gv_playlog.AllowUserToResizeRows = false;
+            this.gv_playlog.BackgroundColor = System.Drawing.Color.White;
+            this.gv_playlog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_playlog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.playinfo,
+            this.playvalue});
+            this.tableLayoutPanel1.SetColumnSpan(this.gv_playlog, 5);
+            this.gv_playlog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gv_playlog.Location = new System.Drawing.Point(3, 705);
+            this.gv_playlog.Name = "gv_playlog";
+            this.gv_playlog.Size = new System.Drawing.Size(344, 200);
+            this.gv_playlog.TabIndex = 59;
+            // 
+            // playinfo
+            // 
+            this.playinfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.playinfo.DataPropertyName = "Key";
+            this.playinfo.HeaderText = "Player Statistic";
+            this.playinfo.Name = "playinfo";
+            this.playinfo.ReadOnly = true;
+            this.playinfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // playvalue
+            // 
+            this.playvalue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.playvalue.DataPropertyName = "Value";
+            this.playvalue.HeaderText = "Value";
+            this.playvalue.Name = "playvalue";
+            this.playvalue.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.playvalue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // splitter5
             // 
@@ -369,120 +406,6 @@
             this.splitter2.TabIndex = 40;
             this.splitter2.TabStop = false;
             // 
-            // nud_lu
-            // 
-            this.nud_lu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_lu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_lu.Location = new System.Drawing.Point(423, 283);
-            this.nud_lu.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_lu.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_lu.Name = "nud_lu";
-            this.nud_lu.Size = new System.Drawing.Size(58, 16);
-            this.nud_lu.TabIndex = 29;
-            // 
-            // nud_ag
-            // 
-            this.nud_ag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_ag.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_ag.Location = new System.Drawing.Point(353, 283);
-            this.nud_ag.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_ag.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_ag.Name = "nud_ag";
-            this.nud_ag.Size = new System.Drawing.Size(58, 16);
-            this.nud_ag.TabIndex = 28;
-            // 
-            // nud_ma
-            // 
-            this.nud_ma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_ma.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_ma.Location = new System.Drawing.Point(283, 283);
-            this.nud_ma.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_ma.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_ma.Name = "nud_ma";
-            this.nud_ma.Size = new System.Drawing.Size(58, 16);
-            this.nud_ma.TabIndex = 27;
-            // 
-            // nud_dx
-            // 
-            this.nud_dx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_dx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_dx.Location = new System.Drawing.Point(213, 283);
-            this.nud_dx.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_dx.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_dx.Name = "nud_dx";
-            this.nud_dx.Size = new System.Drawing.Size(58, 16);
-            this.nud_dx.TabIndex = 26;
-            // 
-            // nud_st
-            // 
-            this.nud_st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_st.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_st.Location = new System.Drawing.Point(143, 283);
-            this.nud_st.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_st.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_st.Name = "nud_st";
-            this.nud_st.Size = new System.Drawing.Size(58, 16);
-            this.nud_st.TabIndex = 25;
-            // 
-            // nud_mp
-            // 
-            this.nud_mp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_mp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_mp.Location = new System.Drawing.Point(73, 283);
-            this.nud_mp.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_mp.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_mp.Name = "nud_mp";
-            this.nud_mp.Size = new System.Drawing.Size(58, 16);
-            this.nud_mp.TabIndex = 24;
-            // 
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(3, 100);
@@ -554,25 +477,6 @@
             this.label16.Size = new System.Drawing.Size(15, 13);
             this.label16.TabIndex = 22;
             this.label16.Text = "lu";
-            // 
-            // nud_hp
-            // 
-            this.nud_hp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nud_hp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nud_hp.Location = new System.Drawing.Point(3, 283);
-            this.nud_hp.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nud_hp.Minimum = new decimal(new int[] {
-            32768,
-            0,
-            0,
-            -2147483648});
-            this.nud_hp.Name = "nud_hp";
-            this.nud_hp.Size = new System.Drawing.Size(58, 16);
-            this.nud_hp.TabIndex = 23;
             // 
             // label18
             // 
@@ -860,16 +764,6 @@
             this.b_changeEquips.Text = "Change";
             this.b_changeEquips.UseVisualStyleBackColor = true;
             // 
-            // b_changeSkill
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.b_changeSkill, 2);
-            this.b_changeSkill.Location = new System.Drawing.Point(353, 343);
-            this.b_changeSkill.Name = "b_changeSkill";
-            this.b_changeSkill.Size = new System.Drawing.Size(100, 23);
-            this.b_changeSkill.TabIndex = 56;
-            this.b_changeSkill.Text = "Change";
-            this.b_changeSkill.UseVisualStyleBackColor = true;
-            // 
             // gv_skills
             // 
             this.gv_skills.AllowUserToAddRows = false;
@@ -889,6 +783,15 @@
             this.gv_skills.Size = new System.Drawing.Size(344, 110);
             this.gv_skills.TabIndex = 57;
             // 
+            // skillnames
+            // 
+            this.skillnames.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.skillnames.DataPropertyName = "Text";
+            this.skillnames.HeaderText = "Skill Name";
+            this.skillnames.Name = "skillnames";
+            this.skillnames.ReadOnly = true;
+            this.skillnames.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // gv_apps
             // 
             this.gv_apps.AllowUserToAddRows = false;
@@ -906,6 +809,167 @@
             this.gv_apps.Name = "gv_apps";
             this.gv_apps.Size = new System.Drawing.Size(344, 200);
             this.gv_apps.TabIndex = 58;
+            // 
+            // appnames
+            // 
+            this.appnames.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.appnames.DataPropertyName = "Name";
+            this.appnames.HeaderText = "App Name";
+            this.appnames.Name = "appnames";
+            this.appnames.ReadOnly = true;
+            this.appnames.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.appnames.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // appunlocks
+            // 
+            this.appunlocks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.appunlocks.DataPropertyName = "Unlocked";
+            this.appunlocks.HeaderText = "Unlocked";
+            this.appunlocks.Name = "appunlocks";
+            this.appunlocks.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // b_changeSkill
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.b_changeSkill, 2);
+            this.b_changeSkill.Location = new System.Drawing.Point(353, 343);
+            this.b_changeSkill.Name = "b_changeSkill";
+            this.b_changeSkill.Size = new System.Drawing.Size(100, 23);
+            this.b_changeSkill.TabIndex = 56;
+            this.b_changeSkill.Text = "Change";
+            this.b_changeSkill.UseVisualStyleBackColor = true;
+            // 
+            // nud_hp
+            // 
+            this.nud_hp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_hp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_hp.Location = new System.Drawing.Point(3, 283);
+            this.nud_hp.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_hp.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_hp.Name = "nud_hp";
+            this.nud_hp.Size = new System.Drawing.Size(58, 16);
+            this.nud_hp.TabIndex = 23;
+            // 
+            // nud_mp
+            // 
+            this.nud_mp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_mp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_mp.Location = new System.Drawing.Point(73, 283);
+            this.nud_mp.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_mp.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_mp.Name = "nud_mp";
+            this.nud_mp.Size = new System.Drawing.Size(58, 16);
+            this.nud_mp.TabIndex = 24;
+            // 
+            // nud_st
+            // 
+            this.nud_st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_st.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_st.Location = new System.Drawing.Point(143, 283);
+            this.nud_st.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_st.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_st.Name = "nud_st";
+            this.nud_st.Size = new System.Drawing.Size(58, 16);
+            this.nud_st.TabIndex = 25;
+            // 
+            // nud_dx
+            // 
+            this.nud_dx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_dx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_dx.Location = new System.Drawing.Point(213, 283);
+            this.nud_dx.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_dx.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_dx.Name = "nud_dx";
+            this.nud_dx.Size = new System.Drawing.Size(58, 16);
+            this.nud_dx.TabIndex = 26;
+            // 
+            // nud_ma
+            // 
+            this.nud_ma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_ma.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_ma.Location = new System.Drawing.Point(283, 283);
+            this.nud_ma.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_ma.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_ma.Name = "nud_ma";
+            this.nud_ma.Size = new System.Drawing.Size(58, 16);
+            this.nud_ma.TabIndex = 27;
+            // 
+            // nud_ag
+            // 
+            this.nud_ag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_ag.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_ag.Location = new System.Drawing.Point(353, 283);
+            this.nud_ag.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_ag.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_ag.Name = "nud_ag";
+            this.nud_ag.Size = new System.Drawing.Size(58, 16);
+            this.nud_ag.TabIndex = 28;
+            // 
+            // nud_lu
+            // 
+            this.nud_lu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.nud_lu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nud_lu.Location = new System.Drawing.Point(423, 283);
+            this.nud_lu.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nud_lu.Minimum = new decimal(new int[] {
+            32768,
+            0,
+            0,
+            -2147483648});
+            this.nud_lu.Name = "nud_lu";
+            this.nud_lu.Size = new System.Drawing.Size(58, 16);
+            this.nud_lu.TabIndex = 29;
             // 
             // tabPage2
             // 
@@ -1118,14 +1182,14 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -1133,7 +1197,7 @@
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -1149,27 +1213,27 @@
             this.equipsToolStripMenuItem,
             this.skillsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // demonSearchToolStripMenuItem
             // 
             this.demonSearchToolStripMenuItem.Name = "demonSearchToolStripMenuItem";
-            this.demonSearchToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.demonSearchToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.demonSearchToolStripMenuItem.Text = "Demon Search";
             this.demonSearchToolStripMenuItem.Click += new System.EventHandler(this.demonSearchToolStripMenuItem_Click);
             // 
             // equipsToolStripMenuItem
             // 
             this.equipsToolStripMenuItem.Name = "equipsToolStripMenuItem";
-            this.equipsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.equipsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.equipsToolStripMenuItem.Text = "Equips";
             this.equipsToolStripMenuItem.Click += new System.EventHandler(this.clickChangeEquip);
             // 
             // skillsToolStripMenuItem
             // 
             this.skillsToolStripMenuItem.Name = "skillsToolStripMenuItem";
-            this.skillsToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.skillsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.skillsToolStripMenuItem.Text = "Skills";
             // 
             // statusStrip1
@@ -1184,67 +1248,8 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(95, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.playinfo,
-            this.playvalue});
-            this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 5);
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 705);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 200);
-            this.dataGridView1.TabIndex = 59;
-            // 
-            // playinfo
-            // 
-            this.playinfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.playinfo.DataPropertyName = "Key";
-            this.playinfo.HeaderText = "Player Statistic";
-            this.playinfo.Name = "playinfo";
-            this.playinfo.ReadOnly = true;
-            this.playinfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // playvalue
-            // 
-            this.playvalue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.playvalue.DataPropertyName = "Value";
-            this.playvalue.HeaderText = "Value";
-            this.playvalue.Name = "playvalue";
-            this.playvalue.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.playvalue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // appnames
-            // 
-            this.appnames.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.appnames.DataPropertyName = "Name";
-            this.appnames.HeaderText = "App Name";
-            this.appnames.Name = "appnames";
-            this.appnames.ReadOnly = true;
-            this.appnames.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.appnames.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // appunlocks
-            // 
-            this.appunlocks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.appunlocks.DataPropertyName = "Unlocked";
-            this.appunlocks.HeaderText = "Unlocked";
-            this.appunlocks.Name = "appunlocks";
-            this.appunlocks.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // skillnames
-            // 
-            this.skillnames.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.skillnames.DataPropertyName = "Text";
-            this.skillnames.HeaderText = "Skill Name";
-            this.skillnames.Name = "skillnames";
-            this.skillnames.ReadOnly = true;
-            this.skillnames.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Form1
             // 
@@ -1263,22 +1268,23 @@
             this.tabPage1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_playlog)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_appPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_lu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_ag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_ma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_dx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_st)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_mp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_hp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_level)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_exp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_macca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_alignment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_skills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_apps)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_hp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_mp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_st)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_dx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_ma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_ag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_lu)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
@@ -1291,7 +1297,6 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1378,15 +1383,15 @@
         private System.Windows.Forms.Button b_changeEquips;
         private System.Windows.Forms.ToolStripMenuItem equipsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem skillsToolStripMenuItem;
-        private System.Windows.Forms.Button b_changeSkill;
-        private System.Windows.Forms.DataGridView gv_skills;
         private System.Windows.Forms.DataGridView gv_apps;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gv_playlog;
         private System.Windows.Forms.DataGridViewTextBoxColumn playinfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn playvalue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn skillnames;
         private System.Windows.Forms.DataGridViewTextBoxColumn appnames;
         private System.Windows.Forms.DataGridViewCheckBoxColumn appunlocks;
+        private System.Windows.Forms.DataGridView gv_skills;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skillnames;
+        private System.Windows.Forms.Button b_changeSkill;
     }
 }
 

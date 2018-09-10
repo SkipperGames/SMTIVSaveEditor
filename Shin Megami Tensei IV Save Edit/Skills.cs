@@ -1,53 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using SMTIV.Enums;
 
 namespace SMTIV.Skills
 {
-    public enum SkillType
-    {
-        Dummy = -1,
-        Fire,
-        Ice,
-        Elec,
-        Force,
-        Almighty,
-        Dark,
-        Light,
-        Ailment,
-        Healing,
-        Status,
-        Support,
-        Phys,
-        Gun,
-        Auto
-    }
-
-    public enum Damage
-    {
-        Unknown = -1,
-        Zero,
-        Fixed,
-        Weak,
-        Medium,
-        Heavy,
-        Severe,
-        Mega,
-        KO
-    }
-
-    public enum Target
-    {
-        Unknown,
-        Single,
-        Multi,
-        Enemies,
-        Self,
-        Ally,
-        Allies,
-        All
-    }
-
     public class Skill
     {
         public short ID { get; set; }

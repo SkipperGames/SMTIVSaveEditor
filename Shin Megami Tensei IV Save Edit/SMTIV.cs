@@ -10,6 +10,8 @@ using Newtonsoft.Json;
 
 using SMTIV.Items;
 using SMTIV.Skills;
+using SMTIV.Enums;
+
 
 namespace SMTIV
 {
@@ -32,7 +34,7 @@ namespace SMTIV
         public static Dictionary<short, Armor> LowerArmor { get; private set; } =  new Dictionary<short, Armor>();//120
         public static Dictionary<short, Accessory> Accessories { get; private set; } =  new Dictionary<short, Accessory>();//120
         public static Skill[] Skills { get; private set; }//500
-        public static List<Demon> Demons { get; private set; } = new List<Demon>();//1124
+        //public static List<Demon> Demons { get; private set; } = new List<Demon>();//1124
         public static BindingList<Appdata> Apps { get; private set; }
 
         static SMTIV()
@@ -102,7 +104,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            } Swords.Add(0, new Sword());
+            }
 
             id = 0xb5;
             using (var sr = new StreamReader(
@@ -123,7 +125,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            } Guns.Add(0, new Weapon());
+            }
 
             id = 0x12d;//helms
             using (var sr = new StreamReader(
@@ -142,7 +144,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            } Helms.Add(0, new Armor());
+            }
 
             id = 0x1a5;//tops            
             using (var sr = new StreamReader(
@@ -161,7 +163,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            } UpperArmor.Add(0, new UpperArmor());
+            }
 
             id = 0x21d;//bottoms
             using (var sr = new StreamReader(
@@ -180,7 +182,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            }  LowerArmor.Add(0, new Armor());
+            }
 
             id = 0x295;
             using (var sr = new StreamReader(
@@ -200,8 +202,8 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            } Accessories.Add(0, new Accessory());    
-
+            }
+            
             id = 0x30D;
             using (var sr = new StreamReader(
                 File.OpenRead(Application.StartupPath + "/SMT4 Item Lists - Bullets.csv")))
@@ -221,7 +223,7 @@ namespace SMTIV
                 }
 
                 sr.Close();
-            } Bullets.Add(0, new Bullet());
+            }
 
             Skills = JsonConvert.DeserializeObject<Skill[]>(File.ReadAllText(
                 Application.StartupPath + "/skills.json"));
@@ -261,7 +263,6 @@ namespace SMTIV
                         default:
                             throw new Exception(id.ToString());
                     }
-                    Demons.Add(temp);
                     id++;
                 }
 

@@ -22,6 +22,7 @@ namespace SMTIV
         short alignment = 0;
         byte level = 1;
         int macca = 0;
+        byte[] data = new byte[0x200];
 
         public static Player Instance { get; private set; }
         static Player() { Instance = new Player(); }
@@ -30,81 +31,81 @@ namespace SMTIV
         {
             get
             {
-                byte[] arr = new byte[0x200];
                 byte[] a4 = new byte[4];
                 byte[] a2 = new byte[2];
                 a2 = BitConverter.GetBytes(Sword);
-                a2.CopyTo(arr, 0x092);
-                a2.CopyTo(arr, 0x110);
+                a2.CopyTo(data, 0x092);
+                a2.CopyTo(data, 0x110);
                 a2 = BitConverter.GetBytes(Gun);
-                a2.CopyTo(arr, 0x094);
-                a2.CopyTo(arr, 0x112);
+                a2.CopyTo(data, 0x094);
+                a2.CopyTo(data, 0x112);
                 a2 = BitConverter.GetBytes(Ammo);
-                a2.CopyTo(arr, 0x096);
-                a2.CopyTo(arr, 0x114);
+                a2.CopyTo(data, 0x096);
+                a2.CopyTo(data, 0x114);
                 a2 = BitConverter.GetBytes(Helm);
-                a2.CopyTo(arr, 0x098);
-                a2.CopyTo(arr, 0x116);
+                a2.CopyTo(data, 0x098);
+                a2.CopyTo(data, 0x116);
                 a2 = BitConverter.GetBytes(Top);
-                a2.CopyTo(arr, 0x09a);
-                a2.CopyTo(arr, 0x118);
+                a2.CopyTo(data, 0x09a);
+                a2.CopyTo(data, 0x118);
                 a2 = BitConverter.GetBytes(Bottom);
-                a2.CopyTo(arr, 0x09c);
-                a2.CopyTo(arr, 0x11a);
+                a2.CopyTo(data, 0x09c);
+                a2.CopyTo(data, 0x11a);
                 a2 = BitConverter.GetBytes(Accessory);
-                a2.CopyTo(arr, 0x09e);
-                a2.CopyTo(arr, 0x11c);
+                a2.CopyTo(data, 0x09e);
+                a2.CopyTo(data, 0x11c);
                 a4 = BitConverter.GetBytes(exp);
-                a4.CopyTo(arr, 0x0a0);
-                a4.CopyTo(arr, 0x140);
+                a4.CopyTo(data, 0x0a0);
+                a4.CopyTo(data, 0x140);
                 a2 = BitConverter.GetBytes(Hp);
-                a2.CopyTo(arr, 0x0a4);
-                a2.CopyTo(arr, 0x0b0);
-                a2.CopyTo(arr, 0x12c);
-                a2.CopyTo(arr, 0x13a);
+                a2.CopyTo(data, 0x0a4);
+                a2.CopyTo(data, 0x0b0);
+                a2.CopyTo(data, 0x12c);
+                a2.CopyTo(data, 0x13a);
                 a2 = BitConverter.GetBytes(Mp);
-                a2.CopyTo(arr, 0x0a6);
-                a2.CopyTo(arr, 0x0b2);
-                a2.CopyTo(arr, 0x12e);
-                a2.CopyTo(arr, 0x13c);
+                a2.CopyTo(data, 0x0a6);
+                a2.CopyTo(data, 0x0b2);
+                a2.CopyTo(data, 0x12e);
+                a2.CopyTo(data, 0x13c);
                 a2 = BitConverter.GetBytes(St);
-                a2.CopyTo(arr, 0x0b4);
-                a2.CopyTo(arr, 0x0c2);
-                a2.CopyTo(arr, 0x122);
-                a2.CopyTo(arr, 0x130);
+                a2.CopyTo(data, 0x0b4);
+                a2.CopyTo(data, 0x0c2);
+                a2.CopyTo(data, 0x122);
+                a2.CopyTo(data, 0x130);
                 a2 = BitConverter.GetBytes(Dx);
-                a2.CopyTo(arr, 0x0b6);
-                a2.CopyTo(arr, 0x0c4);
-                a2.CopyTo(arr, 0x124);
-                a2.CopyTo(arr, 0x132);
+                a2.CopyTo(data, 0x0b6);
+                a2.CopyTo(data, 0x0c4);
+                a2.CopyTo(data, 0x124);
+                a2.CopyTo(data, 0x132);
                 a2 = BitConverter.GetBytes(Ma);
-                a2.CopyTo(arr, 0x0b8);
-                a2.CopyTo(arr, 0x0c6);
-                a2.CopyTo(arr, 0x126);
-                a2.CopyTo(arr, 0x134);
+                a2.CopyTo(data, 0x0b8);
+                a2.CopyTo(data, 0x0c6);
+                a2.CopyTo(data, 0x126);
+                a2.CopyTo(data, 0x134);
                 a2 = BitConverter.GetBytes(Ag);
-                a2.CopyTo(arr, 0x0ba);
-                a2.CopyTo(arr, 0x0c8);
-                a2.CopyTo(arr, 0x128);
-                a2.CopyTo(arr, 0x136);
+                a2.CopyTo(data, 0x0ba);
+                a2.CopyTo(data, 0x0c8);
+                a2.CopyTo(data, 0x128);
+                a2.CopyTo(data, 0x136);
                 a2 = BitConverter.GetBytes(Lu);
-                a2.CopyTo(arr, 0x0bc);
-                a2.CopyTo(arr, 0x0ca);
-                a2.CopyTo(arr, 0x12a);
-                a2.CopyTo(arr, 0x138);
-                arr[0x0cc] = arr[0x186] = level;
-                BitConverter.GetBytes(macca).CopyTo(arr, MACCA_OFFSET);
+                a2.CopyTo(data, 0x0bc);
+                a2.CopyTo(data, 0x0ca);
+                a2.CopyTo(data, 0x12a);
+                a2.CopyTo(data, 0x138);
+                data[0x0cc] = data[0x186] = level;
+                BitConverter.GetBytes(macca).CopyTo(data, MACCA_OFFSET);
                 for (int i = 0; i < 8; i++)
                 {
-                    BitConverter.GetBytes(skills[i]).CopyTo(arr, PLAYER_SKILLS_OFFSET + (i * 2));
-                    arr[PLAYER_SKILLS_OFFSET + 0x10 + i] = 0xc;
+                    BitConverter.GetBytes(skills[i]).CopyTo(data, PLAYER_SKILLS_OFFSET + (i * 2));
+                    data[PLAYER_SKILLS_OFFSET + 0x10 + i] = 0xc;
                 }
-                BitConverter.GetBytes(status).CopyTo(arr, STATUS_FLAGS_OFFSET);
-                BitConverter.GetBytes(alignment).CopyTo(arr, STORY_ALIGNMENT_OFFSET);
-                return arr;
+                BitConverter.GetBytes(status).CopyTo(data, STATUS_FLAGS_OFFSET);
+                BitConverter.GetBytes(alignment).CopyTo(data, STORY_ALIGNMENT_OFFSET);
+                return data;
             }
             set
             {
+                Array.Copy(value, data, data.Length);
                 Macca = BitConverter.ToInt32(value, MACCA_OFFSET);
 
                 Sword = BitConverter.ToInt16(value, PLAYER_EQUIPS_OFFSET + 0x00);

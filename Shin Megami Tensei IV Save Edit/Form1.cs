@@ -14,8 +14,10 @@ namespace SMTIV
 {
     public partial class Form1 : Form
     {
+        const int DEMON_STOCK_OFFSET = 0x19c;
+        const int PARTY_IDS_OFFSET = 0x91fc;
         const int APP_UNLOCKS_OFFSET = 0x989e;
-        //const int APP_POINTSTOTAL_OFFSET = 0x98EC;
+        const int APP_POINTSTOTAL_OFFSET = 0x98ec;
         const int APP_POINTS_OFFSET = 0x98f0;
         const int VALUABLES_OFFSET = 0x98f4;
         const int EXPENDABLES_OFFSET = 0x99e4;
@@ -201,7 +203,8 @@ namespace SMTIV
                     saveToolStripMenuItem.Enabled = true;
 
                     Player.Instance.Data = data;
-                    //ChangeSkillsForm.Instance.RefreshValues();
+                    ChangeEquipForm.Instance.Refresh();
+                    //ChangeSkillsForm.Instance.Refresh();
                     gv_skills.Refresh();
                     setAppdataFromData();
                     setInventoryFromData();
@@ -296,7 +299,7 @@ namespace SMTIV
             {
                 num.Current.Unlocked = true;
             }
-
+            BitConverter.GetBytes((short)9999).CopyTo(data, APP_POINTSTOTAL_OFFSET);
             gv_apps.DataSource = SMTIV.Apps;
             gv_apps.Refresh();
         }
@@ -452,7 +455,7 @@ namespace SMTIV
         
         private void demonSearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //form2.Show();
+            Form2.Instance.Show();
         }
 
         private void clickChangeEquip(object sender, EventArgs e)

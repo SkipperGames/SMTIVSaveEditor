@@ -4,7 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-using SMTIV.Skills;
+using SMTIV.Enums;
+
 namespace SMTIV
 {
     public partial class ChangeEquipForm : Form
